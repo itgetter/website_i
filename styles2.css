@@ -1,0 +1,73 @@
+:root {
+	--bgcolor: rgb(56, 102, 148);
+}
+
+body {
+	background-color: var(--bgcolor);
+	font-family: courier;
+}
+h1 {
+	color: white;
+	font-size: 60px;
+	margin-left: 20px;
+
+}
+
+p {color: white;
+font-size: 20px;
+float: left;
+width: 700px;
+margin-top: 100px; }
+
+.container {
+    width: 300px;
+    height: 300px;
+}
+
+/* Resize images */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+img {
+	margin-left: 175px;
+	border-radius: 60%;
+}
+.listview
+{
+display:flex;
+align-items:center;
+}
+.listview p
+{
+padding:10px;
+}
+button {
+	position: absolute;
+	left: 1500px;
+background-color: hotpink;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+	font-weight: bold;
+	font-family: courier;
+  margin: 4px 2px;
+  cursor: pointer;
+	border-radius: 12px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;}
+	
+	.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+	
+
