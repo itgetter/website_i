@@ -1,0 +1,9 @@
+:root {
+	--bgcolor: rgb(2, 0, 36);
+}
+
+body {
+	background-color: var(--bgcolor);
+	color: white;
+	font-family: Courier;
+}
