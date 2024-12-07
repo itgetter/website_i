@@ -1,5 +1,6 @@
 :root {
-	--bgcolor: rgb(2, 0, 36);
+	--bgcolor: rgb(114, 181, 121);
+	--bttncolor: rgb(181, 114, 174);
 }
 
 * {
@@ -13,7 +14,7 @@ body {
 	display: grid;
 	place-items: center;
 	background: var(--bgcolor);
-	color: white;
+	color: black;
 	
 }
 ul {
@@ -45,7 +46,7 @@ h1::before {
 h1:hover::before {
 	top: -3px;
 	left: 0px;
-	color: hotpink;
+	color: var(--bttncolor);
 }
 
 h1::after {
@@ -56,7 +57,7 @@ h1::after {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: hotpink;
+	background: var(--bttncolor);
 	transition: all 300ms ease;
 }
 h1:hover::after {
@@ -75,12 +76,12 @@ h1:hover::after {
 	padding: 1em 0.5em 1em 1em;
 	background: #fafafa;
 	border-radius: 0.5em 0 0 0.5em;
-	box-shadow: -4px 0px 0px hotpink;
+	box-shadow: -4px 0px 0px var(--bttncolor);
 	transition: all 300ms ease;
 }
 
 ._social-links:hover {
-	box-shadow: -8px 0px 20px hotpink;
+	box-shadow: -8px 0px 20px var(--bttncolor);
 	padding: 1em;
 }
 
@@ -99,7 +100,7 @@ h1:hover::after {
 	color: #111;
 }
 ._social-link a:hover {
-	color: hotpink;
+	color: var(--bttncolor);
 	font-size: 1.75rem;
 }
 
@@ -107,5 +108,5 @@ h1:hover::after {
 
 a {
 	text-decoration:none !important;
-	color: white;
+	
 }
