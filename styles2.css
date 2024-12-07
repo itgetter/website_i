@@ -1,5 +1,6 @@
 :root {
 	--bgcolor: rgb(114, 181, 121);
+	--bttncolor: rgb(181, 114, 174);
 }
 
 body {
@@ -13,7 +14,7 @@ h1 {
 
 }
 
-p {color: white;
+p {color: black;
 font-size: 20px;
 float: left;
 width: 700px;
@@ -46,9 +47,9 @@ padding:10px;
 button {
 	position: absolute;
 	left: 1400px;
-background-color: hotpink;
+background-color: var(--bttncolor);
   border: none;
-  color: white;
+  color: var(--bgcolor);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
