@@ -78,13 +78,13 @@ a {
 	 color: var(--bgcolor)
 }
 .rectangle {
-	height: 300px;
-	width:1800px;
+	height: 55%;
+	width:100%;
 	background-color: var(--bttncolor);
 	z-index:-1;
 	position: absolute;
-	top: 240px;
-	right: 25px;
+	top: 50%;
+	right: 10%;
 	
 		
 }
