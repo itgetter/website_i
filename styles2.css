@@ -49,7 +49,7 @@ padding:10px;
 }
 button {
 	position: absolute;
-	left: 1400px;
+	left: 90%;
 background-color: var(--bttncolor);
   border: none;
   color: var(--bgcolor);
