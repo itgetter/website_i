@@ -6,7 +6,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: Parkinsans;
 }
 
 body {
@@ -62,7 +62,7 @@ h1::after {
 }
 h1:hover::after {
 	width: 120%;
-	outline: 5px solid rgb(2, 0, 36);
+	outline: 5px solid var(--bttncolor);
 }
 
 /* //////////////////////////// */
@@ -104,9 +104,20 @@ h1:hover::after {
 	font-size: 1.75rem;
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+
+.parkinsans-<uniquifier> {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 /* //////////////////////////// */
 
 a {
 	text-decoration:none !important;
 	
 }
+
+
