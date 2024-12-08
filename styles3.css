@@ -42,6 +42,7 @@ h1::before {
 	overflow: hidden;
 	transition: all 300ms ease;
 	padding-left: 20px;
+	color: var(--bttncolor);
 	
 }
 h1:hover::before {
