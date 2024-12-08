@@ -66,6 +66,7 @@ h1::after {
 h1:hover::after {
 	width: 120%;
 	outline: 5px solid var(--bttncolor);
+	color: var(--bttncolor);
 }
 
 /* //////////////////////////// */
