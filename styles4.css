@@ -1,11 +1,12 @@
 :root {
-	--bgcolor: rgb(2, 0, 36);
+	--bgcolor: rgb(114, 181, 121);
+	--bttncolor: rgb(181, 114, 174);
 }
 
 body {
 	background-color: var(--bgcolor);
-	color: white;
-	font-family: Courier;
+	color: balck;
+	font-family: Parkinsans;
 }
 
 button {
@@ -30,6 +31,13 @@ background-color: hotpink;
 	
 	.button1 {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.parkinsans-<uniquifier> {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 .button2:hover {
