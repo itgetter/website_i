@@ -37,7 +37,7 @@ h1::before {
 	position: absolute;
 	top: 0;
 	left: -20px;
-	background: var(--bttncolor);
+	background: var(--bgcolor);
 	height: 3rem;
 	overflow: hidden;
 	transition: all 300ms ease;
