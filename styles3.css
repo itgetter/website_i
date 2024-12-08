@@ -28,6 +28,7 @@ h1 {
 	transition: all 300ms ease;
 	width: fit-content;
 	cursor: pointer;
+	color: var(--bttncolor);
 }
 h1:hover {
 	transform: skew(10deg);
