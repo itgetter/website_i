@@ -14,7 +14,7 @@ body {
 	display: grid;
 	place-items: center;
 	background: var(--bgcolor);
-	color: black;
+	color: var(--bttncolor);
 	font-family: Parkinsans
 	
 }
