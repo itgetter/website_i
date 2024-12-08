@@ -75,7 +75,7 @@ h1:hover::after {
 	top: 50%;
 	transform: translatey(-50%);
 	padding: 1em 0.5em 1em 1em;
-	background: #fafafa;
+	background: var(--bgcolor);
 	border-radius: 0.5em 0 0 0.5em;
 	box-shadow: -4px 0px 0px var(--bttncolor);
 	transition: all 300ms ease;
@@ -93,7 +93,7 @@ h1:hover::after {
 	gap: 1em;
 }
 ._social-link a {
-	color: #111;
+	color: var(--bgcolor);
 	font-size: 1.5rem;
 	transition: all 200ms ease;
 }
