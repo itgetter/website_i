@@ -1,135 +1,128 @@
-:root { 
-  --bgcolor: rgb(114, 181, 121);
-  --bttncolor: rgb(181, 114, 174);
+:root {
+	--bgcolor: rgb(114, 181, 121);
+	--bttncolor: rgb(181, 114, 174);
 }
 
-h1 {
-  margin-left: 20px;
-	font-size: 50px;
-	color: var(--bgcolor);
-	
-}
-
-
-h2 {
-  margin-left: 35px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 35px; /* To maintain the left margin */
-}
-
-li {
-  display: block; /* Changed to block for proper styling */
-  color: black;
-  padding: 10px 20px; /* Adds space inside the li */
-  border-radius: 25px;
-  transition: background-color 0.3s, border-radius 0.3s; /* Smooth transition */
-}
-
-li::before {
-  content: "+";
-  font-size: 1em;
-  font-weight: bold;
-  color: var(--bttncolor);
-  padding-right: 12px;
-}
-
-/* Non-essential styles */
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Parkinsans;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  color: black;
-  background-color: var(--bgcolor);
-  font-family: Parkinsans;
-  font-weight: bold;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	background: var(--bgcolor);
+	color: var(--bttncolor);
+	font-family: Parkinsans
+	
+}
+ul {
+	list-style: none;
+}
+h1 {
+	font-size: 5rem;
+	position: relative;
+	text-transform: uppercase;
+	transition: all 300ms ease;
+	width: fit-content;
+	cursor: pointer;
+	color: var(--bttncolor);
+}
+h1:hover {
+	transform: skew(10deg);
+}
+h1::before {
+	content: attr(data-name);
+	position: absolute;
+	top: 0;
+	left: -20px;
+	background: var(--bgcolor);
+	height: 3rem;
+	overflow: hidden;
+	transition: all 300ms ease;
+	padding-left: 20px;
+	color: var(--bttncolor);
+	
+}
+h1:hover::before {
+	top: -3px;
+	left: 0px;
+	color: var(--bttncolor);
 }
 
-.content-container {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1::after {
+	content: "";
+	height: 4px;
+	width: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--bgcolor);
+	transition: all 300ms ease;
+	color: var(--bttncolor);
+}
+h1:hover::after {
+	width: 120%;
+	outline: 5px solid var(--bttncolor);
+	color: var(--bttncolor);
 }
 
-.list-container {
-  width: 80%;
+/* //////////////////////////// */
+
+/*  links sidebar CSS  */
+._social-links {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translatey(-50%);
+	padding: 1em 0.5em 1em 1em;
+	background: var(--bgcolor);
+	border-radius: 0.5em 0 0 0.5em;
+	box-shadow: -4px 0px 0px var(--bttncolor);
+	transition: all 300ms ease;
 }
 
-strong {
-  color: #fff;
+._social-links:hover {
+	box-shadow: -8px 0px 20px var(--bttncolor);
+	padding: 1em;
 }
 
-/* Hover effect */
-li:hover {
-  background-color: rgba(181, 114, 174, 1);
-  border-radius: 25px; /* Keep this to ensure the corners stay rounded on hover */
+._links-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+._social-link a {
+	color: var(--bgcolor);
+	font-size: 1.5rem;
+	transition: all 200ms ease;
+}
+._social-link a:visited {
+	color: var(--bttncolor);
+}
+._social-link a:hover {
+	color: var(--bttncolor);
+	font-size: 1.75rem;
 }
 
-li:before:hover {
-  background-color: rgba(181, 114, 174, 1);
-  border-radius: 25px;
-}
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
 
-li:not(:first-of-type)::before {
-  padding-top: 12px;
+.parkinsans-<uniquifier> {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
-
-button {
-  position: absolute;
-  left: 1535px;
-	top: 25px;
-  background-color: var(--bttncolor);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: Parkinsans;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-}
-
-.button1 {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
+/* //////////////////////////// */
 
 a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--bgcolor);
-}
-.heading {
-	background-color: var(--bttncolor);
-	border-radius: 25px;
-	width: 231px;
-	margin-left: 15px;
-	padding-top: ;
-	margin-top: 20px;
+	text-decoration:none !important;
 	
-
 }
+
+
