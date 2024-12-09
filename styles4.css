@@ -5,7 +5,7 @@
 
 body {
 	background-color: var(--bgcolor);
-	color: balck;
+	color: black;
 	font-family: Parkinsans;
 }
 
@@ -13,9 +13,9 @@ button {
 	position: absolute;
 	left: 90%;
 	top:5%;
-background-color: hotpink;
+background-color: var(--bttncolor);
   border: none;
-  color: white;
+  color: var(--bgcolor);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -42,5 +42,48 @@ background-color: hotpink;
 
 .button2:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	
 }
 	
+.banner1 {
+	padding: 0px;
+}
+h1 {
+	padding-left: 50px;
+	padding-bottom:25px;
+}
+h2 {
+	position: relative;
+	padding-left: 0px;
+	
+	
+}
+
+p {
+	padding-left: 50px;
+	font-weight: bold;
+	padding-right: 50px;
+}
+.videoTitle {
+	padding-left: 50px;
+	font-size: 50px;
+	color: var(--bgcolor);
+}
+.banner1 {
+	background-color: var(--bttncolor);
+	border-radius: 25px;
+	padding-top: 25px;
+}
+.banner2 {
+	border-radius: 25px;
+	padding-top: 25px;
+}
+a {
+	text-decoration: none;
+	color: var(--bgcolor);
+}
+.videoTitle2 {
+	padding-left: 50px;
+	font-size: 50px;
+	color:var(--bttncolor);
+}
