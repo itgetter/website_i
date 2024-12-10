@@ -1,15 +1,16 @@
 :root { 
   --bgcolor: rgb(114, 181, 121);
   --bttncolor: rgb(181, 114, 174);
-	--bgcolor2: rgb(65, 102, 69);
+	--bgcolor2: rgb(87, 138, 92);
 }
 
 h1 {
   margin-left: 0px;
 	font-size: 50px;
-	color: var(--bttncolor);
+	color: black;
 	text-align: center;
 	border-radius: 25px;
+	font-family: Parkinsans
 
 	
 }
@@ -70,6 +71,7 @@ body {
 p {
 	padding: 0px 280px;
 	font-size: 24px;
+	font-family: Parkinsans;
 }
 .bottom {
 	padding-bottom: 250px
@@ -77,9 +79,15 @@ p {
 .titlebg {
 background-color: var(--bgcolor2);
 border-radius: 25px;
-width: 900px;
+width: 1050px;
 position: relative;
-margin-left: 375px;
+margin-left: 300px;
 padding: 1px;
 
+}
+.firstpar {
+	padding-top: 50px;
+}
+.topcushion {
+	padding-bottom: 50px;
 }
