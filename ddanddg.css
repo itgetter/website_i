@@ -21,7 +21,7 @@ h2 {
 button {
   position: absolute;
   left: 90%;
-	top: 0%;
+	top: 2%;
   background-color: var(--bttncolor);
   border: none;
   color: white;
