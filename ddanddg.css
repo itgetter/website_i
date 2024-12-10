@@ -1,12 +1,14 @@
 :root { 
   --bgcolor: rgb(114, 181, 121);
   --bttncolor: rgb(181, 114, 174);
+	--bgcolor2: rgb(65, 102, 69);
 }
 
 h1 {
   margin-left: 0px;
 	font-size: 50px;
 	color: var(--bttncolor);
+	background-color: var(--bgcolor2);
 	text-align: center;
 	padding-top: 10px;
 	
