@@ -76,15 +76,7 @@ p {
 .bottom {
 	padding-bottom: 250px
 }
-.titlebg {
-background-color: var(--bgcolor2);
-border-radius: 25px;
-width: 1050px;
-position: relative;
-margin-left: 300px;
-padding: 1px;
 
-}
 .firstpar {
 	padding-top: 50px;
 }
