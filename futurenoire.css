@@ -1,0 +1,86 @@
+:root { 
+  --bgcolor: rgb(114, 181, 121);
+  --bttncolor: rgb(181, 114, 174);
+	--bgcolor2: rgb(87, 138, 92);
+}
+
+h1 {
+  margin-left: 0px;
+	font-size: 50px;
+	color: black;
+	text-align: center;
+	border-radius: 25px;
+	font-family: Parkinsans
+
+	
+}
+
+
+h2 {
+  margin-left: 35px;
+}
+
+
+button {
+  position: absolute;
+  left: 90%;
+	top: 3%;
+  background-color: var(--bttncolor);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Parkinsans;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--bgcolor);
+}
+.heading {
+	background-color: var(--bttncolor);
+	border-radius: 25px;
+	width: 231px;
+	margin-left: 15px;
+	padding-top: ;
+	margin-top: 20px;
+	
+
+}
+
+body {
+	background-color: var(--bgcolor);
+}
+p {
+	padding: 0px 280px;
+	font-size: 24px;
+	font-family: Parkinsans;
+}
+.bottom {
+	padding-bottom: 250px
+}
+
+}
+.firstpar {
+	padding-top: 50px;
+}
+.topcushion {
+	padding-bottom: 50px;
+}
