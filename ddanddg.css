@@ -8,6 +8,7 @@ h1 {
 	font-size: 50px;
 	color: var(--bttncolor);
 	text-align: center;
+	padding-top: 10px;
 	
 }
 
@@ -20,7 +21,7 @@ h2 {
 button {
   position: absolute;
   left: 90%;
-	top: 10%;
+	top: 5%;
   background-color: var(--bttncolor);
   border: none;
   color: white;
