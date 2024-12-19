@@ -1,5 +1,6 @@
 :root {
-	--bgcolor: rgb(2, 0, 36);
+	--bgcolor: rgb(114, 181, 121);
+	--bttncolor: rgb(181, 114, 174);
 }
 h1 {
 	margin-left: 35px;
@@ -54,7 +55,7 @@ body {
   color: #ddd;
 	background-color: var(--bgcolor);
 	color: white;
-	font-family: Courier;
+	font-family: Parkinsans;
 	font-weight: bold;
   
 }
@@ -94,4 +95,49 @@ li:before:hover {
 li:not(:first-of-type)::before {
   padding-top: 12px;
 }
+button {
+	position: absolute;
+	left: 90%;
+  top: 10%;
+background-color: var(--bttncolor);
+  border: none;
+  color: var(--bgcolor);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+	font-weight: bold;
+	font-family: Parkinsans;
+  margin: 4px 2px;
+  cursor: pointer;
+	border-radius: 12px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;}
+	
+	.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+a {
+	text-decoration: none;
+  color: var(--bttncolor);
+}
+.rectangle {
+	height: 40%;
+	width:100%;
+	background-color: var(--bttncolor);
+	z-index:-1;
+	position: absolute;
+	top: 31%;
+	right: 10%;
+	
+		
+}
+
+.bttnlink {
+  color: var(--bgcolor);
+}
