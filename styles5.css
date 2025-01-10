@@ -1,6 +1,6 @@
 :root { 
-  --bgcolor: rgb(114, 181, 121); /* Green */
-  --bttncolor: rgb(181, 114, 174); /* Pinkish */
+  --bgcolor: #EFC7C2;
+	--bttncolor: #694F5D;
 }
 
 h1 {
