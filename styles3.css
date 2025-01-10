@@ -6,7 +6,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Parkinsans;
+	font-family: Fascinate;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 	place-items: center;
 	background: var(--bgcolor);
 	color: var(--bttncolor);
-	font-family: Parkinsans
+	font-family: Fascinate;
 	
 }
 ul {
@@ -66,7 +66,7 @@ h1::after {
 }
 h1:hover::after {
 	width: 120%;
-	outline: 5px solid var(--bttncolor);
+	outline: 8px solid var(--bttncolor);
 	color: var(--bttncolor);
 }
 
@@ -109,13 +109,11 @@ h1:hover::after {
 	font-size: 1.75rem;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 800
 
-.parkinsans-<uniquifier> {
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800px;
+
+.fascinate-regular {
+  font-family: "Fascinate", serif;
+  font-weight: 400;
   font-style: normal;
 }
 /* //////////////////////////// */
@@ -124,5 +122,3 @@ a {
 	text-decoration:none !important;
 	
 }
-
-
