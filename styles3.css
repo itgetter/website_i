@@ -115,7 +115,7 @@ h1:hover::after {
 .parkinsans-<uniquifier> {
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 800;
   font-style: normal;
 }
 /* //////////////////////////// */
