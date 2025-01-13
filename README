@@ -5,3 +5,11 @@ Color Pallate
 #BFD3C1 - Ash Gray
 #68A691 - Cambridge Blue
 #694F5D - Eggplant
+
+MENU POSITION: 
+left: 90%;
+top: 5%;
+
+h1:
+font-size: 70px;
+
