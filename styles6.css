@@ -1,11 +1,12 @@
+/* Main styles */
 :root {
-	--bgcolor: #EFC7C2;
-	--bttncolor: #694F5D;
+    --bgcolor: #EFC7C2;
+    --bttncolor: #694F5D;
 }
 
 body {
 	background-color: var(--bgcolor);
-	color: white;
+	color: var(--bttncolor);
 	font-family: Parkinsans;
   margin-left: 20px;
 }
@@ -44,6 +45,19 @@ a {
 }
 h1
 {
-  font-size: 60px;
+  font-size: 70px;
   margin-left: ;
+  font-family: Fascinate; 
+  color: var(--bttncolor);
+  
+  
+
+}
+
+h2 {
+  font-family: Fascinate;
+  font-size: 38px;
+}
+p {
+  font-size: 20px;
 }
