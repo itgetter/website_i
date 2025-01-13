@@ -5,12 +5,15 @@
 
 h1 {
   margin-left: 20px;
-  font-size: 50px;
-  color: var(--bgcolor);
+  font-size: 70px;
+  color: var(--bttncolor);
+  font-family: Fascinate;
 }
 
 h2 {
   margin-left: 35px;
+  font-family: Fascinate;
+  font-size: 40px
 }
 
 ul {
@@ -21,7 +24,7 @@ ul {
 li {
   display: flex; /* Changed to flex to ensure elements align horizontally */
   align-items: center; /* Vertically align the content */
-  color: black;
+  color: var(--bttncolor);
   padding: 10px 20px; /* Adds space inside the li */
   border-radius: 25px;
   transition: background-color 0.3s, border-radius 0.3s; /* Smooth transition */
@@ -39,7 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  color: black;
+  color: var(--bttncolor);
   background-color: var(--bgcolor);
   font-family: Parkinsans;
   font-weight: bold;
@@ -68,8 +71,8 @@ strong {
 
 /* Hover effect for li items */
 li:hover {
-  background-color: rgba(181, 114, 174, 1); /* Change background on hover */
-  color: white; /* Text color stays white on hover */
+  background-color: var(--bttncolor); /* Change background on hover */
+  color: var(--bgcolor); /* Text color stays white on hover */
   border-radius: 25px; /* Keep this to ensure the corners stay rounded */
 }
 
@@ -77,12 +80,12 @@ li:hover {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: black; /* Default text color */
+  color: var(--bttncolor); /* Default text color */
 }
 
 /* Hover effect for the links */
 a:hover {
-  color: white; /* Change text color to white on hover */
+  color: var(--bgcolor); /* Change text color to white on hover */
 }
 
 /* Adjusting the anchor links inside list items */
@@ -94,13 +97,13 @@ ul li a {
 
 /* Hover effects specifically for the anchor link */
 li:hover a {
-  color: white; /* Change text color to white when hovering over the list item */
+  color: var(--bgcolor); /* Change text color to white when hovering over the list item */
 }
 
 button {
   position: absolute;
-  left: 1535px;
-  top: 25px;
+  left: 90%;
+  top: 5%;
   background-color: var(--bttncolor);
   border: none;
   color: white;
@@ -110,7 +113,7 @@ button {
   display: inline-block;
   font-size: 24px;
   font-weight: bold;
-  font-family: Parkinsans;
+  font-family: Fascinate;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
@@ -128,16 +131,14 @@ a {
 }
 
 .writlink {
-  color: black; /* Ensure links are black by default */
+  color: var(--bttncolor); /* Ensure links are black by default */
 }
 
 .writlink:hover {
-  color: white; /* Change color on hover */
+  color: var(--bgcolor); /* Change color on hover */
 }
 
 .heading {
-  background-color: var(--bttncolor);
-  border-radius: 25px;
   width: 231px;
   margin-left: 15px;
   padding-top: 0; /* Removed invalid padding */
@@ -151,7 +152,4 @@ ul li a {
   color: inherit; /* Ensure anchor inherits text color */
 }
 
-button {
-  position: absolute;
-  left: 90%;
-  background-col
+
