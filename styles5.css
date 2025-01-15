@@ -22,98 +22,52 @@ ul {
 }
 
 li {
-  display: flex; /* Changed to flex to ensure elements align horizontally */
-  align-items: center; /* Vertically align the content */
   color: var(--bttncolor);
-  padding: 10px 20px; /* Adds space inside the li */
+  padding: 10px 20px;
   border-radius: 25px;
-  transition: background-color 0.3s, border-radius 0.3s; /* Smooth transition */
-  position: relative; /* Ensures proper stacking context */
+  transition: background-color 0.3s, border-radius 0.3s;
 }
 
-/* Non-essential styles */
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  color: var(--bttncolor);
-  background-color: var(--bgcolor);
-  font-family: Parkinsans;
-  font-weight: bold;
-}
-
-.content-container {
+/* Ensure li elements have appropriate behavior */
+ul li {
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block; /* Make sure list items are block-level to prevent any odd behavior */
 }
 
-.list-container {
-  width: 80%;
+ul li:hover {
+  background-color: var(--bttncolor);
+  color: var(--bgcolor);
 }
 
-strong {
-  color: #fff;
-}
-
-/* Hover effect for li items */
-li:hover {
-  background-color: var(--bttncolor); /* Change background on hover */
-  color: var(--bgcolor); /* Text color stays white on hover */
-  border-radius: 25px; /* Keep this to ensure the corners stay rounded */
-}
-
-/* Anchor tag styling */
 a {
   text-decoration: none;
   font-weight: bold;
   color: var(--bttncolor); /* Default text color */
 }
 
-/* Hover effect for the links */
 a:hover {
   color: var(--bgcolor); /* Change text color to white on hover */
 }
 
-/* Adjusting the anchor links inside list items */
+/* Ensure that anchor tags are not overly stretched */
 ul li a {
-  display: inline-block; /* Ensures the link behaves as a block but with inline characteristics */
-  padding: 10px 20px; /* Adds padding to anchor for better spacing */
-  color: inherit; /* Ensure anchor inherits text color */
-  position: relative; /* Ensures the link is on top of the list item */
-  z-index: 1; /* Prevents overlap and ensures it's clickable */
+  display: inline-block;
+  padding: 10px 20px;
+  color: inherit;
+  position: relative;
+  z-index: 1; /* Make sure anchor is always clickable */
 }
 
-/* Hover effects specifically for the anchor link */
-li:hover a {
-  color: var(--bgcolor); /* Change text color to white when hovering over the list item */
-}
-
+/* Button styling */
 button {
-  position: absolute;
-  left: 90%;
-  top: 5%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   background-color: var(--bttncolor);
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 24px;
   font-weight: bold;
   font-family: Fascinate;
@@ -125,32 +79,4 @@ button {
 
 .button2:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--bgcolor); /* Green link color */
-}
-
-.writlink {
-  color: var(--bttncolor); /* Ensure links are black by default */
-}
-
-.writlink:hover {
-  color: var(--bgcolor); /* Change color on hover */
-}
-
-.heading {
-  width: 231px;
-  margin-left: 15px;
-  padding-top: 0; /* Removed invalid padding */
-  margin-top: 20px;
-}
-
-/* Adjust the list item anchors */
-ul li a {
-  display: inline-block; /* Ensures the anchor fills the list item inline */
-  padding: 10px 20px; /* Adds padding to anchor for better spacing */
-  color: inherit; /* Ensure anchor inherits text color */
 }
