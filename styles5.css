@@ -3,6 +3,9 @@
 	--bttncolor: #694F5D;
 }
 
+body {
+	background-color: var(--bgcolor);
+}
 h1 {
   margin-left: 20px;
   font-size: 70px;
