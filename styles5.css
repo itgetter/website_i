@@ -147,9 +147,8 @@ a {
 
 /* Adjust the list item anchors */
 ul li a {
-  display: block; /* Ensures the anchor fills the list item */
-  padding: 10px 20px; /* Adds padding to anchor for better spacing */
+  display: inline; /* Remove block display, make it inline */
+  padding: 10px 20px; /* Add padding to anchor for better spacing */
   color: inherit; /* Ensure anchor inherits text color */
 }
-
 
