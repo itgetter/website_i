@@ -11,9 +11,9 @@ h1 {
 }
 
 h2 {
-  margin-left: 35px;
+margin-left: 35px;
   font-family: Fascinate;
-  font-size: 40px;
+  font-size: 40px
 }
 
 button {
@@ -51,52 +51,45 @@ a {
 }
 
 .heading {
-  background-color: var(--bttncolor);
-  border-radius: 25px;
-  width: 231px;
-  margin-left: 15px;
-  margin-top: 20px;
+	background-color: var(--bttncolor);
+	border-radius: 25px;
+	width: 231px;
+	margin-left: 15px;
+	padding-top: ;
+	margin-top: 20px;
 }
 
 body {
-  background-color: var(--bgcolor);
+	background-color: var(--bgcolor);
 }
 
 p {
-  padding: 0px 280px;
-  font-size: 24px;
-  font-family: Parkinsans;
+	padding: 0px 280px;
+	font-size: 24px;
+	font-family: Parkinsans;
 }
 
 .bottom {
-  padding-bottom: 250px;
+	padding-bottom: 250px
 }
 
 .firstpar {
-  padding-top: 50px;
+	padding-top: 50px;
 }
 
 .topcushion {
-  padding-bottom: 50px;
+	padding-bottom: 50px;
 }
 
-/* Styling for the "Back" button in the top-right corner */
 .back-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: var(--bttncolor);
-  color: #fff;
-  font-family: 'Parkinsans', sans-serif;
+  position: absolute;
+  top: 10px;
+  left: 10px;
   font-size: 24px;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 12px;
   font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: rgba(105, 79, 93, 0.8); /* Darker shade of the button color */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: var(--bttncolor);
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
