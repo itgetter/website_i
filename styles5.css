@@ -11,10 +11,11 @@ h1 {
   font-size: 70px;
   color: var(--bttncolor);
   font-family: Fascinate;
+    margin-left: 25px;
 }
 
 h2 {
-  margin-left: 35px;
+  margin-left: 50px;
   font-family: Fascinate;
   font-size: 40px;
   color: var(--bttncolor); /* Ensures h2 text color is properly defined */
@@ -22,31 +23,56 @@ h2 {
 
 ul {
   list-style: none;
-  padding-left: 35px; /* To maintain the left margin */
+  padding-left: 35px;
 }
 
 li {
   color: var(--bttncolor);
+  position: relative;
+  display: inline-block;
   padding: 10px 20px;
   border-radius: 25px;
-  transition: background-color 0.3s, border-radius 0.3s;
-  position: relative; /* Ensures proper stacking context for the li */
+  transition: color 0.3s;
+  margin-right: 30px;
+  font-family: Parkinsans;
 }
 
-ul li:hover {
+li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: var(--bttncolor);
+  border-radius: 25px;
+  z-index: -1;
+  transition: all 0.3s ease;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: bottom right;
+}
+
+li:hover::before {
+  transform: scaleX(1); /* Scale it on hover to cover the text */
+  transform-origin: bottom left;
+}
+
+li:hover {
   color: var(--bgcolor); /* Correct hover text color */
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
-  color: inherit; /* Anchor inherits color from li */
+  color: inherit;
+  position: relative;
+  z-index: 1; /* Ensures anchor is above the pseudo-element */
 }
 
 a:hover {
-  color: var(--bgcolor); /* Changes to the hover color for anchor */
+  color: var(--bgcolor);
 }
+
 
 /* Make sure anchor tags only occupy the necessary space */
 ul li a {
@@ -74,6 +100,7 @@ button {
   cursor: pointer;
   border-radius: 12px;
   transition-duration: 0.4s;
+  color: var(--bgcolor)
 }
 
 .button2:hover {
