@@ -13,7 +13,7 @@ h1 {
 h2 {
   margin-left: 35px;
   font-family: Fascinate;
-  font-size: 40px
+  font-size: 40px;
 }
 
 ul {
@@ -28,6 +28,7 @@ li {
   padding: 10px 20px; /* Adds space inside the li */
   border-radius: 25px;
   transition: background-color 0.3s, border-radius 0.3s; /* Smooth transition */
+  position: relative; /* Ensures proper stacking context */
 }
 
 /* Non-essential styles */
@@ -90,9 +91,11 @@ a:hover {
 
 /* Adjusting the anchor links inside list items */
 ul li a {
-  display: block; /* Ensures the anchor fills the list item */
+  display: inline-block; /* Ensures the link behaves as a block but with inline characteristics */
   padding: 10px 20px; /* Adds padding to anchor for better spacing */
   color: inherit; /* Ensure anchor inherits text color */
+  position: relative; /* Ensures the link is on top of the list item */
+  z-index: 1; /* Prevents overlap and ensures it's clickable */
 }
 
 /* Hover effects specifically for the anchor link */
@@ -147,8 +150,7 @@ a {
 
 /* Adjust the list item anchors */
 ul li a {
-  display: inline; /* Remove block display, make it inline */
-  padding: 10px 20px; /* Add padding to anchor for better spacing */
+  display: inline-block; /* Ensures the anchor fills the list item inline */
+  padding: 10px 20px; /* Adds padding to anchor for better spacing */
   color: inherit; /* Ensure anchor inherits text color */
 }
-
