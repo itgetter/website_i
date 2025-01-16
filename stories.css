@@ -8,12 +8,13 @@ h1 {
   font-size: 70px;
   color: var(--bttncolor);
   font-family: Fascinate;
+  text-align: center;
 }
 
 h2 {
-margin-left: 35px;
+  margin-left: 35px;
   font-family: Fascinate;
-  font-size: 40px
+  font-size: 40px;
 }
 
 button {
@@ -64,13 +65,14 @@ body {
 }
 
 p {
-	padding: 0px 280px;
+	padding: 0px 300px;
 	font-size: 24px;
 	font-family: Parkinsans;
+  color: var(--bttncolor);
 }
 
 .bottom {
-	padding-bottom: 250px
+	padding-bottom: 250px;
 }
 
 .firstpar {
@@ -83,13 +85,29 @@ p {
 
 .back-button {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  left: 5%; /* Position it in the top left corner with 5% from the left */
+  top: 5%; /* Adjust the top to your preference */
+  background-color: var(--bttncolor);
+  border: none;
+  color: var(--bgcolor);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 24px;
   font-weight: bold;
-  color: var(--bttncolor);
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
+  font-family: Fascinate;
+  margin: 4px 2px;
   cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+.back-button1 {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Hover effect for .back-button and .back-button1 */
+.back-button:hover, .back-button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
