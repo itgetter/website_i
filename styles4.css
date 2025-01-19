@@ -22,7 +22,7 @@ background-color: var(--bttncolor);
   display: inline-block;
   font-size: 24px;
 	font-weight: bold;
-	font-family: Parkinsans;
+	font-family: Fascinate;
   margin: 4px 2px;
   cursor: pointer;
 	border-radius: 12px;
@@ -49,12 +49,18 @@ background-color: var(--bttncolor);
 	padding: 0px;
 }
 h1 {
-	padding-left: 50px;
-	padding-bottom:25px;
+margin-left: 20px;
+  font-size: 70px;
+  color: var(--bttncolor);
+  font-family: Fascinate;
+    margin-left: 25px;
 }
 h2 {
 	position: relative;
-	padding-left: 0px;
+	padding-left: 0px; 
+  font-family: Fascinate;
+  font-size: 40px;
+  color: var(--bttncolor); 
 	
 	
 }
@@ -63,6 +69,7 @@ p {
 	padding-left: 50px;
 	font-weight: bold;
 	padding-right: 50px;
+  font-size: 20px;
 }
 .videoTitle {
 	padding-left: 50px;
@@ -70,10 +77,15 @@ p {
 	color: var(--bgcolor);
 }
 .banner1 {
-	background-color: var(--bttncolor);
-	border-radius: 25px;
-	padding-top: 25px;
+    background-color: var(--bttncolor);
+    border-radius: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
+    margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
 }
+
+
+
 .banner2 {
 	border-radius: 25px;
 	padding-top: 25px;
@@ -86,4 +98,11 @@ a {
 	padding-left: 50px;
 	font-size: 50px;
 	color:var(--bttncolor);
+}
+.paran {
+  color: var(--bgcolor);
+}
+
+.parap {
+  color: var(--bttncolor);
 }
