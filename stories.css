@@ -85,7 +85,7 @@ p {
 
 .back-button {
   position: absolute;
-  left: 3%;
+  left: 1%;
   top: 5%; 
   background-color: var(--bttncolor);
   border: none;
