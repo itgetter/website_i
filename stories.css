@@ -85,8 +85,8 @@ p {
 
 .back-button {
   position: absolute;
-  left: 5%; /* Position it in the top left corner with 5% from the left */
-  top: 5%; /* Adjust the top to your preference */
+  right: 90%;
+  top: 5%; 
   background-color: var(--bttncolor);
   border: none;
   color: var(--bgcolor);
