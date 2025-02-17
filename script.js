@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Array of images and corresponding text
   const images = [
-    { src: 'https://i.ibb.co/PG20Tmg/IMG-5920.jpg', text: 'Hello! I’m Shay Inkpen, a Temple University graduate (2024) with a degree in Film and Media Arts, focusing on screenwriting.' },
+    { src: 'https://i.ibb.co/tT5074vw/IMG-5650.jpg', text: 'Hello! I’m Shay Inkpen, a Temple University graduate (2024) with a degree in Film and Media Arts, focusing on screenwriting.' },
     { src: 'https://i.ibb.co/2FhN5b8/new-image.jpg', text: 'Here’s a new image and a fresh new story to tell. Keep moving forward.' },
     { src: 'https://i.ibb.co/6BBRf5r/IMG-5950.jpg', text: 'Each picture tells a story. Each frame has its own truth to uncover.' }
   ];
