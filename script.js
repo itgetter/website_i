@@ -1,38 +1,60 @@
 document.addEventListener('DOMContentLoaded', function() {
   const image = document.getElementById('main-image');
-  const imageContainer = document.getElementById('image-container');
   const infoText = document.getElementById('info');
   const bottomText = document.getElementById('bottom-text');
 
   // Array of images and corresponding text
   const images = [
-    { src: 'https://i.ibb.co/7JWFyYry/IMG-5650.jpg' },
-    { src: 'https://i.ibb.co/2FhN5b8/new-image.jpg', text: 'Here’s a new image and a fresh new story to tell. Keep moving forward.' },
-    { src: 'https://i.ibb.co/6BBRf5r/IMG-5950.jpg', text: 'Each picture tells a story. Each frame has its own truth to uncover.' }
+    { 
+      src: 'https://i.ibb.co/Z1cMFSFy/portrait.png', 
+      infoText: 'Hello! I’m Shay Inkpen, a Temple University graduate (2024) with a degree in Film and Media Arts, focusing on screenwriting. Over the years, Ive gained hands-on experience in multiple areas of filmmaking, including producing, script supervising, gaffing, and acting. I also enjoy directing, lighting, and cinematography for my own projects, where I get to wear a few extra creative hats.', 
+      bottomText: 'You can find my scripts, short stories, and essays <a>here</a>, and my video projects <a>here</a>. If you’re interested in collaborating on an existing project or starting something new, feel free to <a>reach out!</a> I’d love to connect.' 
+    },
+    { 
+      src: 'https://i.ibb.co/8LTPtG9b/gaffportrait.png', 
+      infoText: 'I spent time gaffing for an independent film company in the Poconos, crafting light to hold the desolate and piercing beauty of <i>Genisis Valley</i>.',
+      bottomText: 'We worked day and night to properly illuminate the slow-burn, post-apocalyptic thriller.' 
+    },
+    { 
+      src: 'https://i.ibb.co/QvxLT9T6/Image-Editor.jpg', 
+      infoText: 'I provided script supervision for the film <em>Marina</em>, starring Peter Friedman <em>(Succession)</em> and Grace McLean. An incredible honor to work with such talented actors and crewmembers.',
+      bottomText: 'The film involved an incredible amount of tension, pain, and beauty - a haunted, strange beauty that shows up especially in the final moments, where the art direction was able to shine its brightest.' 
+    },
+    { 
+      src: 'https://i.ibb.co/Xx4JPHbd/Image-Editor-2.png" alt="Image-Editor-2', 
+      infoText: 'I had the rare privilege of having my script read at the Phoenixville Film Festival. It was a great experience to meet new people, hear new stories, and experience the storytelling techniques others use to navigate their worlds.',
+      bottomText: 'Looking forward to next year!' 
+    }
   ];
 
   let currentIndex = 0; // Keeps track of the current image and text index
 
+  // Trigger the rollIn animation initially and text zoom-in
+  image.classList.add('animate__animated', 'animate__rollIn');
+  infoText.classList.add('animate__animated', 'animate__zoomInDown');
+  bottomText.classList.add('animate__animated', 'animate__zoomInUp');
+
+  // Handle image click to change content
   image.addEventListener('click', function() {
-    // Animate the text out (zoom out)
+    // Animate text out (zoom out)
     infoText.classList.remove('animate__zoomInDown');
     infoText.classList.add('animate__zoomOutUp');
     bottomText.classList.remove('animate__zoomInUp');
     bottomText.classList.add('animate__zoomOutDown');
 
-    // Animate the image out (roll out)
+    // Animate the image out (rollOut)
     image.classList.remove('animate__rollIn');
     image.classList.add('animate__rollOut');
 
-    // Wait for the image to finish rolling out before switching to the next
+    // Wait for rollOut to finish and then update the image and text
     image.addEventListener('animationend', function() {
       // Update the image and text based on the current index
       currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image after the last one
       image.src = images[currentIndex].src;
-      infoText.textContent = images[currentIndex].text;
-      bottomText.textContent = images[currentIndex].text;
+      infoText.innerHTML = images[currentIndex].infoText;
+      bottomText.innerHTML = images[currentIndex].bottomText;
 
-      // Reset the animations for the new image and text
+      // Reset the rollIn animation after switching content
       image.classList.remove('animate__rollOut');
       image.classList.add('animate__rollIn');
 
@@ -44,9 +66,4 @@ document.addEventListener('DOMContentLoaded', function() {
       bottomText.classList.add('animate__zoomInUp');
     }, { once: true });
   });
-
-  // Initially trigger the roll-in animation
-  setTimeout(function() {
-    image.classList.add('animate__rollIn');
-  }, 100);
 });
