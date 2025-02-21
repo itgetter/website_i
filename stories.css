@@ -3,7 +3,7 @@
 	--bttncolor: #694F5D;
 }
 
-body {height: 100%; /* Ensure the body and html elements take up full height */
+.center {height: 100%; /* Ensure the body and html elements take up full height */
       margin: 0;
       display: flex;
       justify-content: center; /* Horizontally center */
