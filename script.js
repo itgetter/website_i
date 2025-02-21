@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { 
       src: 'https://i.ibb.co/Z1cMFSFy/portrait.png', 
       infoText: 'Hello! I’m Shay Inkpen, a Temple University graduate (2024) with a degree in Film and Media Arts, focusing on screenwriting. Over the years, Ive gained hands-on experience in multiple areas of filmmaking, including producing, script supervising, gaffing, and acting. I also enjoy directing, lighting, and cinematography for my own projects, where I get to wear a few extra creative hats.', 
-      bottomText: 'You can find my scripts, short stories, and essays <a>here</a>, and my video projects <a>here</a>. If you’re interested in collaborating on an existing project or starting something new, feel free to <a>reach out!</a> I’d love to connect.' 
+      bottomText: 'You can find my scripts, short stories, and essays <a class= intextlink href= index5.html>here</a>, and my video projects <a class= intextlink href= index4.html>here</a>. If you’re interested in collaborating on an existing project or starting something new, feel free to <a class= intextlink href= index7.html>reach out!</a> I’d love to connect.' 
     },
     { 
       src: 'https://i.ibb.co/8LTPtG9b/gaffportrait.png', 
