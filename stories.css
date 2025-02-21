@@ -3,6 +3,14 @@
 	--bttncolor: #694F5D;
 }
 
+body {height: 100%; /* Ensure the body and html elements take up full height */
+      margin: 0;
+      display: flex;
+      justify-content: center; /* Horizontally center */
+      align-items: center; /* Vertically center */
+    }
+
+
 h1 {
   margin-left: 20px;
   font-size: 70px;
