@@ -27,10 +27,11 @@ p {
   padding: 50px;
   color: var(--bgcolor);
   text-align: center;
+  line-height: 2;
 }
 
 h1 {
-  margin-left: 20px;
+  margin-left: 50px;
   font-size: 70px;
   color: var(--bttncolor);
   font-family: 'Fascinate', cursive;
@@ -54,9 +55,7 @@ img {
     font-size: 40px;
   }
 
-  p {
-    padding: 20px;
-  }
+
 
   img {
     width: 150px;
@@ -97,10 +96,25 @@ background-color: var(--bttncolor);
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	
 }
-a {
+.buttonlink {
 	text-decoration: none;
   color: var(--bgcolor);}
   
  .bigspace {
     padding: 100px;
   }
+.intextlink {
+  text-decoration: none;
+  color: var(--bttncolor);
+  font-weight: bold;
+  background-color: var(--bgcolor);
+  padding: 1px;
+  border-radius: 12px;
+  
+}
+.intextlink:hover {
+  color: var(--bgcolor);
+  background-color: var(--bttncolor);
+  padding: 1px;
+  border-radius: 12px;
+}
