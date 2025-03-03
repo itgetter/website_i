@@ -93,3 +93,5 @@ p {
     transform: scale(1.05); /* Slightly enlarges the banner */
     transition: transform 0.3s ease; /* Smooth transition for the scaling */
 }
+.a {text-decoration: none;
+    color: var(--bttncolor)
