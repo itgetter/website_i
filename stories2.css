@@ -1,0 +1,87 @@
+:root { 
+  --bgcolor: #EFC7C2;
+  --bttncolor: #694F5D;
+}
+
+html, body {
+  height: 100%; /* Ensures body takes up full height of the viewport */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Enables Flexbox on the body */
+  flex-direction: column; /* Ensures content is stacked vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  background-color: var(--bgcolor); /* Set background color */
+}
+
+.buttons {
+  position: absolute;
+  top: 5%;
+  display: flex;
+  justify-content: space-between; /* Ensures buttons are spaced apart */
+  width: 90%; /* Button container takes 90% of the page width */
+  padding: 0 5%; /* Ensures buttons are spaced from edges */
+  z-index: 10; /* Ensures buttons are on top of the iframe */
+}
+
+button {
+  background-color: var(--bttncolor);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Fascinate;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  font-size: 70px;
+  color: var(--bttncolor);
+  font-family: Fascinate;
+  text-align: center;
+  margin-top: 20px;
+  z-index: 5; /* Ensures it stays above iframe */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Allow height to auto-adjust */
+  width: 100%; /* Set a max-width for the iframe container */
+  
+ 
+}
+
+iframe {
+  width: 8in;
+  height: 11in;
+  border: none; /* Optional: remove iframe border */
+  
+  
+}
