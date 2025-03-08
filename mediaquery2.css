@@ -1,0 +1,110 @@
+/* mediaquery2.css */
+
+/* For Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    margin-left: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 20px;
+    margin: 0 20px;
+  }
+
+  img {
+    width: 150px;
+    margin-top: 20px;
+  }
+
+  .bigspace {
+    padding: 20px;
+  }
+
+  .space {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    top: 10%;
+    left: 80%;
+  }
+
+  .intextlink {
+    font-size: 14px;
+  }
+}
+
+/* For Tablet (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 30px;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 12px 25px;
+    top: 8%;
+    left: 85%;
+  }
+
+  .bigspace {
+    padding: 60px;
+  }
+
+  .space {
+    padding: 15px;
+  }
+
+  .intextlink {
+    font-size: 16px;
+  }
+}
+
+/* For Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 70px;
+    margin-left: 50px;
+  }
+
+  p {
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  img {
+    width: 500px;
+  }
+
+  button {
+    font-size: 24px;
+    padding: 15px 32px;
+    top: 5%;
+    left: 90%;
+  }
+
+  .bigspace {
+    padding: 100px;
+  }
+
+  .space {
+    padding: 20px;
+  }
+
+  .intextlink {
+    font-size: 18px;
+  }
+}
