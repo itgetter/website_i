@@ -8,21 +8,21 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
   overflow-x: hidden; /* Prevents horizontal overflow */
-  position: relative; /* Ensures that absolute elements are positioned relative to body */
   box-sizing: border-box; /* Ensures consistent box-sizing */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align content to top */
+  text-align: center; /* Center text inside elements */
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Ensures all elements use border-box model */
-}
-
-body {
-  background-color: var(--bgcolor);
-  margin: 0;
-  padding: 0;
+/* Main content wrapper to ensure centered layout */
+.main-container {
+  width: 100%;
+  max-width: 1200px; /* Keeps max width for large screens */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Paragraph Styles */
@@ -72,7 +72,7 @@ img {
 button {
   position: fixed;
   top: 5%;
-  right: 10%; /* Keeps button from clipping off screen */
+  right: 5%; /* Keeps button from clipping off screen */
   font-size: 24px;
   padding: 15px 32px;
   background-color: var(--bttncolor);
@@ -82,6 +82,7 @@ button {
   cursor: pointer;
   border-radius: 12px;
   transition-duration: 0.4s;
+  z-index: 1000; /* Ensures the button stays above other elements */
 }
 
 .button1 {
@@ -147,8 +148,7 @@ button {
     font-size: 18px;
     padding: 10px 20px;
     top: 5%;
-    right: 10%; /* Keeps button from clipping off screen */
-    margin: 0 20px; /* Adds spacing */
+    right: 5%; /* Keeps button from clipping off screen */
   }
 
   .intextlink {
@@ -177,8 +177,7 @@ button {
     font-size: 20px;
     padding: 12px 25px;
     top: 8%;
-    right: 10%;
-    margin: 0 30px; /* Adds spacing */
+    right: 5%; /* Keeps button from clipping off screen */
   }
 
   .bigspace {
@@ -215,8 +214,7 @@ button {
     font-size: 24px;
     padding: 15px 32px;
     top: 5%;
-    right: 10%; /* Keeps button from clipping off screen */
-    margin: 0 50px; /* Adds spacing */
+    right: 5%; /* Keeps button from clipping off screen */
   }
 
   .bigspace {
