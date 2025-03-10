@@ -3,7 +3,7 @@
   h1 {
     font-size: 40px;
     margin-left: 20px;
-    margin-right: 20px; /* Adds margin on both sides of the title */
+    margin-right: 20px;
   }
 
   p {
@@ -29,8 +29,9 @@
     font-size: 18px;
     padding: 10px 20px;
     top: 10%;
-    left: 80%;
-    margin: 0 20px; /* Adds margin to the left and right of the button */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust button to be centered */
+    margin: 0 20px;
   }
 
   .intextlink {
@@ -42,8 +43,8 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   h1 {
     font-size: 50px;
-    margin-left: 30px; /* Adds space to the left side */
-    margin-right: 30px; /* Adds space to the right side */
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   p {
@@ -59,8 +60,9 @@
     font-size: 20px;
     padding: 12px 25px;
     top: 8%;
-    left: 85%;
-    margin: 0 30px; /* Adds margin to the left and right of the button */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust button to be centered */
+    margin: 0 30px;
   }
 
   .bigspace {
@@ -80,8 +82,8 @@
 @media (min-width: 1025px) {
   h1 {
     font-size: 70px;
-    margin-left: 50px; /* Adds space to the left side */
-    margin-right: 50px; /* Adds space to the right side */
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   p {
@@ -97,8 +99,9 @@
     font-size: 24px;
     padding: 15px 32px;
     top: 5%;
-    left: 90%;
-    margin: 0 50px; /* Adds margin to the left and right of the button */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust button to be centered */
+    margin: 0 50px;
   }
 
   .bigspace {
