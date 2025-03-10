@@ -28,10 +28,10 @@
   button {
     font-size: 18px;
     padding: 10px 20px;
-    top: 10%;
-    left: 50%; /* Center the button horizontally */
-    transform: translateX(-50%); /* Adjust button to be centered */
-    margin: 0 20px;
+    top: 5%;
+    left: 90%;  /* Keeps the button positioned to the right */
+    transform: translateX(-50%);
+    margin: 0 20px; /* Adds some spacing */
   }
 
   .intextlink {
@@ -60,9 +60,9 @@
     font-size: 20px;
     padding: 12px 25px;
     top: 8%;
-    left: 50%; /* Center the button horizontally */
-    transform: translateX(-50%); /* Adjust button to be centered */
-    margin: 0 30px;
+    left: 90%;
+    transform: translateX(-50%);
+    margin: 0 30px; /* Adds spacing */
   }
 
   .bigspace {
@@ -99,9 +99,9 @@
     font-size: 24px;
     padding: 15px 32px;
     top: 5%;
-    left: 50%; /* Center the button horizontally */
-    transform: translateX(-50%); /* Adjust button to be centered */
-    margin: 0 50px;
+    left: 90%; /* Keeps button position to the right */
+    transform: translateX(-50%);
+    margin: 0 50px; /* Adds spacing */
   }
 
   .bigspace {
@@ -116,3 +116,11 @@
     font-size: 18px;
   }
 }
+
+/* Prevent any default margins or padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
