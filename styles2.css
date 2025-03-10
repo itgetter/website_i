@@ -1,12 +1,22 @@
+/* Global Styles */
 :root {
   --bgcolor: #EFC7C2;
   --bttncolor: #694F5D;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  position: relative; /* Ensures that absolute elements are positioned relative to body */
+  box-sizing: border-box; /* Ensures consistent box-sizing */
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensures all elements use border-box model */
 }
 
 body {
@@ -15,6 +25,7 @@ body {
   padding: 0;
 }
 
+/* Paragraph Styles */
 p {
   font-family: 'Parkinsans', sans-serif;
   display: block;
@@ -30,6 +41,7 @@ p {
   line-height: 2;
 }
 
+/* Heading Styles */
 h1 {
   margin-left: 50px;
   font-size: 70px;
@@ -37,6 +49,7 @@ h1 {
   font-family: 'Fascinate', cursive;
 }
 
+/* Image Styles */
 img {
   width: 500px;
   display: block;
@@ -46,63 +59,45 @@ img {
   border: 10px solid var(--bttncolor);
 }
 
+/* Spacing Classes */
 .space {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 40px;
-  }
-
-
-
-  img {
-    width: 150px;
-  }
+.bigspace {
+  padding: 100px;
 }
 
-.space {
-  padding: 20px;
-}
-
+/* Button Styles */
 button {
-	position: absolute;
-	left: 90%;
-	top:5%;
-background-color: var(--bttncolor);
+  position: fixed;
+  top: 5%;
+  right: 10%; /* Keeps button from clipping off screen */
+  font-size: 24px;
+  padding: 15px 32px;
+  background-color: var(--bttncolor);
   border: none;
   color: var(--bgcolor);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-	font-weight: bold;
-	font-family: Fascinate;
-  margin: 4px 2px;
+  font-family: 'Fascinate', cursive;
   cursor: pointer;
-	border-radius: 12px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;}
-	
-	.button1 {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+  transition-duration: 0.4s;
 }
 
-
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow for .button1 */
+}
 
 .button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Hover effect for .button2 */
 }
+
 .buttonlink {
-	text-decoration: none;
-  color: var(--bgcolor);}
-  
- .bigspace {
-    padding: 100px;
-  }
+  text-decoration: none;
+  color: var(--bgcolor);
+}
+
+/* Intext Link Styles */
 .intextlink {
   text-decoration: none;
   color: var(--bttncolor);
@@ -110,11 +105,129 @@ background-color: var(--bttncolor);
   background-color: var(--bgcolor);
   padding: 1px;
   border-radius: 12px;
-  
 }
+
 .intextlink:hover {
   color: var(--bgcolor);
   background-color: var(--bttncolor);
   padding: 1px;
   border-radius: 12px;
+}
+
+/* Media Queries */
+
+/* For Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 20px;
+    margin: 0 20px;
+  }
+
+  img {
+    width: 150px;
+    margin-top: 20px;
+  }
+
+  .bigspace {
+    padding: 20px;
+  }
+
+  .space {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    top: 5%;
+    right: 10%; /* Keeps button from clipping off screen */
+    margin: 0 20px; /* Adds spacing */
+  }
+
+  .intextlink {
+    font-size: 14px;
+  }
+}
+
+/* For Tablet (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 30px;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 12px 25px;
+    top: 8%;
+    right: 10%;
+    margin: 0 30px; /* Adds spacing */
+  }
+
+  .bigspace {
+    padding: 60px;
+  }
+
+  .space {
+    padding: 15px;
+  }
+
+  .intextlink {
+    font-size: 16px;
+  }
+}
+
+/* For Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  p {
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  img {
+    width: 500px;
+  }
+
+  button {
+    font-size: 24px;
+    padding: 15px 32px;
+    top: 5%;
+    right: 10%; /* Keeps button from clipping off screen */
+    margin: 0 50px; /* Adds spacing */
+  }
+
+  .bigspace {
+    padding: 100px;
+  }
+
+  .space {
+    padding: 20px;
+  }
+
+  .intextlink {
+    font-size: 18px;
+  }
 }
