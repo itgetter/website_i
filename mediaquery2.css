@@ -37,6 +37,12 @@
   .intextlink {
     font-size: 14px;
   }
+/* Prevent any default margins or padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 }
 
 /* For Tablet (min-width: 769px and max-width: 1024px) */
@@ -117,10 +123,5 @@
   }
 }
 
-/* Prevent any default margins or padding */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
+
 
