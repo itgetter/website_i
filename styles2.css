@@ -25,6 +25,13 @@ body {
   padding: 0;
 }
 
+.main-wrapper {
+  padding: 0 50px;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
 /* Paragraph Styles */
 p {
   font-family: 'Parkinsans', sans-serif;
@@ -119,7 +126,7 @@ button {
 /* For Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   h1 {
-    font-size: 40px;
+    font-size: 35px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -153,7 +160,14 @@ button {
 
   .intextlink {
     font-size: 14px;
+   
   }
+  .main-container {
+  width: 100%;
+    max-width: 1200px;
+    position: relative;
+  
+}
 }
 
 /* For Tablet (min-width: 769px and max-width: 1024px) */
@@ -205,6 +219,7 @@ button {
   p {
     font-size: 18px;
     padding: 50px;
+  
   }
 
   img {
@@ -232,3 +247,5 @@ button {
     font-size: 18px;
   }
 }
+
+
