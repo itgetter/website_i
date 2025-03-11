@@ -1,124 +1,239 @@
 :root {
-	--bgcolor: #EFC7C2;
-	--bttncolor: #694F5D;
+    --bgcolor: #EFC7C2;
+    --bttncolor: #694F5D;
 }
 
 body {
-	background-color: var(--bgcolor);
-	color: black;
-	font-family: Parkinsans;
+    background-color: var(--bgcolor);
+    color: black;
+    font-family: Parkinsans;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-size: 70px;
+    color: var(--bttncolor);
+    font-family: Fascinate;
+    text-align: left;
+    margin-top: 20px;
+  padding-left: 20px;
 }
 
 button {
-	position: absolute;
-	left: 90%;
-	top:5%;
-background-color: var(--bttncolor);
-  border: none;
-  color: var(--bgcolor);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-	font-weight: bold;
-	font-family: Fascinate;
-  margin: 4px 2px;
-  cursor: pointer;
-	border-radius: 12px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;}
-	
-	.button1 {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: sticky;
+    left: 90%;
+    top: 5%;
+    background-color: var(--bttncolor);
+    border: none;
+    color: var(--bgcolor);
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Fascinate;
+    margin: 4px 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
 }
 
-.parkinsans-<uniquifier> {
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	
+.video-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
 }
-	
-.banner1 {
-	padding: 0px;
+
+.video-item {
+    background-color: var(--bttncolor);
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Ensuring the title and description are separate from the thumbnail */
+.video-item .video-content {
+    background-color: var(--bttncolor);
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 25px 25px;
+    z-index: 2; /* Makes sure content stays above the image */
+    color: var(--bgcolor);
+}
+
+.videoThumb {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Video title */
+.videoTitle {
+    font-size: 1.75rem; /* Uniform size */
+    color: var(--bgcolor);
+    margin: 10px 0; /* Set consistent margin */
+}
+
+/* Video description */
+.videoDescription {
+    font-size: 1rem;
+    color: var(--bgcolor);
+    margin-top: 10px;
+    margin-bottom: 0; /* Remove bottom margin */
+    padding: 0; /* Avoid excessive padding */
+}
+
+/* Hover Effects for Desktop */
+@media (min-width: 769px) {
+    .video-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-item:hover .videoThumb {
+        transform: scale(1.05);
+    }
+
+    .video-item:hover .videoTitle,
+    .video-item:hover .videoDescription {
+        opacity: 1;
+    }
+}
+
+/* Mobile Layout (Responsive) */
+@media (max-width: 768px) {
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .video-item {
+        padding: 15px;
+        position: relative; /* Allow text to appear on top */
+        overflow: visible;
+    }
+
+    .videoThumb {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Remove hover effects on mobile */
+    .videoTitle, .videoDescription {
+        opacity: 1;
+        position: relative;
+    }
+}
+
+/* Existing Styles for General Layout */
+.banner1, .banner2 {
+    width: 90%;
+    max-width: 1280px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+  button2 {
+    font-size: 24px;
+    padding: 15px 32px;
+    top: 5%;
+    right: 0%; /* Keeps button from clipping off screen */
+    margin: 0 50px; /* Adds spacing */
+    position: sticky;
+    
+     ;
+  }
+
 h1 {
-margin-left: 20px;
-  font-size: 70px;
-  color: var(--bttncolor);
-  font-family: Fascinate;
+    margin-left: 20px;
+    font-size: 70px;
+    color: var(--bttncolor);
+    font-family: Fascinate;
     margin-left: 25px;
 }
+
 h2 {
-	position: relative;
-	padding-left: 0px; 
-  font-family: Fascinate;
-  font-size: 40px;
-  color: var(--bttncolor); 
-	
-	
+    position: relative;
+    padding-left: 0px;
+    font-family: Fascinate;
+    font-size: 40px;
+    color: var(--bttncolor);
 }
 
 p {
-	padding-left: 50px;
-	font-weight: bold;
-	padding-right: 50px;
-  font-size: 20px;
+    padding-left: 50px;
+    font-weight: bold;
+    padding-right: 50px;
+    font-size: 20px;
 }
+
 .videoTitle {
-	padding-left: 50px;
-	font-size: 50px;
-	color: var(--bgcolor);
+    padding-left: 50px;
+    font-size: 50px;
+    color: var(--bgcolor);
 }
+
 .banner1 {
     background-color: var(--bttncolor);
     border-radius: 25px;
     padding-top: 25px;
-    padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
-    margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
+    padding-bottom: 25px;
+    margin-top: 40px;
 }
-
-
 
 .banner2 {
-	border-radius: 25px;
-	padding-top: 25px;
+    border-radius: 25px;
+    padding-top: 25px;
 }
+
 a {
-	text-decoration: none;
-	color: var(--bgcolor);
+    text-decoration: none;
+    color: var(--bgcolor);
 }
+
 .videoTitle2 {
-	padding-left: 50px;
-	font-size: 50px;
-	color:var(--bttncolor);
+    padding-left: 50px;
+    font-size: 50px;
+    color: var(--bttncolor);
 }
+
 .paran {
-  color: var(--bgcolor);
+    color: var(--bgcolor);
 }
 
 .parap {
-  color: var(--bttncolor);
+    color: var(--bttncolor);
 }
 
 .banner1, .banner2 {
-  width: 90%;  /* Reduces the width to 90% of its container */
-  max-width: 1280px; /* Maximum width to maintain the 16:9 aspect ratio */
-  height: auto;  /* Let the height adjust based on the width */
-  aspect-ratio: 16 / 9; /* Ensure the 16:9 aspect ratio */
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 25px;
-  margin-top: 40px;
+    width: 90%;
+    max-width: 1280px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin-top: 40px;
 }
 
 .banner1:hover, .banner2:hover {
-  transform: scale(1.05); /* Slightly enlarges the banner */
-  transition: transform 0.3s ease; /* Smooth transition for the scaling */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
