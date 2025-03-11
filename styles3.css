@@ -122,3 +122,8 @@ a {
 	text-decoration:none !important;
 	
 }
+
+@media (max-width: 768px) {
+   font-size: 10rem;
+}
+}
