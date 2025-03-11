@@ -215,8 +215,9 @@ button {
     font-size: 24px;
     padding: 15px 32px;
     top: 5%;
-    right: 10%; /* Keeps button from clipping off screen */
+    right: 0%; /* Keeps button from clipping off screen */
     margin: 0 50px; /* Adds spacing */
+    position: absolute;
   }
 
   .bigspace {
