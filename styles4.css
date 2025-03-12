@@ -9,6 +9,7 @@ body {
     font-family: Parkinsans;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
 }
 
 header h1 {
@@ -17,7 +18,7 @@ header h1 {
     font-family: Fascinate;
     text-align: left;
     margin-top: 20px;
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 button {
@@ -59,9 +60,10 @@ button:hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;  /* Ensures video-item takes full width */
+    box-sizing: border-box;  /* Prevents overflow */
 }
 
-/* Ensuring the title and description are separate from the thumbnail */
 .video-item .video-content {
     background-color: var(--bttncolor);
     padding: 15px;
@@ -70,7 +72,7 @@ button:hover {
     left: 0;
     right: 0;
     border-radius: 0 0 25px 25px;
-    z-index: 2; /* Makes sure content stays above the image */
+    z-index: 2;
     color: var(--bgcolor);
 }
 
@@ -79,22 +81,21 @@ button:hover {
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    max-width: 100%;  /* Prevents image from overflowing */
 }
 
-/* Video title */
 .videoTitle {
-    font-size: 1.75rem; /* Uniform size */
+    font-size: 1.75rem;
     color: var(--bgcolor);
-    margin: 10px 0; /* Set consistent margin */
+    margin: 10px 0;
 }
 
-/* Video description */
 .videoDescription {
     font-size: 1rem;
     color: var(--bgcolor);
     margin-top: 10px;
-    margin-bottom: 0; /* Remove bottom margin */
-    padding: 0; /* Avoid excessive padding */
+    margin-bottom: 0;
+    padding: 0;
 }
 
 /* Hover Effects for Desktop */
@@ -118,12 +119,11 @@ button:hover {
 @media (max-width: 768px) {
     .video-gallery {
         grid-template-columns: 1fr;
+        padding: 15px;  /* Add padding around the gallery */
     }
 
     .video-item {
-        padding: 15px;
-        position: relative; /* Allow text to appear on top */
-        overflow: visible;
+        padding: 15px;  /* Adjusted padding for smaller screens */
     }
 
     .videoThumb {
@@ -131,10 +131,15 @@ button:hover {
         height: auto;
     }
 
-    /* Remove hover effects on mobile */
     .videoTitle, .videoDescription {
         opacity: 1;
         position: relative;
+    }
+
+    button {
+        left: auto;  /* Reset left positioning */
+        right: 10%;  /* Adjust right positioning */
+        top: 10%;  /* Adjust top positioning */
     }
 }
 
@@ -150,16 +155,14 @@ button:hover {
     margin-top: 40px;
 }
 
-  button2 {
+button2 {
     font-size: 24px;
     padding: 15px 32px;
     top: 5%;
-    right: 0%; /* Keeps button from clipping off screen */
-    margin: 0 50px; /* Adds spacing */
+    right: 0%;
+    margin: 0 50px;
     position: sticky;
-    
-     ;
-  }
+}
 
 h1 {
     margin-left: 20px;
@@ -237,3 +240,4 @@ a {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
