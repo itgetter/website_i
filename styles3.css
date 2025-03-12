@@ -124,16 +124,9 @@ a {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: 6rem;  /* Adjust the size as needed */
+        font-size: 10rem !important;  /* Adjust the size as needed */
     }
 
-    /* If you have other text elements you want to scale, you can target them here */
-    body {
-        font-size: 1.5rem;  /* You can adjust the body font size if needed */
-    }
-
-    ._social-link a {
-        font-size: 2rem;  /* Increase font size for mobile links */
-    }
+ 
 }
-
+  
