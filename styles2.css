@@ -232,7 +232,7 @@ button {
     top: 5%;
     right: 0%; /* Keeps button from clipping off screen */
     margin: 0 50px; /* Adds spacing */
-    position: absolute;
+    position: sticky;
   }
 
   .bigspace {
