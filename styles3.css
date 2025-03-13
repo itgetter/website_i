@@ -16,7 +16,7 @@ body {
     background: var(--bgcolor);
     color: var(--bttncolor);
     font-family: Fascinate;
-    font-size: 16px; /* Base font size in px for better scaling */
+    font-size: 16px; /* Base font size in px */
     line-height: 1.5;
 }
 
@@ -25,7 +25,7 @@ ul {
 }
 
 h1 {
-    font-size: 5rem; /* Default font-size */
+    font-size: 80px; /* Default font size (in px) */
     position: relative;
     text-transform: uppercase;
     transition: all 300ms ease;
@@ -133,36 +133,36 @@ a {
 
 @media (max-width: 1024px) {
     h1 {
-        font-size: 5rem; /* Keep h1 size the same for medium screens (tablets, etc.) */
+        font-size: 80px !important; /* Keep h1 size the same for medium screens (tablets, etc.) */
     }
 }
 
 @media (max-width: 768px) {
     body {
-        font-size: 1rem; /* Maintain base font size */
+        font-size: 16px !important; /* Keep base font size consistent */
     }
     h1 {
-        font-size: 6rem; /* Adjust the font size for tablets and smaller screens */
+        font-size: 100px !important; /* Larger font size for tablets */
     }
     ._social-links {
-        padding: 0.8em 0.5em; /* Slight padding adjustment */
+        padding: 0.8em 0.5em;
     }
     ._social-link a {
-        font-size: 1.4rem; /* Slightly smaller font for links */
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        font-size: 1rem; /* Ensure body font-size remains responsive */
+        font-size: 16px !important; /* Ensure font size remains correct for small screens */
     }
     h1 {
-        font-size: 7rem; /* Keep a larger font size on mobile */
+        font-size: 120px !important; /* Large font size for mobile */
     }
     ._social-links {
-        padding: 0.6em 0.5em; /* Further reduce padding */
+        padding: 0.6em 0.5em;
     }
     ._social-link a {
-        font-size: 1.2rem; /* Adjust link size for mobile */
+        font-size: 1.2rem;
     }
 }
