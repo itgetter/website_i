@@ -1,132 +1,167 @@
 :root {
-	--bgcolor: #EFC7C2;
-	--bttncolor: #694F5D;
+    --bgcolor: #EFC7C2;
+    --bttncolor: #694F5D;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	font-family: Fascinate;
+    margin: 0;
+    padding: 0;
+    font-family: Fascinate;
 }
 
 body {
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
-	background: var(--bgcolor);
-	color: var(--bttncolor);
-	font-family: Fascinate;
-	
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bgcolor);
+    color: var(--bttncolor);
+    font-family: Fascinate;
+    font-size: 1rem; /* Use rem for base font-size */
 }
+
 ul {
-	list-style: none;
+    list-style: none;
 }
+
 h1 {
-	font-size: 5rem;
-	position: relative;
-	text-transform: uppercase;
-	transition: all 300ms ease;
-	width: fit-content;
-	cursor: pointer;
-	color: var(--bttncolor);
+    font-size: 5rem; /* Default font-size, will increase for larger screens */
+    position: relative;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    width: fit-content;
+    cursor: pointer;
+    color: var(--bttncolor);
 }
+
 h1:hover {
-	transform: skew(10deg);
+    transform: skew(10deg);
 }
+
 h1::before {
-	content: attr(data-name);
-	position: absolute;
-	top: 0;
-	left: -20px;
-	background: var(--bgcolor);
-	height: 3rem;
-	overflow: hidden;
-	transition: all 300ms ease;
-	padding-left: 20px;
-	color: var(--bttncolor);
-	
+    content: attr(data-name);
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background: var(--bgcolor);
+    height: 3rem;
+    overflow: hidden;
+    transition: all 300ms ease;
+    padding-left: 20px;
+    color: var(--bttncolor);
 }
+
 h1:hover::before {
-	top: -3px;
-	left: 0px;
-	color: var(--bttncolor);
+    top: -3px;
+    left: 0px;
+    color: var(--bttncolor);
 }
 
 h1::after {
-	content: "";
-	height: 4px;
-	width: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: var(--bgcolor);
-	transition: all 300ms ease;
-	color: var(--bttncolor);
+    content: "";
+    height: 4px;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bgcolor);
+    transition: all 300ms ease;
+    color: var(--bttncolor);
 }
+
 h1:hover::after {
-	width: 120%;
-	outline: 8px solid var(--bttncolor);
-	color: var(--bttncolor);
+    width: 120%;
+    outline: 8px solid var(--bttncolor);
+    color: var(--bttncolor);
 }
 
 /* //////////////////////////// */
 
-/*  links sidebar CSS  */
+/* Links sidebar CSS */
 ._social-links {
-	position: fixed;
-	right: 0;
-	top: 50%;
-	transform: translatey(-50%);
-	padding: 1em 0.5em 1em 1em;
-	background: var(--bgcolor);
-	border-radius: 0.5em 0 0 0.5em;
-	box-shadow: -4px 0px 0px var(--bttncolor);
-	transition: all 300ms ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
+    padding: 1em 0.5em 1em 1em;
+    background: var(--bgcolor);
+    border-radius: 0.5em 0 0 0.5em;
+    box-shadow: -4px 0px 0px var(--bttncolor);
+    transition: all 300ms ease;
 }
 
 ._social-links:hover {
-	box-shadow: -8px 0px 20px var(--bttncolor);
-	padding: 1em;
+    box-shadow: -8px 0px 20px var(--bttncolor);
+    padding: 1em;
 }
 
 ._links-list {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
+
 ._social-link a {
-	color: var(--bgcolor);
-	font-size: 1.5rem;
-	transition: all 200ms ease;
+    color: var(--bgcolor);
+    font-size: 1.5rem;
+    transition: all 200ms ease;
 }
+
 ._social-link a:visited {
-	color: var(--bttncolor);
+    color: var(--bttncolor);
 }
+
 ._social-link a:hover {
-	color: var(--bttncolor);
-	font-size: 1.75rem;
+    color: var(--bttncolor);
+    font-size: 1.75rem;
 }
-
-
 
 .fascinate-regular {
-  font-family: "Fascinate", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Fascinate", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
 /* //////////////////////////// */
 
+/* Media queries */
 a {
-	text-decoration:none !important;
-	
+    text-decoration: none !important;
 }
-@media (max-width: 768px) {
-    h1 {
-        font-size: 6rem !important;  /* Adjust the size as needed */
-    }
 
- 
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 5rem; /* Adjusted font-size for medium screens */
+    }
 }
-  
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* Maintain base font size for smaller screens */
+    }
+    h1 {
+        font-size: 6rem; /* Adjust the font size for tablets */
+    }
+    ._social-links {
+        padding: 0.8em 0.5em; /* Slight padding adjustment */
+    }
+    ._social-link a {
+        font-size: 1.4rem; /* Slightly smaller font for links */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* Smaller base font-size for smaller screens */
+    }
+    h1 {
+        font-size: 7rem; /* Adjust the font-size for mobile screens */
+    }
+    ._social-links {
+        padding: 0.6em 0.5em; /* Further reduce padding */
+    }
+    ._social-link a {
+        font-size: 1.2rem; /* Smaller link size */
+    }
+}
