@@ -52,14 +52,14 @@ h1::before {
 }
 
 h1:hover::before {
-    top: -3px;
+    top: 3px;
     left: 0px;
     color: var(--bttncolor);
 }
 
 h1::after {
     content: "";
-    height: 4px;
+    height: 5px;
     width: 0;
     position: absolute;
     top: 50%;
