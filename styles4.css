@@ -49,6 +49,10 @@ button:hover {
     padding: 15px;  /* Adjust padding for smaller screens */
 }
 
+.space {
+    padding: 20px;
+}
+
 .video-item {
     background-color: var(--bttncolor);
     border-radius: 25px;
