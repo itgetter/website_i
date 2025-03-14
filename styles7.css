@@ -85,7 +85,7 @@ p {
     padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
     margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
     color: var(--bgcolor);
-    padding-left: 2%; /* Shift the banner content to the right */
+    padding-left: 5%; /* Shift the banner content to the right */
 }
 
 .banner2 {
@@ -94,7 +94,7 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
     color: var(--bttncolor); /* Text color */
-    padding-left: 2%; /* Shift the banner content to the right */
+    padding-left: 5%; /* Shift the banner content to the right */
 }
 
 .banner1, .banner2 {
@@ -111,7 +111,7 @@ p {
 }
 
 .pad {
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 /* Media Queries for Mobile Devices */
@@ -147,7 +147,7 @@ p {
         padding-top: 20px; /* Reduced padding for better fit */
         padding-bottom: 20px;
         margin-top: 20px;
-        padding-left: 5%;  /* Shift the banner content further to the right */
+        padding-left: 4%;  /* Shift the banner content further to the right */
     }
 
     .pad {
@@ -179,7 +179,7 @@ p {
     .banner1, .banner2 {
         width: 90%;
         margin-top: 30px;
-        padding-left: 5%; /* Shift content a bit more to the right for medium screens */
+        padding-left: 3%; /* Shift content a bit more to the right for medium screens */
     }
 }
 
@@ -199,4 +199,15 @@ p {
 
     .banner1, .banner2 {
         width: 90%; /* Keep banners at 90% width on desktop */
-        display: block; /* Ensure banners ar
+        display: block; /* Ensure banners are stacked vertically on large screens */
+        margin-top: 40px;
+        padding-left: 2%; /* Ensure proper alignment with some space on the left */
+    }
+
+    button {
+        font-size: 24px;
+        padding: 15px 32px;
+        top: 3%;
+        left: 90%;
+    }
+}
