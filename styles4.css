@@ -152,7 +152,7 @@ button:hover {
 
     .videoTitle, .videoDescription {
         opacity: 1;
-        position: relative;
+        
     }
 
     button {
@@ -192,13 +192,14 @@ h1 {
 }
 
 h2 {
-    position: relative;
+    
     padding-left: 0px;
     font-family: Fascinate;
     font-size: 40px;
     color: var(--bttncolor);
-    padding-right: 50px;
-    padding-left: 50px;
+  word-wrap: break-word; /* Prevents long words from overflowing */
+  overflow-wrap: break-word;
+   
 }
 
 p {
