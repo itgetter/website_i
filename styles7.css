@@ -76,6 +76,8 @@ h2 {
 p {
     font-size: 20px;
     padding-left: 35px;
+  word-wrap: break-word; /* Prevents long words from overflowing */
+  overflow-wrap: break-word;
 }
 
 .banner1 {
@@ -121,17 +123,17 @@ p {
     }
 
     h1 {
-        font-size: 40px; /* Smaller heading for mobile */
+        font-size: 60px; /* Smaller heading for mobile */
         padding-left: 15px;
     }
 
     h2 {
-        font-size: 28px; /* Smaller subheading */
+        font-size: 35px; /* Smaller subheading */
         padding-left: 15px;
     }
 
     p {
-        font-size: 16px; /* Adjusting paragraph text size */
+        font-size: 35px; /* Adjusting paragraph text size */
         padding-left: 15px;
     }
 
