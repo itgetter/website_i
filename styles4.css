@@ -13,7 +13,7 @@ body {
 }
 
 header h1 {
-    font-size: 70px;
+    font-size: 40px;  /* Smaller font size for mobile */
     color: var(--bttncolor);
     font-family: Fascinate;
     text-align: left;
@@ -22,20 +22,20 @@ header h1 {
 }
 
 button {
-    position: sticky;
-    left: 90%;
-    top: 5%;
     background-color: var(--bttncolor);
     border: none;
     color: var(--bgcolor);
-    padding: 15px 30px;
-    font-size: 24px;
+  top: 10%;
+    right: calc(20px + 2vw);
+    padding: 12px 24px;
+    font-size: 20px;
     font-weight: bold;
     font-family: Fascinate;
     margin: 4px 20px;
     cursor: pointer;
     border-radius: 12px;
     transition-duration: 0.4s;
+  position: absolute;
 }
 
 button:hover {
@@ -44,15 +44,15 @@ button:hover {
 
 .video-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;  /* Default to 1 column on small screens */
     gap: 20px;
-    padding: 20px;
+    padding: 15px;  /* Adjust padding for smaller screens */
 }
 
 .video-item {
     background-color: var(--bttncolor);
     border-radius: 25px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -60,20 +60,6 @@ button:hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;  /* Ensures video-item takes full width */
-    box-sizing: border-box;  /* Prevents overflow */
-}
-
-.video-item .video-content {
-    background-color: var(--bttncolor);
-    padding: 15px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0 0 25px 25px;
-    z-index: 2;
-    color: var(--bgcolor);
 }
 
 .videoThumb {
@@ -100,7 +86,39 @@ button:hover {
 }
 
 /* Hover Effects for Desktop */
-@media (min-width: 769px) {
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 50px;  /* Adjust font size for medium screens */
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr 1fr;  /* 2 columns for medium screens */
+    }
+
+    button {
+        font-size: 22px;  /* Adjust button size */
+    }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 70px;  /* Larger font size for desktop */
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr 1fr 1fr;  /* 3 columns for large screens */
+    }
+
+    button {
+        font-size: 24px;  /* Adjust button size for large screens */
+    }
+
+    .video-item {
+        padding: 20px;  /* Increase padding for larger screens */
+    }
+
+    /* Hover effects for larger screens */
     .video-item:hover {
         transform: scale(1.05);
         box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
@@ -162,7 +180,7 @@ button2 {
     top: 5%;
     right: 0%;
     margin: 0 50px;
-    position: sticky;
+    position: absolute;
 }
 
 h1 {
@@ -245,4 +263,3 @@ a {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-
