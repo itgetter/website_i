@@ -5,16 +5,16 @@
 }
 
 body {
-	background-color: var(--bgcolor);
-	color: var(--bttncolor);
-	font-family: Parkinsans;
+    background-color: var(--bgcolor);
+    color: var(--bttncolor);
+    font-family: Parkinsans;
     margin-left: 20px;
 }
 
 button {
-	position: absolute;
-	left: 90%;
-    top:3%;
+    position: absolute;
+    left: 90%;
+    top: 3%;
     background-color: var(--bttncolor);
     border: none;
     color: white;
@@ -33,11 +33,11 @@ button {
 }
 
 .button1 {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 a {
@@ -68,21 +68,23 @@ p {
     background-color: var(--bttncolor);
     border-radius: 25px;
     padding-top: 25px;
-    padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
-    margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
+    padding-bottom: 25px;
+    margin-top: 40px;
     color: var(--bgcolor);
+    padding-left: 5%;  /* Shift the banner content to the right */
 }
 
 .banner2 {
-    background-color: var(--bgcolor); /* Set background color for banner2 */
+    background-color: var(--bgcolor);
     border-radius: 25px;
     padding-top: 25px;
     padding-bottom: 25px;
-    color: var(--bttncolor); /* Text color */
+    color: var(--bttncolor);
+    padding-left: 5%;  /* Shift the banner content to the right */
 }
 
 .banner1, .banner2 {
-    width: 90%;  /* Reduces the width to 90% of its container */
+    width: 90%;  /* Banners take up 90% of container by default */
     height: auto;
     margin-top: 40px;
     cursor: pointer;
@@ -90,6 +92,108 @@ p {
 
 /* Hover effect for the banners */
 .banner1:hover, .banner2:hover {
-    transform: scale(1.05); /* Slightly enlarges the banner */
-    transition: transform 0.3s ease; /* Smooth transition for the scaling */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.space {
+    padding: 20px;
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+    body {
+        margin-left: 10px;
+    }
+
+    h1 {
+        font-size: 40px; /* Smaller heading for mobile */
+        padding-left: 15px;
+    }
+
+    h2 {
+        font-size: 28px; /* Smaller subheading */
+        padding-left: 15px;
+    }
+
+    p {
+        font-size: 16px; /* Adjusting paragraph text size */
+        padding-left: 15px;
+    }
+
+    button {
+        font-size: 18px; /* Smaller button text for mobile */
+        padding: 10px 20px;
+        top: 5%;
+        left: 80%; /* Adjust button position for mobile */
+    }
+
+    .banner1, .banner2 {
+        width: 100%;  /* Ensure banners take up full width on mobile */
+        padding-top: 20px; /* Reduced padding for better fit */
+        padding-bottom: 20px;
+        margin-top: 20px;
+        padding-left: 10%;  /* Shift the banner content further to the right */
+    }
+
+    .space {
+        padding: 10px;
+    }
+}
+
+/* Media Queries for Larger Screens (Tablet to Desktop) */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 12px 24px;
+        top: 4%;
+        left: 85%;
+    }
+
+    .banner1, .banner2 {
+        width: 90%; /* Keeping banners large for tablet screens */
+        margin-top: 30px;
+        padding-left: 8%; /* Shift content a bit more to the right for medium screens */
+    }
+}
+
+/* Media Queries for Larger Desktop Screens */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 70px; /* Keep the large heading for desktop */
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .banner1, .banner2 {
+        width: 90%; /* Keep banners at 90% width on desktop */
+        display: block; /* Ensure banners are stacked vertically on large screens */
+        margin-top: 40px;
+        padding-left: 5%; /* Ensure proper alignment with some space on the left */
+    }
+
+    button {
+        font-size: 24px;
+        padding: 15px 32px;
+        top: 3%;
+        left: 90%;
+    }
 }
