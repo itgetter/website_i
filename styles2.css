@@ -75,6 +75,10 @@ img {
   padding: 100px;
 }
 
+.lilspace {
+  padding: 10px;
+}
+
 /* Button Styles */
 button {
   position: absolute;
