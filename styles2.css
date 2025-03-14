@@ -29,7 +29,6 @@ body {
 .main-wrapper {
   padding: 0 50px;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 
@@ -99,13 +98,15 @@ button {
 }
 
 .button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Hover effect for .button2 */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+  /* Hover effect for .button2 */
 }
 
 .buttonlink {
   text-decoration: none;
   color: var(--bgcolor);
 }
+
 
 
 /* Intext Link Styles */
@@ -128,105 +129,83 @@ button {
 /* Media Queries */
 
 /* For Mobile (max-width: 768px) */
+/* Remove the meta tag for device-width scaling */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box; /* Ensures consistent box-sizing across all elements */
+}
+
+/* Media Queries Based on Layout Width */
+
+/* For screens that are 768px or smaller (tablets and small devices) */
 @media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Adjust body font size */
+    padding: 0 15px; /* Ensure padding is on both sides */
+  }
+
+  /* Main content container adjustments */
+  .main-wrapper {
+    padding: 0 20px; /* Ensure there is some padding */
+    max-width: 100%; /* Prevent stretching of content */
+    width: 100%;
+  }
+
+  /* Heading and text resizing */
   h1 {
-    font-size: 35px;
-    margin-left: 20px;
-    margin-right: 20px;
+    font-size: 36px; /* Adjust heading size for mobile */
+    margin: 10px 0;
+    text-align: center;
   }
 
   p {
-    font-size: 14px;
-    padding: 20px;
-    margin: 0 20px;
-  }
-
-  img {
-    width: 150px;
-    margin-top: 20px;
-  }
-
-  .bigspace {
-    padding: 20px;
-  }
-
-  .space {
+    font-size: 14px; /* Adjust paragraph font size */
     padding: 10px;
+    text-align: center;
   }
 
+  /* Image adjustments */
+  img {
+    width: 70%; /* Adjust image size to fit smaller screen */
+    max-width: 350px; /* Set a max-width for images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Button adjustments for mobile */
   button {
     font-size: 18px;
     padding: 10px 20px;
-    top: 5%;  /* Adjust the top to move button lower */
-    right: 10%;  /* Adds padding on the right, prevents clipping */
-    margin: 0 20px; /* Adds spacing */
+    top: 5%;
+    right: 5%;
+    position: absolute;
   }
+}
 
-  .intextlink {
-    font-size: 14px;
+/* For screens that are 1024px or smaller (standard tablet size) */
+@media (max-width: 1024px) {
+  body {
+    font-size: 18px; /* Adjust body font size */
   }
 
   .main-wrapper {
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
+    padding: 0 40px; /* Add more padding for tablets */
+    max-width: 100%;
   }
-}
 
-/* For Extra Small Mobile (max-width: 480px) */
-@media (max-width: 480px) {
   h1 {
-    font-size: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
+    font-size: 48px; /* Adjust heading size for tablets */
   }
 
   p {
-    font-size: 12px;
-    padding: 15px;
-    margin: 0 15px;
+    font-size: 16px; /* Adjust paragraph font size for tablets */
   }
 
   img {
-    width: 120px;
-    margin-top: 15px;
-  }
-
-  .space {
-    padding: 8px;
-  }
-
-  button {
-    font-size: 16px;
-    padding: 8px 16px;
-    top: 5%;  /* Adjust top positioning for smaller screens */
-    right: 10px; /* Make sure button stays within view */
-    margin: 0 10px; /* Ensure button doesn't clip */
-  }
-}
-
-/* For Tablet Screens (max-width: 1024px) */
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  p {
-    font-size: 16px;
-    padding: 25px;
-    margin: 0 30px;
-  }
-
-  img {
-    width: 200px;
-  }
-
-  button {
-    font-size: 20px;
-    padding: 12px 24px;
-    top: 8%;
-    right: 5%;  /* Adjust button's right distance for larger tablets */
+    width: 50%; /* Adjust image size to fit larger tablets */
+    max-width: 450px; /* Set max-width for images */
   }
 }
