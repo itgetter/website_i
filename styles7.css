@@ -85,6 +85,7 @@ p {
     padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
     margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
     color: var(--bgcolor);
+    padding-left: 2%; /* Shift the banner content to the right */
 }
 
 .banner2 {
@@ -93,10 +94,11 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
     color: var(--bttncolor); /* Text color */
+    padding-left: 2%; /* Shift the banner content to the right */
 }
 
 .banner1, .banner2 {
-    width: 90%;  /* Reduces the width to 90% of its container */
+    width: 90%;  /* Banners take up 90% of the container */
     height: auto;
     margin-top: 40px;
     cursor: pointer;
@@ -104,18 +106,97 @@ p {
 
 /* Hover effect for the banners */
 .banner1:hover, .banner2:hover {
-    transform: scale(1.05); /* Slightly enlarges the banner */
-    transition: transform 0.3s ease; /* Smooth transition for the scaling */
-}
-
-/* Optional: Ensure the link inside the button covers the full button */
-.button2 a {
-    color: var(--bgcolor); /* Color of the link inside the button */
-    display: block;
-    text-align: center;
-    font-weight: bold;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .pad {
-  padding-left: 50px;
+    padding-left: 50px;
 }
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+    body {
+        margin-left: 10px;
+    }
+
+    h1 {
+        font-size: 40px; /* Smaller heading for mobile */
+        padding-left: 15px;
+    }
+
+    h2 {
+        font-size: 28px; /* Smaller subheading */
+        padding-left: 15px;
+    }
+
+    p {
+        font-size: 16px; /* Adjusting paragraph text size */
+        padding-left: 15px;
+    }
+
+    button {
+        font-size: 18px; /* Smaller button text for mobile */
+        padding: 10px 20px;
+        top: 5%;
+        left: 80%; /* Adjust button position for mobile */
+    }
+
+    .banner1, .banner2 {
+        width: 100%;  /* Ensure banners take up full width on mobile */
+        padding-top: 20px; /* Reduced padding for better fit */
+        padding-bottom: 20px;
+        margin-top: 20px;
+        padding-left: 5%;  /* Shift the banner content further to the right */
+    }
+
+    .pad {
+        padding-left: 10px;
+    }
+}
+
+/* Media Queries for Larger Screens (Tablet to Desktop) */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 12px 24px;
+        top: 4%;
+        left: 85%;
+    }
+
+    .banner1, .banner2 {
+        width: 90%;
+        margin-top: 30px;
+        padding-left: 5%; /* Shift content a bit more to the right for medium screens */
+    }
+}
+
+/* Media Queries for Larger Desktop Screens */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 70px; /* Keep the large heading for desktop */
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .banner1, .banner2 {
+        width: 90%; /* Keep banners at 90% width on desktop */
+        display: block; /* Ensure banners ar
