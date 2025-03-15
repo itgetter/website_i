@@ -75,10 +75,6 @@ img {
   padding: 100px;
 }
 
-.lilspace {
-  padding: 10px;
-}
-
 /* Button Styles */
 button {
   position: absolute;
@@ -172,7 +168,7 @@ html, body {
 
   /* Image adjustments */
   img {
-    width: 70%; /* Adjust image size to fit smaller screen */
+    width: 80%; /* Adjust image size to fit smaller screen */
     max-width: 350px; /* Set a max-width for images */
     display: block;
     margin-left: auto;
