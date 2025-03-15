@@ -18,7 +18,9 @@ header h1 {
     font-family: Fascinate;
     text-align: left;
     margin-top: 20px;
-    padding-left: 20px;
+    padding: 20px;
+  display: flex;
+ 
 }
 
 button {
@@ -47,10 +49,6 @@ button:hover {
     grid-template-columns: 1fr;  /* Default to 1 column on small screens */
     gap: 20px;
     padding: 15px;  /* Adjust padding for smaller screens */
-}
-
-.space {
-    padding: 20px;
 }
 
 .video-item {
@@ -199,7 +197,7 @@ h2 {
     
     padding-left: 0px;
     font-family: Fascinate;
-    font-size: 40px;
+    font-size: 8vw;
     color: var(--bttncolor);
   word-wrap: break-word; /* Prevents long words from overflowing */
   overflow-wrap: break-word;
