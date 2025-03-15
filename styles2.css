@@ -54,6 +54,9 @@ h1 {
   font-size: 70px;
   color: var(--bttncolor);
   font-family: 'Fascinate', cursive;
+  padding: 20px;
+  position: relative;
+  
 }
 
 /* Image Styles */
@@ -107,6 +110,7 @@ button {
   color: var(--bgcolor);
 }
 
+.buttonfix {position:relative;}
 
 
 /* Intext Link Styles */
