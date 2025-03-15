@@ -13,7 +13,7 @@ body {
 
 button {
     position: absolute;
-    left: 90%;
+    right: calc(20px + 2vw);
     top: 3%;
     background-color: var(--bttncolor);
     border: none;
@@ -76,8 +76,6 @@ h2 {
 p {
     font-size: 20px;
     padding-left: 35px;
-  word-wrap: break-word; /* Prevents long words from overflowing */
-  overflow-wrap: break-word;
 }
 
 .banner1 {
@@ -113,7 +111,7 @@ p {
 }
 
 .pad {
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 /* Media Queries for Mobile Devices */
@@ -123,25 +121,25 @@ p {
     }
 
     h1 {
-        font-size: 60px; /* Smaller heading for mobile */
+        font-size: 48px; /* Increase heading size on mobile */
         padding-left: 15px;
     }
 
     h2 {
-        font-size: 35px; /* Smaller subheading */
+        font-size: 30px; /* Increase subheading size */
         padding-left: 15px;
     }
 
     p {
-        font-size: 35px; /* Adjusting paragraph text size */
+        font-size: 18px; /* Increase paragraph text size */
         padding-left: 15px;
     }
 
     button {
-        font-size: 18px; /* Smaller button text for mobile */
-        padding: 10px 20px;
+        font-size: 28px; /* Larger button text for mobile */
+        padding: 18px 36px;
         top: 5%;
-        left: 80%; /* Adjust button position for mobile */
+        right: calc(20px + 2vw); /* Adjust button position for mobile */
     }
 
     .banner1, .banner2 {
@@ -149,7 +147,7 @@ p {
         padding-top: 20px; /* Reduced padding for better fit */
         padding-bottom: 20px;
         margin-top: 20px;
-        padding-left: 4%;  /* Shift the banner content further to the right */
+        padding-left: 10%;  /* Shift the banner content further to the right */
     }
 
     .pad {
@@ -175,13 +173,13 @@ p {
         font-size: 20px;
         padding: 12px 24px;
         top: 4%;
-        left: 85%;
+        right: calc(20px + 2vw);
     }
 
     .banner1, .banner2 {
         width: 90%;
         margin-top: 30px;
-        padding-left: 3%; /* Shift content a bit more to the right for medium screens */
+        padding-left: 8%; /* Shift content a bit more to the right for medium screens */
     }
 }
 
@@ -203,7 +201,7 @@ p {
         width: 90%; /* Keep banners at 90% width on desktop */
         display: block; /* Ensure banners are stacked vertically on large screens */
         margin-top: 40px;
-        padding-left: 2%; /* Ensure proper alignment with some space on the left */
+        padding-left: 5%; /* Ensure proper alignment with some space on the left */
     }
 
     button {
