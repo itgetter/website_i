@@ -73,19 +73,20 @@ button:hover {
 }
 
 .videoTitle {
-    font-size: 1.75rem;
+    font-size: calc(2vw + 1.5rem);  /* Responsive font size */
     color: var(--bgcolor);
     margin: 10px 0;
     text-align: center;
 }
 
 .videoDescription {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
     color: var(--bgcolor);
     margin-top: 10px;
     margin-bottom: 0;
     padding: 0;
 }
+
 
 /* Hover Effects for Desktop */
 @media (min-width: 600px) {
@@ -212,11 +213,12 @@ p {
 }
 
 .videoTitle {
-    padding-left: 50px;
-    font-size: 50px;
+    font-size: calc(2vw + 1.5rem);  /* Responsive font size */
     color: var(--bgcolor);
-    padding-right: 50px;
+    margin: 10px 0;
+    text-align: center;
 }
+
 
 .banner1 {
     background-color: var(--bttncolor);
@@ -236,12 +238,7 @@ a {
     color: var(--bgcolor);
 }
 
-.videoTitle2 {
-    padding-left: 50px;
-    font-size: 50px;
-    color: var(--bttncolor);
-    padding-right: 50px;
-}
+
 
 .paran {
     color: var(--bgcolor);
