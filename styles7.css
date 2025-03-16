@@ -42,6 +42,7 @@ button {
 
 a {
     text-decoration: none;
+  color: var(--bgcolor);
     
 }
 
@@ -120,7 +121,7 @@ p {
 /* Media Queries for Mobile Devices */
 @media screen and (max-width: 768px) {
     body {
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     /* Increase spacing between menu and first banner */
@@ -128,18 +129,13 @@ p {
         margin-bottom: 30px; /* Add space below the button */
     }
 
-    h1 {
-        font-size: 48px; /* Increase heading size on mobile */
-        padding-left: 15px;
-    }
-
-    h2 {
-        font-size: 30px; /* Increase subheading size */
-        padding-left: 15px;
-    }
-
-    p {
-        font-size: 18px; /* Adjust paragraph text size for readability */
-        padding-left: 10px;
-    }
+    h2, p {
+    padding-left: ;  /* Remove or adjust padding for smaller screens */
 }
+
+.banner1, .banner2 {
+    padding-left: 2%;  /* Reduce left padding to avoid content being pushed off-screen */
+    padding-right: 2%; /* Optionally add some right padding */
+}
+
+  h1 { padding-left: calc(5% + 20px);}
