@@ -3,7 +3,10 @@
     --bgcolor: #EFC7C2;
     --bttncolor: #694F5D;
 }
-
+html, body {
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    width: 100%; /* Ensures the body width is confined to the screen width */
+}
 body {
     background-color: var(--bgcolor);
     color: var(--bttncolor);
@@ -136,4 +139,7 @@ p {
     }
 
     p {
-        font-size: 18px; /* Increase pa
+        font-size: 18px; /* Adjust paragraph text size for readability */
+        padding-left: 10px;
+    }
+}
