@@ -1,112 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
+:root {
+    --bgcolor: #EFC7C2;
+    --bttncolor: #694F5D;
+}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="author" href="//plus.google.com/u/0/+AngelaHoldenDesign/posts">
-    <meta name="description" content="Learn to build a simple, responsive grid for displaying and playing videos using CSS and jQuery.">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Responsive Video Gallery</title>
+body {
+    background-color: var(--bgcolor);
+    color: black;
+    font-family: Parkinsans;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+header h1 {
+    font-size: 40px;  /* Smaller font size for mobile */
+    color: var(--bttncolor);
+    font-family: Fascinate;
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+  display: flex;
+ 
+}
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles4.css">
+button {
+    background-color: var(--bttncolor);
+    border: none;
+    color: var(--bgcolor);
+  top: 10%;
+    right: calc(20px + 2vw);
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Fascinate;
+    margin: 4px 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+  position: absolute;
+}
 
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.video-gallery {
+    display: grid;
+    grid-template-columns: 1fr;  /* Default to 1 column on small screens */
+    gap: 20px;
+    padding: 15px;  /* Adjust padding for smaller screens */
+}
 
-</head>
+.video-item {
+    background-color: var(--bttncolor);
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-<body>
+.videoThumb {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    max-width: 100%;  /* Prevents image from overflowing */
+}
 
-    <header>
-        <h1>Videos</h1>
-       </header>
-        <button class="button2"><a href="index3.html"> Menu </a></button>
-    <div class= "space"> </div>
+.videoTitle {
+    font-size: calc(2vw + 1.5rem);  /* Responsive font size */
+    color: var(--bgcolor);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.videoDescription {
+    font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
+    color: var(--bgcolor);
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+/* Hover Effects for Desktop */
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 50px;  /* Adjust font size for medium screens */
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr 1fr;  /* 2 columns for medium screens */
+    }
+
+    button {
+        font-size: 22px;  /* Adjust button size */
+    }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 70px;  /* Larger font size for desktop */
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr 1fr 1fr;  /* 3 columns for large screens */
+    }
+
+    button {
+        font-size: 24px;  /* Adjust button size for large screens */
+    }
+
+    .video-item {
+        padding: 20px;  /* Increase padding for larger screens */
+    }
+
+    /* Hover effects for larger screens */
+    .video-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-item:hover .videoThumb {
+        transform: scale(1.05);
+    }
+
+    .video-item:hover .videoTitle,
+    .video-item:hover .videoDescription {
+        opacity: 1;
+    }
+}
+
+/* Mobile Layout (Responsive) */
+@media (max-width: 768px) {
+    .video-gallery {
+        grid-template-columns: 1fr;
+        padding: 15px;  /* Add padding around the gallery */
+    }
+
+    .video-item {
+        padding: 15px;  /* Adjusted padding for smaller screens */
+    }
+
+    .videoThumb {
+        width: 100%;
+        height: auto;
+    }
+
+    .videoTitle, .videoDescription {
+        opacity: 1;
+        
+    }
+
+    button {
+        left: auto;  /* Reset left positioning */
+        right: 10%;  /* Adjust right positioning */
+        top: 10%;  /* Adjust top positioning */
+    }
+}
+
+/* Existing Styles for General Layout */
+.banner1, .banner2 {
+    width: 90%;
+    max-width: 1280px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+button2 {
+    font-size: 24px;
+    padding: 15px 32px;
+    top: 5%;
+    right: 0%;
+    margin: 0 50px;
+    position: absolute;
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 70px;
+    color: var(--bttncolor);
+    font-family: Fascinate;
+    margin-left: 25px;
+}
+
+h2 {
+    
+    padding-left: 0px;
+    font-family: Fascinate;
+    font-size: 8vw;
+    color: var(--bttncolor);
+  word-wrap: break-word; /* Prevents long words from overflowing */
+  overflow-wrap: break-word;
    
+}
 
-    <section class="video-gallery">
-        <!-- Video 1 -->
-        <div class="video-item">
-            <a href="https://youtu.be/9YigWwfXUHE">
-                <img class="videoThumb" src="https://i.ibb.co/6WDQC9T/9-Yig-Wwf-XUHE-HD.jpg" alt="Neurocapital">
-            </a>
-            <h2 class="videoTitle">Neurocapital</h2>
-            <p class="videoDescription">How low budget can you go? I made this short film with just me, the actors, a camera and some basic lighting equipment. It was an excersize in creativity, patience and hustle to get it done, and I'm proud of that.</p>
-        </div>
+p {
+    padding-left: 50px;
+    font-weight: bold;
+    padding-right: 50px;
+    font-size: 20px;
+}
 
-        <!-- Video 2 -->
-        <div class="video-item">
-            <a href="https://youtu.be/ipgORAwEbn4">
-                <img class="videoThumb" src="https://i.ibb.co/8YBB8NS/ipg-ORAw-Ebn4-SD.jpg" alt="Happy Horrordays">
-            </a>
-            <h2 class="videoTitle">Happy Horrordays</h2>
-            <p class="videoDescription">This was a fun adventure, exploring the things in horror that I find really funny, and a gift to work with two excellent actors. Their commitment to the parts did a lot of the heavy lifting in what was ultimately a very silly short. </p>
-        </div>
+.videoTitle {
+    font-size: calc(2vw + 1.5rem);  /* Responsive font size */
+    color: var(--bgcolor);
+    margin: 10px 0;
+    text-align: center;
+}
 
-        <!-- Video 3 -->
-        <div class="video-item">
-            <a href="https://youtu.be/3xWPJ3SEZNQ">
-                <img class="videoThumb" src="https://i.ibb.co/nrvdJXW/3x-WPJ3-SEZNQ-HD.jpg" alt="MANIA!">
-            </a>
-            <h2 class="videoTitle">MANIA!</h2>
-            <p class="videoDescription">I love pro wrestling. I think it's so fun that so many people still get together to play and pretend. That being said, there's no ignoring it's dark side. I wanted to try to skate the line between the highs and lows of a (very very) small-time wrestler. </p>
-      </article></p>
-        </div>
 
-        <!-- Video 4 -->
-        <div class="video-item">
-            <a href="https://youtu.be/cKqbmeDjWqk">
-                <img class="videoThumb" src="https://i.ibb.co/qFWpGvK/c-Kqbme-Dj-Wqk-HD.jpg" alt="A Yearly Occasion">
-            </a>
-            <h2 class="videoTitle">A Yearly Occasion</h2>
-            <p class="videoDescription">This was my kind of experimental short film - the kind where I wanted to see if I could go from having you hate a character to sympathize with them in under 5 minutes.</p>
-        </div>
+.banner1 {
+    background-color: var(--bttncolor);
+    border-radius: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 40px;
+}
 
-        <!-- Video 5 -->
-        <div class="video-item">
-            <a href="https://youtu.be/fHL7zHkr5MM">
-                <img class="videoThumb" src="https://i.ibb.co/QDWCjSB/f-HL7z-Hkr5-MM-HD.jpg" alt="The Great Clone Chase of '23">
-            </a>
-            <h2 class="videoTitle">The Great Clone Chase of '23</h2>
-            <p class="videoDescription">Guess who couldn't find anyone to be in there short film? Oh, the plight of the long-distance commuter. So I did what any self respecting filmmaker does and made a film about clones. For what it is, I put a lot of thought into it, and I think that comes across.</p>
-        </div>
+.banner2 {
+    border-radius: 25px;
+    padding-top: 25px;
+}
 
-        <!-- Video 6 -->
-        <div class="video-item">
-            <a href="https://youtube.com/watch?v=oZ7qan4-tBE">
-                <img class="videoThumb" src="https://i.ibb.co/jk12qJN/o-Z7qan4-t-BE-SD.jpg" alt="Oxventure Animated - For God's Sake Chairs!">
-            </a>
-            <h2 class="videoTitle">Oxventure Animated - For God's Sake Chairs!</h2>
-            <p class="videoDescription">Oxventure is the most highly underrated tabletop RPG series on the internet, and that's saying something. I made this, my most polished (at the time) completed animation, as a thank you for the many years of laughs.</p>
-        </div>
+a {
+    text-decoration: none;
+    color: var(--bgcolor);
+}
 
-        <!-- Video 7 -->
-        <div class="video-item">
-            <a href="https://youtu.be/39NY5n1z2W4">
-                <img class="videoThumb" src="https://i.ibb.co/HdFSyN1/39-NY5n1z2-W4-HD.jpg" alt="Outsidexbox Animated - The Standup">
-            </a>
-            <h2 class="videoTitle">Outsidexbox Animated - The Standup</h2>
-            <p class="videoDescription">The best way for me to practice animation is to try to synch it with some sound...and why not use a clip from one of the livestreams that got me through the pandemic?</p>
-        </div>
 
-        <!-- Video 8 -->
-        <div class="video-item">
-            <a href="https://youtu.be/AeqgQzb6ZKU">
-                <img class="videoThumb" src="https://i.ibb.co/BCPBbN4/Aeqg-Qzb6-ZKU-HD.jpg" alt="Oxventure Animated - The Strangetide Negotiation">
-            </a>
-            <h2 class="videoTitle">Oxventure Animated - The Strangetide Negotiation</h2>
-            <p class="videoDescription">This was the first animation that I made. It appeared fully formed in my head and I had to bring it to life. It's a little choppy compared to the later animations I did, but I'm proud to show where I started!</p>
-        </div>
-    </section>
 
-</body>
+.paran {
+    color: var(--bgcolor);
+}
 
-</html>
+.parap {
+    color: var(--bttncolor);
+}
+
+.banner1, .banner2 {
+    width: 90%;
+    max-width: 1280px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+.banner1:hover, .banner2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
