@@ -11,7 +11,7 @@ body {
     background-color: var(--bgcolor);
     color: var(--bttncolor);
     font-family: Parkinsans;
-    margin-left: 20px;
+    margin-left: calc(5px+1vw);
 }
 
 button {
@@ -68,7 +68,7 @@ h1 {
     font-size: 70px;
     font-family: Fascinate;
     color: var(--bttncolor);
-    padding-left: 30px;
+    padding-left:calc(1vw);
 }
 
 h2 {
@@ -89,7 +89,7 @@ p {
     padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
     margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
     color: var(--bgcolor);
-    padding-left: 5%; /* Shift the banner content to the right */
+    padding-left: calc(5%+1vw); /* Shift the banner content to the right */
 }
 
 .banner2 {
@@ -98,7 +98,7 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
     color: var(--bttncolor); /* Text color */
-    padding-left: 5%; /* Shift the banner content to the right */
+    padding-left: calc(5%+1vw); /* Shift the banner content to the right */
 }
 
 .banner1, .banner2 {
