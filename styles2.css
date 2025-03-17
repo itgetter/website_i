@@ -23,14 +23,46 @@ body {
   background-color: var(--bgcolor);
   margin: 0;
   padding: 0;
-  
 }
 
 .main-wrapper {
-  padding: 0 50px;
+  padding: calc(5vw + 20px);
   width: 100%;
 }
 
+/* Image Styles */
+img {
+  width: calc(25vw + px);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 10px solid var(--bttncolor);
+}
+
+/* The "Click Me" text */
+.clickme {
+  position: absolute;
+  left: calc(10vw + 50px);
+  top: 50%;
+  font-family: 'Parkinsans', sans-serif;
+  color: var(--bttncolor);
+  pointer-events: none;
+  font-size: calc(0.5rem + 1vw);
+  animation: bounceInfinite 1s ease-in-out infinite, fadeOut 10s ease-out forwards; /* Continuous bounce animation */
+}
+
+@keyframes bounceInfinite {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.image-container {
+  position: relative;
+  display: block;  /* Ensure image and text stay together */
+  text-align: center;
+}
 
 /* Paragraph Styles */
 p {
@@ -48,42 +80,23 @@ p {
   line-height: 2;
 }
 
-/* Heading Styles */
 h1 {
-  margin-left: 50px;
-  font-size: 70px;
+  margin-left: calc(20px + 2vw);
+  font-size: calc(60px);
   color: var(--bttncolor);
   font-family: 'Fascinate', cursive;
   padding: 20px;
   position: relative;
-  
+}
+.italic-text {
+  font-style: italic;
 }
 
-/* Image Styles */
-img {
-  width: 500px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  border: 10px solid var(--bttncolor);
-}
-
-/* Spacing Classes */
-.space {
-  padding: 20px;
-}
-
-.bigspace {
-  padding: 100px;
-}
-
-/* Button Styles */
 button {
   position: absolute;
   top: 10%;
   right: calc(20px + 2vw);
-  font-size: 24px;
+  font-size: 2rem;
   padding: 15px 32px;
   background-color: var(--bttncolor);
   background-size: cover;
@@ -94,26 +107,19 @@ button {
   border-radius: 12px;
   transition-duration: 0.4s;
   background-size: contain;
-}
-
-.button1 {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow for .button1 */
-}
-
-.button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
-  /* Hover effect for .button2 */
+  width: auto;  
+  height: auto;
+  min-width: 150px; 
+  min-height: 50px; 
 }
 
 .buttonlink {
   text-decoration: none;
   color: var(--bgcolor);
 }
+.buttonfix
+{position: relative;}
 
-.buttonfix {position:relative;}
-
-
-/* Intext Link Styles */
 .intextlink {
   text-decoration: none;
   color: var(--bttncolor);
@@ -130,86 +136,85 @@ button {
   border-radius: 12px;
 }
 
+.space { padding: 30px; }
+
 /* Media Queries */
-
-/* For Mobile (max-width: 768px) */
-/* Remove the meta tag for device-width scaling */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box; /* Ensures consistent box-sizing across all elements */
-}
-
-/* Media Queries Based on Layout Width */
-
-/* For screens that are 768px or smaller (tablets and small devices) */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* Adjust body font size */
-    padding: 0 15px; /* Ensure padding is on both sides */
+    font-size: 16px;
+    padding: 0 15px;
   }
 
-  /* Main content container adjustments */
   .main-wrapper {
-    padding: 0 20px; /* Ensure there is some padding */
-    max-width: 100%; /* Prevent stretching of content */
+    padding: 0 20px;
+    max-width: 100%;
     width: 100%;
   }
 
-  /* Heading and text resizing */
   h1 {
-    font-size: 36px; /* Adjust heading size for mobile */
+    font-size: 36px;
     margin: 10px 0;
-    text-align: center;
+    text-align: left;
   }
 
   p {
-    font-size: 14px; /* Adjust paragraph font size */
+    font-size: 14px;
     padding: 10px;
     text-align: center;
   }
 
-  /* Image adjustments */
   img {
-    width: 80%; /* Adjust image size to fit smaller screen */
-    max-width: 350px; /* Set a max-width for images */
+    width: 80%;
+    max-width: 350px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
   }
 
-  /* Button adjustments for mobile */
-  button {
-    font-size: 18px;
-    padding: 10px 20px;
-    top: 5%;
-    right: 5%;
-    position: absolute;
-  }
-}
+ 
 
-/* For screens that are 1024px or smaller (standard tablet size) */
+
 @media (max-width: 1024px) {
   body {
-    font-size: 18px; /* Adjust body font size */
+    font-size: 18px;
+    
   }
 
   .main-wrapper {
-    padding: 0 40px; /* Add more padding for tablets */
+    padding: 0 40px;
     max-width: 100%;
   }
 
   h1 {
-    font-size: 48px; /* Adjust heading size for tablets */
+    font-size: calc(1vw+10px);
   }
 
   p {
-    font-size: 16px; /* Adjust paragraph font size for tablets */
+    font-size: 16px;
   }
 
   img {
-    width: 50%; /* Adjust image size to fit larger tablets */
-    max-width: 450px; /* Set max-width for images */
+    width: 50%;
+    max-width: 450px;
   }
 }
+
+@media (max-width: 1147px) {
+  .clickme {
+    left: calc(3vw + 5px); /* Adjust the horizontal position on smaller screens */
+    font-size: calc(1.2rem + 1.5vw);  /* Scale font size accordingly */
+  }
+}
+@media (max-width: 1695px) {
+  .clickme {
+    left: calc(1.5vw);
+    font-size: calc(.5rem + 1vw)
+  }
+}
+
+@media (max-width: 768px) {
+  .clickme {
+    right: 100%; /* Move the text a bit further left on smaller screens */
+    font-size: calc(.5rem + 1vw);/* Smaller font size for smaller screens */
+  }
