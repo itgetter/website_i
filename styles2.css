@@ -118,7 +118,9 @@ button {
   color: var(--bgcolor);
 }
 .buttonfix
-{position: relative;}
+{position: relative;
+padding: 2vh; 
+}
 
 .intextlink {
   text-decoration: none;
