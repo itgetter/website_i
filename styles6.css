@@ -4,33 +4,40 @@
     --bttncolor: #694F5D;
 }
 
+* {
+    box-sizing: border-box; /* Include padding and borders in the total width and height */
+}
+
+
 body {
     background-color: var(--bgcolor);
     color: var(--bttncolor);
     font-family: Parkinsans;
-    margin-left: 20px;
+    
+  overflow-x: hidden;
 }
 
 button {
-    position: absolute;
-    left: 90%;
-    top: 3%;
-    background-color: var(--bttncolor);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Fascinate;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+   position: absolute;
+  top: 10%;
+  right: calc(20px + 2vw);
+  font-size: 2rem;
+  padding: 15px 32px;
+  background-color: var(--bttncolor);
+  background-size: cover;
+  border: none;
+  color: var(--bgcolor);
+  font-family: 'Fascinate';
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  background-size: contain;
+  width: auto;  
+  height: auto;
+  min-width: 150px; 
+  min-height: 50px; 
 }
+
 
 .button1 {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -38,6 +45,11 @@ button {
 
 .button2:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.buttonfix {
+  position: relative;
+  padding: 8vh;
+  
 }
 
 a {
@@ -50,18 +62,18 @@ h1 {
     font-size: 70px;
     font-family: Fascinate;
     color: var(--bttncolor);
-    padding-left: 30px;
+    padding-left: 2vw;
 }
 
 h2 {
     font-family: Fascinate;
     font-size: 38px;
-    padding-left: 35px;
+    padding-left: 3vw;
 }
 
 p {
-    font-size: 20px;
-    padding-left: 35px;
+    font-size: calc(20px+5vw);
+    padding-left: 3vw;
 }
 
 .banner1 {
@@ -71,7 +83,8 @@ p {
     padding-bottom: 25px;
     margin-top: 40px;
     color: var(--bgcolor);
-    padding-left: 5%;  /* Shift the banner content to the right */
+    padding-left: 2vw;
+  position: relative;/* Shift the banner content to the right */
 }
 
 .banner2 {
@@ -80,11 +93,12 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
     color: var(--bttncolor);
-    padding-left: 5%;  /* Shift the banner content to the right */
+    padding-left: 2vw;
+  position: relative; /* Shift the banner content to the right */
 }
 
 .banner1, .banner2 {
-    width: 90%;  /* Banners take up 90% of container by default */
+    width: 100%;  /* Banners take up 100% of container by default */
     height: auto;
     margin-top: 40px;
     cursor: pointer;
@@ -96,9 +110,7 @@ p {
     transition: transform 0.3s ease;
 }
 
-.space {
-    padding: 20px;
-}
+
 
 /* Media Queries for Mobile Devices */
 @media screen and (max-width: 768px) {
@@ -124,8 +136,7 @@ p {
     button {
         font-size: 18px; /* Smaller button text for mobile */
         padding: 10px 20px;
-        top: 5%;
-        left: 80%; /* Adjust button position for mobile */
+      
     }
 
     .banner1, .banner2 {
@@ -158,8 +169,7 @@ p {
     button {
         font-size: 20px;
         padding: 12px 24px;
-        top: 4%;
-        left: 85%;
+        
     }
 
     .banner1, .banner2 {
@@ -187,13 +197,12 @@ p {
         width: 90%; /* Keep banners at 90% width on desktop */
         display: block; /* Ensure banners are stacked vertically on large screens */
         margin-top: 40px;
-        padding-left: 5%; /* Ensure proper alignment with some space on the left */
+        padding-left: calc(5%+20px); /* Ensure proper alignment with some space on the left */
     }
 
     button {
         font-size: 24px;
         padding: 15px 32px;
-        top: 3%;
-        left: 90%;
+       
     }
 }
