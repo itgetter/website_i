@@ -85,7 +85,7 @@ h2 {
 
 p {
     font-size: 20px;
-    padding-left: 35px;
+    padding-left: 1vw;
 }
 
 .banner1 {
@@ -95,7 +95,7 @@ p {
     padding-bottom: 25px; /* Same padding at the bottom to keep it balanced */
     margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
     color: var(--bgcolor);
-    padding-left: calc(5%+1vw); /* Shift the banner content to the right */
+    padding-left: calc(3%+1vw); /* Shift the banner content to the right */
   
  
 }
@@ -106,7 +106,7 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
     color: var(--bttncolor); /* Text color */
-    padding-left: calc(5%+1vw);
+    padding-left: calc(3%+1vw);
   /* Shift the banner content to the right */
 }
 
