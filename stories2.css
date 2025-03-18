@@ -13,33 +13,32 @@ html, body {
   background-color: var(--bgcolor); /* Set background color */
 }
 
-.buttons {
-  position: absolute;
-  top: 5%;
-  display: flex;
-  justify-content: space-between; /* Ensures buttons are spaced apart */
-  width: 90%; /* Button container takes 90% of the page width */
-  padding: 0 5%; /* Ensures buttons are spaced from edges */
-  z-index: 10; /* Ensures buttons are on top of the iframe */
-  
-}
+
 
 button {
+  position: absolute;
+  
+  top: 5vh; /* Use vh for vertical position */
   background-color: var(--bttncolor);
   border: none;
-  color: var(--bgcolor);
-  padding: 15px 32px;
+  color: white;
+  padding: 2.5vh 5vw; /* Relative padding */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
+  font-size: clamp(18px, 4vw, 25px);
   font-weight: bold;
   font-family: Fascinate;
-  margin: 4px 2px;
+  margin: 1vh; /* Relative margin */
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 12px; /* Border radius relative to viewport width */
   transition-duration: 0.4s;
 }
+
+.button2 {
+ right: 2vw;
+}
+
 
 button a {
   text-decoration: none;
@@ -49,14 +48,36 @@ button a {
 button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+.back-button {
+  position: absolute;
+  left: 1%; /* Positioned from the left */
+  top: 5vh; /* Adjusted for viewport height */
+  background-color: var(--bttncolor);
+  border: none;
+  color: var(--bgcolor);
+  padding: 2.5vh 5vw; /* Responsive padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  font-weight: bold;
+  font-family: Fascinate;
+  margin: 1vh 1vw; /* Responsive margin */
+  cursor: pointer;
+  border-radius: 12px; /* Border radius as relative unit */
+  transition-duration: 0.4s;
+}
+
 
 h1 {
-  font-size: 70px;
+  font-size: clamp(40px, 6vw, 90px);
   color: var(--bttncolor);
   font-family: Fascinate;
   text-align: center;
   margin-top: 20px;
-  z-index: 5; /* Ensures it stays above iframe */
+  z-index: 5;
+  /* Ensures it stays above iframe */
+  
 }
 
 .main-content {
@@ -86,4 +107,3 @@ iframe {
   
   
 }
-
