@@ -16,8 +16,8 @@ body {
 
 button {
     position: absolute;
-    right: 5%; /* Ensure the button is inside the viewport on mobile */
-    top: 3%;
+    right:calc(3vw); /* Ensure the button is inside the viewport on mobile */
+    bottom: calc(15vh);
     background-color: var(--bttncolor);
     border: none;
     color: white;
@@ -33,6 +33,11 @@ button {
     border-radius: 12px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+  
+}
+
+.button2 {
+  
 }
 
 /* Hover effect for button */
@@ -69,6 +74,7 @@ h1 {
     font-family: Fascinate;
     color: var(--bttncolor);
     padding-left:calc(1vw);
+  margin-bottom: 20vh;
 }
 
 h2 {
@@ -90,6 +96,8 @@ p {
     margin-top: 40px; /* Adjust this to get equal space between banner and h2 */
     color: var(--bgcolor);
     padding-left: calc(5%+1vw); /* Shift the banner content to the right */
+  
+ 
 }
 
 .banner2 {
@@ -98,14 +106,16 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
     color: var(--bttncolor); /* Text color */
-    padding-left: calc(5%+1vw); /* Shift the banner content to the right */
+    padding-left: calc(5%+1vw);
+  /* Shift the banner content to the right */
 }
 
 .banner1, .banner2 {
     width: 90%;  /* Banners take up 90% of the container */
-    height: auto;
+    
     margin-top: 40px;
     cursor: pointer;
+  
 }
 
 /* Hover effect for the banners */
@@ -115,7 +125,7 @@ p {
 }
 
 .pad {
-    padding-left: 50px;
+    padding-left: 3vw;
 }
 
 /* Media Queries for Mobile Devices */
@@ -124,18 +134,18 @@ p {
         margin-left: 0px;
     }
 
-    /* Increase spacing between menu and first banner */
-    .button2 {
-        margin-bottom: 30px; /* Add space below the button */
-    }
-
-    h2, p {
-    padding-left: ;  /* Remove or adjust padding for smaller screens */
+    
+ 
 }
 
 .banner1, .banner2 {
     padding-left: 2%;  /* Reduce left padding to avoid content being pushed off-screen */
     padding-right: 2%; /* Optionally add some right padding */
-}
+  }}
 
   h1 { padding-left: calc(5% + 20px);}
+  
+  .buttonfix {
+    position: relative;
+    padding-bottom: calc(10vh+5px)
+  }
