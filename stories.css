@@ -1,56 +1,62 @@
 :root { 
-	--bgcolor: #EFC7C2;
-	--bttncolor: #694F5D;
+  --bgcolor: #EFC7C2;
+  --bttncolor: #694F5D;
 }
 
-.center {height: 100%; /* Ensure the body and html elements take up full height */
-      margin: 0;
-      display: flex;
-      justify-content: center; /* Horizontally center */
-      align-items: center; /* Vertically center */
-    }
-
+.center {
+  height: 100%; /* Ensure the body and html elements take up full height */
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
 
 h1 {
-  margin-left: 20px;
-  font-size: 70px;
+  margin-left: 2vw; /* Adjusting to a relative unit */
+  font-size: 4vw; /* Font size adjusts with viewport width */
   color: var(--bttncolor);
   font-family: Fascinate;
   text-align: center;
+  margin-top: 20vh;
 }
 
 h2 {
-  margin-left: 35px;
+  margin-left: 3vw; /* Adjusting to relative unit */
   font-family: Fascinate;
-  font-size: 40px;
+  font-size: 4vw; /* Font size adjusts with viewport width */
 }
 
 button {
   position: absolute;
-  left: 90%;
-  top: 5%;
+  
+  top: 5vh; /* Use vh for vertical position */
   background-color: var(--bttncolor);
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 2.5vh 5vw; /* Relative padding */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
+  font-size: clamp(18px, 4vw, 25px);
   font-weight: bold;
   font-family: Fascinate;
-  margin: 4px 2px;
+  margin: 1vh; /* Relative margin */
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 12px; /* Border radius relative to viewport width */
   transition-duration: 0.4s;
 }
 
+.button2 {
+ right: 2vw;
+}
+
+
 .button1 {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0.8vw 1.6vw 0 rgba(0, 0, 0, 0.2), 0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19);
 }
 
 .button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
 }
 
 a {
@@ -60,62 +66,62 @@ a {
 }
 
 .heading {
-	background-color: var(--bttncolor);
-	border-radius: 25px;
-	width: 231px;
-	margin-left: 15px;
-	padding-top: ;
-	margin-top: 20px;
+  background-color: var(--bttncolor);
+  border-radius: 2vw; /* Border radius adjusted */
+  width: 30vw; /* Width in relative unit */
+  margin-left: 2vw; /* Adjusted for responsiveness */
+  padding-top: 2vh;
+  margin-top: 3vh; /* Adjusted margin */
 }
 
 body {
-	background-color: var(--bgcolor);
+  background-color: var(--bgcolor);
 }
 
 p {
-	padding: 0px 300px;
-	font-size: 24px;
-	font-family: Parkinsans;
+  padding: 2vh 15vw; /* Relative padding */
+  font-size: clamp(18px, 4vw, 25px);
+  font-family: Parkinsans;
   color: var(--bttncolor);
 }
 
 .bottom {
-	padding-bottom: 250px;
+  padding-bottom: 25vh; /* Relative padding for bottom space */
 }
 
 .firstpar {
-	padding-top: 50px;
+  padding-top: 5vh; /* Adjusted for viewport height */
 }
 
 .topcushion {
-	padding-bottom: 50px;
+  padding-bottom: 5vh; /* Adjusted padding */
 }
 
 .back-button {
   position: absolute;
-  left: 1%;
-  top: 5%; 
+  left: 1%; /* Positioned from the left */
+  top: 5vh; /* Adjusted for viewport height */
   background-color: var(--bttncolor);
   border: none;
   color: var(--bgcolor);
-  padding: 15px 32px;
+  padding: 2.5vh 5vw; /* Responsive padding */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
+  
   font-weight: bold;
   font-family: Fascinate;
-  margin: 4px 2px;
+  margin: 1vh 1vw; /* Responsive margin */
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 12px; /* Border radius as relative unit */
   transition-duration: 0.4s;
 }
 
 .back-button1 {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0.8vw 1.6vw 0 rgba(0, 0, 0, 0.2), 0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Hover effect for .back-button and .back-button1 */
 .back-button:hover, .back-button1:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
 }
