@@ -28,28 +28,38 @@ body {
 .main-wrapper {
   padding: calc(5vw + 20px);
   width: 100%;
+  position: relative;
+  overflow: hidden; /* Prevent overflow */
+  display: flex; /* Flexbox for column alignment */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* Image Styles */
 img {
-  width: clamp(500px, 40vw, 700px);
+  width: clamp(30%, 30vw, 50%);  /* Make the image responsive to container */
+  height: auto; /* Maintain aspect ratio */
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
   border: 10px solid var(--bttncolor);
+  box-sizing: border-box;
+  object-fit: cover; /* Ensure the image covers the container without stretching */
 }
 
 /* The "Click Me" text */
 .clickme {
   position: absolute;
-  left: calc(10vw + 50px);
-  top: 50%;
+  left: 10%; /* Place the text to the left of the image */
+  top: 45%;
+  transform: translateY(-50%);
   font-family: 'Parkinsans', sans-serif;
   color: var(--bttncolor);
   pointer-events: none;
   font-size: calc(0.5rem + 1vw);
-  animation: bounceInfinite 1s ease-in-out infinite, fadeOut 10s ease-out forwards; /* Continuous bounce animation */
+  animation: bounceInfinite 1s ease-in-out infinite, /* fadeOut 10s*/ ease-out forwards;
 }
 
 @keyframes bounceInfinite {
@@ -60,8 +70,12 @@ img {
 
 .image-container {
   position: relative;
-  display: block;  /* Ensure image and text stay together */
-  text-align: center;
+  display: flex;  /* Flexbox for aligning the image and text */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically align the image */
+  z-index: 1; /* Ensure image is below the text */
+  width: 100%; /* Ensure the image container is full width */
+  flex-direction: column; /* Keep text and image in a vertical stack */
 }
 
 /* Paragraph Styles */
@@ -82,12 +96,13 @@ p {
 
 h1 {
   margin-left: calc(20px + 2vw);
-  font-size: calc(60px);
+  font-size: clamp(40px, 5vw, 70px);
   color: var(--bttncolor);
   font-family: 'Fascinate', cursive;
   padding: 20px;
   position: relative;
 }
+
 .italic-text {
   font-style: italic;
 }
@@ -117,9 +132,10 @@ button {
   text-decoration: none;
   color: var(--bgcolor);
 }
-.buttonfix
-{position: relative;
-padding: 2vh; 
+
+.buttonfix { 
+  position: relative;
+  padding: 2vh; 
 }
 
 .intextlink {
@@ -141,90 +157,16 @@ padding: 2vh;
 .space { padding: 30px; }
 
 /* Media Queries */
+
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 0 15px;
+  .clickme {
+    position: relative;
+    left:0;
+    top:20%
   }
-
-  .main-wrapper {
-    padding: 0 20px;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 36px;
-    margin: 10px 0;
-    text-align: left;
-  }
-
-  p {
-    font-size: 14px;
-    padding: 10px;
-    text-align: center;
-  }
-
   img {
-    max-width: calc();
+    width: 65%;
     height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
   }
-
-
-    
-    
-  }
-
-
-@media (max-width: 1024px) {
-  body {
-    font-size: 18px;
-    
-  }
-
-  .main-wrapper {
-    padding: 0 40px;
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: calc(1vw+10px);
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  img {
-    max-width: 50%;
-    height:auto; 
-    
-  }
-}
-
-@media (max-width: 1147px) {
-  .clickme {
-    left: calc(3vw + 5px); /* Adjust the horizontal position on smaller screens */
-    font-size: calc(1.2rem + 1.5vw);  /* Scale font size accordingly */
-  }
-}
-@media (max-width: 1610px) {
-  .clickme {
-    right: 100%;
-    font-size: calc(.5rem + 1vw);
-    top: 40%;
-    
-  }
-}
-
-@media (max-width: 768px) {
-  .clickme {
-    right: 100%; /* Move the text a bit further left on smaller screens */
-    font-size: calc(.5rem + 1vw);/* Smaller font size for smaller screens */
-    top: 30%;
-    
-  }}
+  
+  
