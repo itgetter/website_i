@@ -59,7 +59,7 @@ img {
   color: var(--bttncolor);
   pointer-events: none;
   font-size: calc(0.5rem + 1vw);
-  animation: bounceInfinite 1s ease-in-out infinite, /* fadeOut 10s*/ ease-out forwards;
+  animation: bounceInfinite 1s ease-in-out infinite, fadeOut 10s ease-out forwards;
 }
 
 @keyframes bounceInfinite {
