@@ -101,3 +101,17 @@ document.addEventListener('DOMContentLoaded', function() {
   infoText.style.justifyContent = "center";
   infoText.style.alignItems = "center";
 });
+
+window.addEventListener('resize', function() {
+  const arrow = document.getElementById('arrow');
+  
+  // Check if screen width is <= 768px (small screen)
+  if (window.innerWidth <= 768) {
+    arrow.innerHTML = "↓"; // Change to down arrow for smaller screens
+  } else {
+    arrow.innerHTML = "→"; // Change back to right arrow for larger screens
+  }
+});
+
+// Run the resize function once when the page loads
+window.dispatchEvent(new Event('resize'));
