@@ -1,37 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
 <head>
- <link rel="stylesheet" href="styles3.css">
-	<title>Inkpen Films - Menu</title>
-
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS-only Marquee Menu Effect | Codrops</title>
+	<meta name="description" content="A menu with a css-only marquee hover effect" />
+	<meta name="keywords" content="marquee, css, animation, loop, infinite, hover, menu, navigation" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://use.typekit.net/zhq0vyf.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+	<script>
+	document.documentElement.className = "js";
+	var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+	supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+	<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 </head>
 
-<body>
-<!-- Reference CodePen -->
-<!-- https://codepen.io/bosworthco/pen/RjBvgw -->
-<!-- -------------------------- -->
-      
-<ul id="nav">
-	<li class="nav-link">
-		<a href=index.html><h1 data-name="About"> About</h1></a>
-	</li>
-	<li class="nav-link">
-		<a href=index4.html><h1 data-name="Videos"> Videos</h1></a>
-	</li>
-	<li class="nav-link">
-		<a href=index5.html><h1 data-name="Writing"> Writing</h1></a>
-	</li>
-	<li class="nav-link">
-		<a href=index6.html><h1 data-name="Services">Services</h1></a>
-	</li>
-	<li class="nav-link">
-		<a href= index7.html><h1 data-name="Contact">Contact</h1></a>
-	</li>
-</ul>
-
-
+<body class="demo-1">
+	<main>
+		<div class="frame">
+			
+			
+		</div>
+		<nav class="menu">
+			<div class="menu__item">
+				<a class="menu__item-link">About</a>
+				<img class="menu__item-img" src="img/1.jpg" alt="Some image"/>
+				<div class="marquee">
+					<div class="marquee__inner" aria-hidden="true">
+						<span>About</span>
+						<span>About</span>
+						<span>About</span>
+						<span>About</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">Videos</a>
+				<img class="menu__item-img" src="img/2.jpg" alt="Some image"/>
+				<div class="marquee">
+					<div class="marquee__inner" aria-hidden="true">
+						<span>Videos</span>
+							<span>Videos</span>
+							<span>Videos</span>
+							<span>Videos</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">Writing</a>
+				<img class="menu__item-img" src="img/3.jpg" alt="Some image"/>
+				<div class="marquee">
+					<div class="marquee__inner" aria-hidden="true">
+						<span>Writing</span>
+						<span>Writing</span>
+						<span>Writing</span>
+						<span>Writing</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">Services</a>
+				<img class="menu__item-img" src="img/4.jpg" alt="Some image"/>
+				<div class="marquee">
+					<div class="marquee__inner" aria-hidden="true">
+						<span>Services</span>
+						<span>Services</span>
+						<span>Services</span>
+						<span>Services</span>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<a class="menu__item-link">Contact</a>
+				<img class="menu__item-img" src="img/5.jpg" alt="Some image"/>
+				<div class="marquee">
+					<div class="marquee__inner" aria-hidden="true">
+						<span>Contact</span>
+						<span>Contact</span>
+						<span>Contact</span>
+						<span>Contact</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="frame">
+				<h1 class="frame__title">CSS-only Marquee Menu Effect</h1>
+				<p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
+		</div>
+	</main>
+	<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
 </body>
+
+</html>
