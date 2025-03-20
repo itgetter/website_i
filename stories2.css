@@ -4,36 +4,37 @@
 }
 
 html, body {
-  height: 100%; /* Ensures body takes up full height of the viewport */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Enables Flexbox on the body */
-  flex-direction: column; /* Ensures content is stacked vertically */
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  background-color: var(--bgcolor); /* Set background color */
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center; /* Ensures that all content is centered horizontally */
+  align-items: flex-start; /* Align content at the top */
+  background-color: var(--bgcolor);
 }
 
 button {
-  position: absolute;
-  top: 5vh; /* Use vh for vertical position */
+  position: fixed; /* Make buttons fixed at the top */
+  top: 5vh; /* Space between top of the screen and button */
   background-color: var(--bttncolor);
   border: none;
   color: white;
-  padding: 2.5vh 5vw; /* Relative padding */
+  padding: 2.5vh 5vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: clamp(18px, 4vw, 25px);
   font-weight: bold;
   font-family: Fascinate;
-  margin: 1vh; /* Relative margin */
+  margin: 1vh;
   cursor: pointer;
-  border-radius: 12px; /* Border radius relative to viewport width */
+  border-radius: 12px;
   transition-duration: 0.4s;
+  z-index: 10;
 }
 
 .button2 {
-  right: 2vw;
+  right: 2vw; /* Menu button on the right */
 }
 
 button a {
@@ -46,22 +47,7 @@ button:hover {
 }
 
 .back-button {
-  position: absolute;
-  left: 1%; /* Positioned from the left */
-  top: 5vh; /* Adjusted for viewport height */
-  background-color: var(--bttncolor);
-  border: none;
-  color: var(--bgcolor);
-  padding: 2.5vh 5vw; /* Responsive padding */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  font-family: Fascinate;
-  margin: 1vh 1vw; /* Responsive margin */
-  cursor: pointer;
-  border-radius: 12px; /* Border radius as relative unit */
-  transition-duration: 0.4s;
+  left: 2vw; /* Back button on the left */
 }
 
 h1 {
@@ -69,9 +55,8 @@ h1 {
   color: var(--bttncolor);
   font-family: Fascinate;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10vh; /* Add more space above the h1 */
   z-index: 5;
-  /* Ensures it stays above iframe */
 }
 
 .main-content {
@@ -82,25 +67,60 @@ h1 {
   text-align: center;
   position: relative;
   padding-top: 50px;
-  padding-bottom: 50px; /* Add space at the bottom */
+  padding-bottom: 50px;
+  margin-top: 15vh; 
+  overflow: auto; /* Adjusted space to ensure title doesn't overlap with buttons */
 }
 
 .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Allow height to auto-adjust */
-  width: 100%; /* Set a max-width for the iframe container */
-  padding-bottom: 5vh; /* Adds padding to the bottom without affecting iframe */
-  box-sizing: border-box; /* Ensures padding is included in height calculation */
+  display: grid;
+  justify-items: center; /* Centers the iframe horizontally */
+  align-items: center; /* Ensures iframe is vertically centered within the container */
+  width: 100%; /* Allow the center container to take full width */
+  padding-top: 20px; /* Adjust for spacing above iframe */
+  box-sizing: border-box; /* Ensures padding does not affect the grid layout */
 }
 
 iframe {
-  width: 80vw;  /* Adjust this value to scale the iframe */
-  height: calc(80vw * 1.375); /* Maintain the 8:11 aspect ratio (height = width * 1.375) */
-  border: none; /* Optional: remove iframe border */
+  width: 40vw; /* Default iframe width */
+  height: calc(80vw * 1.375); /* Maintain aspect ratio (height = width * 1.375) */
+  border: none;
+  display: block; /* Make iframe behave as a block element */
+  margin: 0 auto; /* Ensures the iframe stays centered if not using grid */
 }
 
 .padding {
   margin: 2vh;
+}
+
+/* Ensure buttons stay above iframe and are responsive */
+@media (max-width: 650px) {
+  button {
+    font-size: 25px; /* Make buttons larger on mobile */
+    padding: 3vh 7vw; /* Adjust padding for buttons on mobile */
+    top: 5vh; /* Keep buttons at the top */
+  }
+
+  .back-button {
+    left: 2vw; /* Adjust left position of back button */
+  }
+
+  .button2 {
+    right: 2vw; /* Adjust right position of menu button */
+  }
+
+  iframe {
+    width: 90vw; /* Adjust iframe width on mobile */
+    height: calc(90vw * 1.375); /* Maintain aspect ratio (height = width * 1.375) */
+  }
+
+  h1 {
+    font-size: 7vw; /* Adjust title font size for mobile */
+    margin-top: 20vh; /* Add more space between title and buttons */
+  }
+
+  button {
+    font-size: 25px; /* Make buttons larger on mobile */
+    padding: 3vh 7vw; /* Adjust padding for buttons on mobile */
+  }
 }
