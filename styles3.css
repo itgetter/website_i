@@ -274,6 +274,13 @@ a:focus {
 		transform: translate3d(calc(-100% - 6vw), -30%, 0); /* Keep the image in its initial position */
 		transition: none;  /* Disable transition on hover */
 	}
+  .frame__info {
+		font-size: 8px;
+	}
+
+	.frame__title {
+		font-size: 8px;
+	}
 }
 
 
