@@ -28,35 +28,41 @@ h2 {
 
 button {
   position: absolute;
-  
   top: 5vh; /* Use vh for vertical position */
   background-color: var(--bttncolor);
   border: none;
-  color: white;
+  color: var(--bgcolor);
   padding: 2.5vh 5vw; /* Relative padding */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: clamp(18px, 4vw, 25px);
+  font-size: clamp(18px, 4vw, 25px); /* Ensure it's at least 18px on smaller screens */
   font-weight: bold;
   font-family: Fascinate;
   margin: 1vh; /* Relative margin */
   cursor: pointer;
   border-radius: 12px; /* Border radius relative to viewport width */
   transition-duration: 0.4s;
+  z-index: 10; /* Ensure the button stays above other content */
 }
 
-.button2 {
- right: 2vw;
+/* Hover shadow for both buttons */
+button:hover {
+  box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
 }
 
-
-.button1 {
+.button1, .button2 {
   box-shadow: 0 0.8vw 1.6vw 0 rgba(0, 0, 0, 0.2), 0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19);
 }
 
-.button2:hover {
-  box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
+.button2 {
+  /* Set this for the back button */
+  
+}
+
+.button1 {
+  /* Set this for the menu button */
+  
 }
 
 a {
@@ -99,7 +105,7 @@ p {
 
 .back-button {
   position: absolute;
-  left: 1%; /* Positioned from the left */
+  right: 5vw; /* Positioned from the right edge */
   top: 5vh; /* Adjusted for viewport height */
   background-color: var(--bttncolor);
   border: none;
@@ -108,13 +114,13 @@ p {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  
   font-weight: bold;
   font-family: Fascinate;
   margin: 1vh 1vw; /* Responsive margin */
   cursor: pointer;
   border-radius: 12px; /* Border radius as relative unit */
   transition-duration: 0.4s;
+  z-index: 10; /* Ensure the button stays above other content */
 }
 
 .back-button1 {
@@ -124,4 +130,19 @@ p {
 /* Hover effect for .back-button and .back-button1 */
 .back-button:hover, .back-button1:hover {
   box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu-button {
+  left: 5vw
+}
+
+/* Media query for mobile */
+@media (max-width: 600px) {
+  button {
+    font-size: 20px; /* Or any larger value that fits better on mobile */
+  }
+
+  .titlebg h1 {
+    font-size: 6vw; /* Adjust the title font size for mobile */
+  }
 }
