@@ -250,3 +250,31 @@ a:focus {
 		pointer-events: auto;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	/* Disable marquee animation and hide marquee text on mobile */
+	.marquee__inner {
+		animation: none; /* Disable the animation on mobile */
+		opacity: 0; /* Keep the marquee hidden */
+	}
+
+	/* Prevent hover effect on mobile */
+	.menu__item-link:hover {
+		opacity: 1;  /* Reset opacity to 1, no hover effect */
+	}
+
+	/* Disable marquee text visibility on hover for mobile */
+	.menu__item-link:hover ~ .marquee .marquee__inner {
+		opacity: 0;  /* Prevent marquee text from becoming visible on hover */
+	}
+
+	/* Disable image pop-in effect on hover */
+	.menu__item-link:hover + .menu__item-img {
+		opacity: 0;  /* Keep the image hidden */
+		transform: translate3d(calc(-100% - 6vw), -30%, 0); /* Keep the image in its initial position */
+		transition: none;  /* Disable transition on hover */
+	}
+}
+
+
+
