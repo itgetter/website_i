@@ -36,7 +36,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: clamp(18px, 4vw, 25px); /* Ensure it's at least 18px on smaller screens */
+  font-size: clamp(25px, 6vw, 35px); /* Ensure it's at least 18px on smaller screens */
   font-weight: bold;
   font-family: Fascinate;
   margin: 1vh; /* Relative margin */
@@ -55,15 +55,7 @@ button:hover {
   box-shadow: 0 0.8vw 1.6vw 0 rgba(0, 0, 0, 0.2), 0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19);
 }
 
-.button2 {
-  /* Set this for the back button */
-  
-}
 
-.button1 {
-  /* Set this for the menu button */
-  
-}
 
 a {
   text-decoration: none;
@@ -105,7 +97,7 @@ p {
 
 .back-button {
   position: absolute;
-  right: 5vw; /* Positioned from the right edge */
+  left: 5vw; /* Positioned from the right edge */
   top: 5vh; /* Adjusted for viewport height */
   background-color: var(--bttncolor);
   border: none;
@@ -133,7 +125,7 @@ p {
 }
 
 .menu-button {
-  left: 5vw
+  right: 5vw
 }
 
 /* Media query for mobile */
