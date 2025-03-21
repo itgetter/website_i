@@ -9,7 +9,7 @@ html, body {
   display: grid;
   grid-template-rows: 1fr auto;
   justify-items: center; /* Centers content horizontally */
-  align-items: flex-start; /* Align content to top */
+  align-items: flex-start; /* Align content to the top */
   background-color: var(--bgcolor);
   width: 100%;
 }
@@ -58,8 +58,6 @@ h1 {
   text-align: center;
   margin-top: 10vh;
   z-index: 5;
-  width: 100%;
-  text-align: center; /* Ensures it's centered */
 }
 
 .main-content {
@@ -77,19 +75,18 @@ h1 {
 
 .center {
   display: grid;
- 
-  
+  justify-items: center; /* Ensures the iframe is centered horizontally */
   width: 100%;
   padding-top: 20px;
   box-sizing: border-box;
 }
 
 iframe {
-  width: 40vw;
-  height: calc(80vw * 1.375);
+  width: 40vw; /* Default iframe width */
+  height: calc(40vw * 1.375); /* Maintain aspect ratio */
   border: none;
   display: block;
-  margin-left: 33vw;
+  margin: 0 auto; /* Centers the iframe horizontally */
 }
 
 .padding {
@@ -112,8 +109,8 @@ iframe {
   }
 
   iframe {
-
-    
+    width: 90vw; /* Adjust iframe width on mobile */
+    height: calc(90vw * 1.375); /* Maintain aspect ratio on mobile */
   }
 
   h1 {
