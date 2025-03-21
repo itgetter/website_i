@@ -1,0 +1,120 @@
+:root { 
+  --bgcolor: #EFC7C2;
+  --bttncolor: #694F5D;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center; /* Centers content horizontally */
+  align-items: flex-start; /* Align content to the top */
+  background-color: var(--bgcolor);
+  width: 100%;
+}
+
+button {
+  position: fixed;
+  top: 5vh;
+  background-color: var(--bttncolor);
+  border: none;
+  color: white;
+  padding: 2.5vh 5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: clamp(18px, 4vw, 25px);
+  font-weight: bold;
+  font-family: Fascinate;
+  margin: 1vh;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  z-index: 10;
+}
+
+.button2 {
+  right: 2vw;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--bgcolor);
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back-button {
+  left: 2vw;
+}
+
+h1 {
+  font-size: clamp(40px, 6vw, 80px); /* Adjusted the clamp for better resizing */
+  color: var(--bttncolor);
+  font-family: Fascinate;
+  text-align: center;
+  margin-top: 10vh;
+  z-index: 5;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 15vh;
+  overflow: auto;
+  max-width: 100%; /* Ensures content fills width on small screens */
+}
+
+.center {
+  display: grid;
+  justify-items: center; /* Ensures the iframe is centered horizontally */
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+iframe {
+  width: 80vw; /* PDF iframes should take up more horizontal space */
+  height: calc(80vw * 1.25); /* Adjust height for a PDF aspect ratio */
+  border: none;
+  display: block;
+  margin: 0 auto; /* Centers the iframe horizontally */
+}
+
+.padding {
+  margin: 2vh;
+}
+
+@media (max-width: 650px) {
+  button {
+    font-size: 25px;
+    padding: 3vh 7vw;
+    top: 10vh; /* Adjusted button top position for smaller screens */
+  }
+
+  .back-button {
+    left: 4vw; /* Adjust left position of back button */
+  }
+
+  .button2 {
+    right: 4vw; /* Adjust right position of menu button */
+  }
+
+  iframe {
+    width: 90vw; /* Adjust iframe width on mobile */
+    height: calc(90vw * 1.25); /* Adjust height for PDF aspect ratio on mobile */
+  }
+
+  h1 {
+    font-size: 7vw;
+    margin-top: 15vh; /* Adjust space above title for mobile */
+  }
+}
