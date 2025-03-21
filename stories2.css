@@ -8,14 +8,15 @@ html, body {
   margin: 0;
   display: grid;
   grid-template-rows: 1fr auto;
-  justify-items: center; /* Ensures that all content is centered horizontally */
-  align-items: flex-start; /* Align content at the top */
+  justify-items: center; /* Centers content horizontally */
+  align-items: flex-start; /* Align content to top */
   background-color: var(--bgcolor);
+  width: 100%;
 }
 
 button {
-  position: fixed; /* Make buttons fixed at the top */
-  top: 5vh; /* Space between top of the screen and button */
+  position: fixed;
+  top: 5vh;
   background-color: var(--bttncolor);
   border: none;
   color: white;
@@ -34,7 +35,7 @@ button {
 }
 
 .button2 {
-  right: 2vw; /* Menu button on the right */
+  right: 2vw;
 }
 
 button a {
@@ -47,16 +48,18 @@ button:hover {
 }
 
 .back-button {
-  left: 2vw; /* Back button on the left */
+  left: 2vw;
 }
 
 h1 {
-  font-size: clamp(40px, 6vw, 90px);
+  font-size: clamp(40px, 6vw, 80px); /* Adjusted the clamp for better resizing */
   color: var(--bttncolor);
   font-family: Fascinate;
   text-align: center;
-  margin-top: 10vh; /* Add more space above the h1 */
+  margin-top: 10vh;
   z-index: 5;
+  width: 100%;
+  text-align: center; /* Ensures it's centered */
 }
 
 .main-content {
@@ -65,62 +68,56 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-top: 15vh; 
-  overflow: auto; /* Adjusted space to ensure title doesn't overlap with buttons */
+  margin-top: 15vh;
+  overflow: auto;
+  max-width: 100%; /* Ensures content fills width on small screens */
 }
 
 .center {
   display: grid;
-  justify-items: center; /* Centers the iframe horizontally */
-  align-items: center; /* Ensures iframe is vertically centered within the container */
-  width: 100%; /* Allow the center container to take full width */
-  padding-top: 20px; /* Adjust for spacing above iframe */
-  box-sizing: border-box; /* Ensures padding does not affect the grid layout */
+ 
+  
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
 }
 
 iframe {
-  width: 40vw; /* Default iframe width */
-  height: calc(80vw * 1.375); /* Maintain aspect ratio (height = width * 1.375) */
+  width: 40vw;
+  height: calc(80vw * 1.375);
   border: none;
-  display: block; /* Make iframe behave as a block element */
-  margin: 0 auto; /* Ensures the iframe stays centered if not using grid */
+  display: block;
+  margin-left: 33vw;
 }
 
 .padding {
   margin: 2vh;
 }
 
-/* Ensure buttons stay above iframe and are responsive */
 @media (max-width: 650px) {
   button {
-    font-size: 25px; /* Make buttons larger on mobile */
-    padding: 3vh 7vw; /* Adjust padding for buttons on mobile */
-    top: 5vh; /* Keep buttons at the top */
+    font-size: 25px;
+    padding: 3vh 7vw;
+    top: 10vh; /* Adjusted button top position for smaller screens */
   }
 
   .back-button {
-    left: 2vw; /* Adjust left position of back button */
+    left: 4vw; /* Adjust left position of back button */
   }
 
   .button2 {
-    right: 2vw; /* Adjust right position of menu button */
+    right: 4vw; /* Adjust right position of menu button */
   }
 
   iframe {
-    width: 90vw; /* Adjust iframe width on mobile */
-    height: calc(90vw * 1.375); /* Maintain aspect ratio (height = width * 1.375) */
+
+    
   }
 
   h1 {
-    font-size: 7vw; /* Adjust title font size for mobile */
-    margin-top: 20vh; /* Add more space between title and buttons */
-  }
-
-  button {
-    font-size: 25px; /* Make buttons larger on mobile */
-    padding: 3vh 7vw; /* Adjust padding for buttons on mobile */
+    font-size: 7vw;
+    margin-top: 15vh; /* Adjust space above title for mobile */
   }
 }
