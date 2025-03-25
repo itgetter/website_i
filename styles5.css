@@ -12,7 +12,12 @@ body {
 
 h1 {
   font-size: 70px;
-  color: var(--bttncolor);
+  -webkit-text-stroke: 1.5px #000;
+	text-stroke: 1.5px #000;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	color: transparent;
+	transition: opacity 0.4s;
   font-family: 'Fascinate', sans-serif;
   margin-left: 25px;
 }
