@@ -13,6 +13,8 @@ html, body {
   background-color: var(--bgcolor);
   width: 100%;
 }
+p {font-family: Parkinsans;
+font-weight: bold;}
 
 button {
   position: absolute;
@@ -90,38 +92,55 @@ iframe {
   max-width: 100%; /* Prevents overflow */
 }
 
+.mobile-iframe {
+  display: block; /* Display the iframe by default */
+}
+
+.mobile-link {
+  display: none; /* Hide the link by default */
+}
+
 .padding {
   margin: 2vh;
 }
 
 @media (max-width: 650px) {
+  /* Hide the iframe on mobile */
+  .mobile-iframe {
+    display: none;
+  }
+
+  /* Show the link to view the document on mobile */
+  .mobile-link {
+    display: block;
+    font-size: 20px;
+    color: var(--bttncolor);
+    text-decoration: underline;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Other mobile-specific adjustments */
   button {
     font-size: 25px;
     padding: 3vh 7vw;
-    top: 10vh; /* Adjusted button top position for smaller screens */
+    top: 10vh;
   }
 
   .back-button {
-    left: 4vw; /* Adjust left position of back button */
+    left: 4vw;
   }
 
   .button2 {
-    right: 4vw; /* Adjust right position of menu button */
-  }
-
-  iframe {
-    width: 90vw; /* Adjust iframe width on mobile */
-    height: calc(90vw * 1.375); /* Maintain aspect ratio on mobile */
-    max-width: 100%; /* Ensures iframe doesn't overflow */
+    right: 4vw;
   }
 
   h1 {
     font-size: 7vw;
-    margin-top: 15vh; /* Adjust space above title for mobile */
+    margin-top: 15vh;
   }
 
   .main-content {
-    padding-top: 30px; /* Adjust padding to avoid too much space */
+    padding-top: 30px;
   }
 }
-
