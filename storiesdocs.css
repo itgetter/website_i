@@ -87,6 +87,7 @@ iframe {
   border: none;
   display: block;
   margin: 0 auto; /* Centers the iframe horizontally */
+  max-width: 100%; /* Prevents overflow */
 }
 
 .padding {
@@ -111,10 +112,33 @@ iframe {
   iframe {
     width: 90vw; /* Adjust iframe width on mobile */
     height: calc(90vw * 1.375); /* Maintain aspect ratio on mobile */
+    max-width: 100%; /* Ensures iframe doesn't overflow */
   }
 
   h1 {
     font-size: 7vw;
     margin-top: 15vh; /* Adjust space above title for mobile */
+  }
+
+  .main-content {
+    padding-top: 30px; /* Adjust padding to avoid too much space */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens like some phones */
+  iframe {
+    width: 95vw; /* Slightly more width for smaller devices */
+    height: calc(95vw * 1.375); /* Maintain aspect ratio */
+  }
+
+  h1 {
+    font-size: 6vw; /* Smaller font for very small screens */
+    margin-top: 10vh; /* Adjust space above title for very small screens */
+  }
+
+  button {
+    font-size: 22px; /* Adjust button font size for small screens */
+    padding: 4vh 8vw; /* Adjust padding for small screens */
   }
 }
