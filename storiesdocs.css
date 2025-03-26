@@ -128,8 +128,8 @@ iframe {
 @media (max-width: 480px) {
   /* For very small screens like some phones */
   iframe {
-    width: 95vw; /* Slightly more width for smaller devices */
-    height: calc(95vw * 1.375); /* Maintain aspect ratio */
+    width: 100%; /* Slightly more width for smaller devices */
+    height: calc(100% * 1.375); /* Maintain aspect ratio */
   }
 
   h1 {
