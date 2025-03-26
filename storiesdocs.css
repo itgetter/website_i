@@ -15,7 +15,7 @@ html, body {
 }
 
 button {
-  position: fixed;
+  position: absolute;
   top: 5vh;
   background-color: var(--bttncolor);
   border: none;
@@ -82,7 +82,7 @@ h1 {
 }
 
 iframe {
-  width: 40vw; /* Default iframe width */
+  width: 100%; /* Default iframe width */
   height: calc(40vw * 1.375); /* Maintain aspect ratio */
   border: none;
   display: block;
@@ -125,20 +125,3 @@ iframe {
   }
 }
 
-@media (max-width: 480px) {
-  /* For very small screens like some phones */
-  iframe {
-    width: 100%; /* Slightly more width for smaller devices */
-    height: calc(100% * 1.375); /* Maintain aspect ratio */
-  }
-
-  h1 {
-    font-size: 6vw; /* Smaller font for very small screens */
-    margin-top: 10vh; /* Adjust space above title for very small screens */
-  }
-
-  button {
-    font-size: 22px; /* Adjust button font size for small screens */
-    padding: 4vh 8vw; /* Adjust padding for small screens */
-  }
-}
