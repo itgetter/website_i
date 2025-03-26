@@ -55,11 +55,18 @@ button:hover {
 
 h1 {
   font-size: clamp(40px, 6vw, 80px); /* Adjusted the clamp for better resizing */
-  color: var(--bttncolor);
+ -webkit-text-stroke: 1.5px #000;
+	text-stroke: 1.5px #000;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	color: transparent;
+	transition: opacity 0.4s;
   font-family: Fascinate;
   text-align: center;
   margin-top: 10vh;
   z-index: 5;
+  top: 30px;
+  position: relative;
 }
 
 .main-content {
