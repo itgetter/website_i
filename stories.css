@@ -135,4 +135,6 @@ p {
     font-size: 20px; /* Or any larger value that fits better on mobile */
   }
 
-  
+  h1 {
+    font-size: 8vw;
+  }
