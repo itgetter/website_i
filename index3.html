@@ -34,11 +34,11 @@
         let currentIndex = 0; // Start with the first image
         let backgroundElement = document.querySelector('main::before'); // Target the main background pseudo-element
 
-        // Set initial background to p1.jpg
+        // Set initial background to p1.jpg on the pseudo-element
         document.querySelector('main').style.setProperty('background-image', `url(${images[0]})`);
 
         function changeBackground() {
-            // Update the background image
+            // Update the background image for the pseudo-element
             document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
 
             // Increment index, loop back to 0 after the last image
