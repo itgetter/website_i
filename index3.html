@@ -2,118 +2,128 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Inkpen Films Menu</title>
-	<meta name="description" content="navigation menu for Inkpen Films" />
-	<meta name="keywords" content="inkpen, films, website, independent film, filmmaking, writing" />
-	<meta name="author" content="Codrops" />
-	<link rel="stylesheet" href="styles3.css">
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://use.typekit.net/zhq0vyf.css">
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-	<script>
-	document.documentElement.className = "js";
-	var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
-	supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-	</script>
-  
-  <script>
-    let images = ['img/p1.jpg', 'img/p2.jpg', 'img/p3.jpg', 'img/p4.jpg']; // Array of images
-    let currentIndex = 0; // Start with the first image
-    let backgroundElement = document.querySelector('main::before'); // Target the main background pseudo-element
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inkpen Films Menu</title>
+    <meta name="description" content="navigation menu for Inkpen Films" />
+    <meta name="keywords" content="inkpen, films, website, independent film, filmmaking, writing" />
+    <meta name="author" content="Codrops" />
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/zhq0vyf.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 
-    function changeBackground() {
-        // Update the background image
-        document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
+    <!-- Preload images for faster loading -->
+    <link rel="preload" href="img/p1.jpg" as="image">
+    <link rel="preload" href="img/p2.jpg" as="image">
+    <link rel="preload" href="img/p3.jpg" as="image">
+    <link rel="preload" href="img/p4.jpg" as="image">
 
-        // Increment index, loop back to 0 after the last image
-        currentIndex = (currentIndex + 1) % images.length;
-    }
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
 
-    // Call the function to change background every 5 seconds
-    setInterval(changeBackground, 2000);
-</script>
+    <script>
+        let images = ['img/p1.jpg', 'img/p2.jpg', 'img/p3.jpg', 'img/p4.jpg']; // Array of images
+        let currentIndex = 0; // Start with the first image
+        let backgroundElement = document.querySelector('main::before'); // Target the main background pseudo-element
 
-  
-	<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+        // Set initial background to p1.jpg
+        document.querySelector('main').style.setProperty('background-image', `url(${images[0]})`);
+
+        function changeBackground() {
+            // Update the background image
+            document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
+
+            // Increment index, loop back to 0 after the last image
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Call the function to change background every 5 seconds
+        setInterval(changeBackground, 2000);
+    </script>
+
+    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 </head>
 
 <body class="demo-1">
-	<main>
-		<div class="frame">
-			
-			
-		</div>
-		<nav class="menu">
-			<div class="menu__item">
-				<a class="menu__item-link" href= "index.html">About</a>
-				<img class="menu__item-img" src="img/11.jpg" alt="Some image"/>
-				<div class="marquee">
-					<div class="marquee__inner" aria-hidden="true">
-						<span>About</span>
-						<span>About</span>
-						<span>About</span>
-						<span>About</span>
-					</div>
-				</div>
-			</div>
-			<div class="menu__item">
-				<a class="menu__item-link" href= "index4.html">Videos</a>
-				<img class="menu__item-img" src="img/22.jpg" alt="Some image"/>
-				<div class="marquee">
-					<div class="marquee__inner" aria-hidden="true">
-						<span>Videos</span>
-							<span>Videos</span>
-							<span>Videos</span>
-							<span>Videos</span>
-					</div>
-				</div>
-			</div>
-			<div class="menu__item">
-				<a class="menu__item-link" href="index5.html">Writing</a>
-				<img class="menu__item-img" src="img/33.jpg" alt="Some image"/>
-				<div class="marquee">
-					<div class="marquee__inner" aria-hidden="true">
-						<span>Writing</span>
-						<span>Writing</span>
-						<span>Writing</span>
-						<span>Writing</span>
-					</div>
-				</div>
-			</div>
-			<div class="menu__item">
-				<a class="menu__item-link" href= "index6.html">Services</a>
-				<img class="menu__item-img" src="img/44.jpg" alt="Some image"/>
-				<div class="marquee">
-					<div class="marquee__inner" aria-hidden="true">
-						<span>Services</span>
-						<span>Services</span>
-						<span>Services</span>
-						<span>Services</span>
-					</div>
-				</div>
-			</div>
-			<div class="menu__item">
-				<a class="menu__item-link" href= "index7.html">Contact</a>
-				<img class="menu__item-img" src="img/55.jpg" alt="Some image"/>
-				<div class="marquee">
-					<div class="marquee__inner" aria-hidden="true">
-						<span>Contact</span>
-						<span>Contact</span>
-						<span>Contact</span>
-						<span>Contact</span>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<div class="frame">
-				<h1 class="frame__title">CSS-only Marquee Menu Effect</h1>
-				<p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
-		</div>
-	</main>
-	<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+    <main>
+        <div class="frame">
+        </div>
+        <nav class="menu">
+            <div class="menu__item">
+                <a class="menu__item-link" href="index.html">About</a>
+                <img class="menu__item-img" src="img/11.jpg" alt="Some image" />
+                <div class="marquee">
+                    <div class="marquee__inner" aria-hidden="true">
+                        <span>About</span>
+                        <span>About</span>
+                        <span>About</span>
+                        <span>About</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <a class="menu__item-link" href="index4.html">Videos</a>
+                <img class="menu__item-img" src="img/22.jpg" alt="Some image" />
+                <div class="marquee">
+                    <div class="marquee__inner" aria-hidden="true">
+                        <span>Videos</span>
+                        <span>Videos</span>
+                        <span>Videos</span>
+                        <span>Videos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <a class="menu__item-link" href="index5.html">Writing</a>
+                <img class="menu__item-img" src="img/33.jpg" alt="Some image" />
+                <div class="marquee">
+                    <div class="marquee__inner" aria-hidden="true">
+                        <span>Writing</span>
+                        <span>Writing</span>
+                        <span>Writing</span>
+                        <span>Writing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <a class="menu__item-link" href="index6.html">Services</a>
+                <img class="menu__item-img" src="img/44.jpg" alt="Some image" />
+                <div class="marquee">
+                    <div class="marquee__inner" aria-hidden="true">
+                        <span>Services</span>
+                        <span>Services</span>
+                        <span>Services</span>
+                        <span>Services</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <a class="menu__item-link" href="index7.html">Contact</a>
+                <img class="menu__item-img" src="img/55.jpg" alt="Some image" />
+                <div class="marquee">
+                    <div class="marquee__inner" aria-hidden="true">
+                        <span>Contact</span>
+                        <span>Contact</span>
+                        <span>Contact</span>
+                        <span>Contact</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="frame">
+            <h1 class="frame__title">CSS-only Marquee Menu Effect</h1>
+            <p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
+        </div>
+    </main>
+    <!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
 </body>
 
 </html>
