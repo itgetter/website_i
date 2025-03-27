@@ -13,7 +13,7 @@
 
 h1 {
   margin-left: 2vw; /* Adjusting to a relative unit */
-  font-size: 4vw; /* Font size adjusts with viewport width */
+  font-size: clamp(4vw, 30px, 10vw); /* Font size adjusts with viewport width */
    -webkit-text-stroke: 1.5px #000;
 	text-stroke: 1.5px #000;
 	-webkit-text-fill-color: transparent;
@@ -25,11 +25,7 @@ h1 {
   margin-top: 20vh;
 }
 
-h2 {
-  margin-left: 3vw; /* Adjusting to relative unit */
-  font-family: Fascinate;
-  font-size: 4vw; /* Font size adjusts with viewport width */
-}
+
 
 button {
   position: absolute;
@@ -139,7 +135,4 @@ p {
     font-size: 20px; /* Or any larger value that fits better on mobile */
   }
 
-  .titlebg h1 {
-    font-size: 6vw; /* Adjust the title font size for mobile */
-  }
-}
+  
