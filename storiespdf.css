@@ -15,7 +15,7 @@ html, body {
 }
 
 button {
-  position: fixed;
+  position: absolute;
   top: 5vh;
   background-color: var(--bttncolor);
   border: none;
