@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CSS-only Marquee Menu Effect | Codrops</title>
-	<meta name="description" content="A menu with a css-only marquee hover effect" />
-	<meta name="keywords" content="marquee, css, animation, loop, infinite, hover, menu, navigation" />
+	<title>Inkpen Films Menu</title>
+	<meta name="description" content="navigation menu for Inkpen Films" />
+	<meta name="keywords" content="inkpen, films, website, independent film, filmmaking, writing" />
 	<meta name="author" content="Codrops" />
 	<link rel="stylesheet" href="styles3.css">
 	<link rel="shortcut icon" href="favicon.ico">
@@ -18,6 +18,25 @@
 	var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
 	supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
 	</script>
+  
+  <script>
+    let images = ['img/p1.jpg', 'img/p2.jpg', 'img/p3.jpg', 'img/p4.jpg']; // Array of images
+    let currentIndex = 0; // Start with the first image
+    let backgroundElement = document.querySelector('main::before'); // Target the main background pseudo-element
+
+    function changeBackground() {
+        // Update the background image
+        document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
+
+        // Increment index, loop back to 0 after the last image
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Call the function to change background every 5 seconds
+    setInterval(changeBackground, 5000);
+</script>
+
+  
 	<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 </head>
 
