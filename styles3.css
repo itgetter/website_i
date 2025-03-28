@@ -27,7 +27,9 @@ body {
 
 main::before {
     animation: grain 8s steps(10) infinite;
-    background-image: url('img/noise.png'); /* Default image */
+    background-image: url('img/p1.jpg'); /* Default image */
+    background-size: cover;  /* Make the background cover the screen */
+    background-position: center;  /* Keep the image centered */
     content: '';
     height: 300%;
     left: -50%;
@@ -215,6 +217,20 @@ a:focus {
     }
 }
 
+/* Media Query for mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Hide marquee text and disable animation on small screens */
+    .marquee__inner {
+        display: none;
+    }
+
+    /* Optionally, you can hide the background animation for better performance on mobile */
+    main::before {
+        animation: none;
+        opacity: 1;
+    }
+}
+
 @media screen and (min-width: 53em) {
     .frame {
         text-align: left;
@@ -249,6 +265,3 @@ a:focus {
         pointer-events: auto;
     }
 }
-
-@media screen and (max-width: 768px) {
-    /* Disable marquee animation and hide marquee text
