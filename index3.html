@@ -41,11 +41,14 @@
         });
 
         function changeBackground() {
-            // Update the background image for the main::before pseudo-element
-            document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
+    // Update the background image for the main::before pseudo-element
+    document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
+    document.querySelector('main').style.setProperty('background-size', 'cover');  // Ensures image covers the whole screen
 
-            // Increment index, loop back to 0 after the last image
-            currentIndex = (currentIndex + 1) % images.length;
+    // Increment index, loop back to 0 after the last image
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
         }
 
         // Call the function to change background every 5 seconds
