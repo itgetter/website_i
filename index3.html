@@ -14,10 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
     
     <!-- Preload images for faster loading -->
-    <link rel="preload" href="img/p1.jpg" as="image">
-    <link rel="preload" href="img/p2.jpg" as="image">
-    <link rel="preload" href="img/p3.jpg" as="image">
-    <link rel="preload" href="img/p4.jpg" as="image">
+    <link rel="preload" href="img/p11.jpg" as="image">
+    <link rel="preload" href="img/p22.jpg" as="image">
+    <link rel="preload" href="img/p33.jpg" as="image">
+    <link rel="preload" href="img/p44.jpg" as="image">
+     <link rel="preload" href="img/p55.jpg" as="image">
+     <link rel="preload" href="img/p66.jpg" as="image">
     
     <script>
         document.documentElement.className = "js";
@@ -29,12 +31,12 @@
     </script>
 
     <script>
-        let images = ['img/p1.jpg', 'img/p2.jpg', 'img/p3.jpg', 'img/p4.jpg']; // Array of images
+        let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg']; // Array of images
         let currentIndex = 0; // Start with the first image
 
-        // Set the initial background to p1.jpg on the main::before pseudo-element
+        // Set the initial background to p11.jpg on the main::before pseudo-element
         document.addEventListener('DOMContentLoaded', () => {
-            // Set the initial background to p1.jpg
+            // Set the initial background to p11.jpg
             document.querySelector('main').style.setProperty('background-image', `url(${images[0]})`);
         });
 
