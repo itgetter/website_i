@@ -31,16 +31,17 @@
     </script>
 
     <script>
-        let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg']; // Array of images
-        let currentIndex = 0; // Start with the first image
+       let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg']; // Array of images
+let currentIndex = 0; // Start with the first image
 
-        // Set the initial background to p11.jpg on the main::before pseudo-element
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set the initial background to p11.jpg
-            document.querySelector('main').style.setProperty('background-image', `url(${images[0]})`);
-        });
+// Set the initial background to p11.jpg on the main::before pseudo-element
+document.addEventListener('DOMContentLoaded', () => {
+    // Set the initial background to p11.jpg
+    document.querySelector('main').style.setProperty('background-image', `url(${images[0]})`);
+    document.querySelector('main').style.setProperty('background-size', 'cover'); // Ensures image covers the entire viewport
+});
 
-        function changeBackground() {
+function changeBackground() {
     // Update the background image for the main::before pseudo-element
     document.querySelector('main').style.setProperty('background-image', `url(${images[currentIndex]})`);
     document.querySelector('main').style.setProperty('background-size', 'cover');  // Ensures image covers the whole screen
@@ -49,10 +50,9 @@
     currentIndex = (currentIndex + 1) % images.length;
 }
 
-        }
+// Call the function to change background every 5 seconds (adjust to your preferred interval)
+setInterval(changeBackground, 5000);  // Changed interval to 5 seconds for smoother transitions
 
-        // Call the function to change background every 5 seconds
-        setInterval(changeBackground, 1000);
     </script>
 </head>
 
