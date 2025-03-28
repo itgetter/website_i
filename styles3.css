@@ -28,7 +28,7 @@ body {
 main::before {
     animation: grain 8s steps(10) infinite;
     background-image: url('img/noise.png'); /* Default image */
-    background-size: cover;  /* Make the background cover the screen */
+     /* Make the background cover the screen */
     background-position: center;  /* Keep the image centered */
     content: '';
     height: 300%;
