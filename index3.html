@@ -31,7 +31,7 @@
     </script>
 
     <script>
-      let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg']; // Array of images
+     let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg']; // Array of images
 let currentIndex = 0; // Start with the first image
 
 // Set the initial background to p11.jpg on the main::before pseudo-element
@@ -45,8 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function changeBackground() {
     let mainElement = document.querySelector('main');
     
-    // Apply smooth fade-out and fade-in transition
-    mainElement.style.transition = "background-image 1s ease-in-out";
+    // Ensure the previous background transition has completed before triggering the next one
+    mainElement.style.transition = "none"; // Temporarily remove transition
+    
+    // Force a reflow (a dummy change)
+    mainElement.offsetHeight; // This is a hack to trigger reflow, ensuring the background is updated smoothly
+    
+    // Set the new background image with a transition
+    mainElement.style.transition = "background-image 1s ease-in-out"; // Reapply transition
     mainElement.style.setProperty('background-image', `url(${images[currentIndex]})`);
     mainElement.style.setProperty('background-size', 'cover');  // Ensure image covers the whole screen
 
@@ -56,6 +62,7 @@ function changeBackground() {
 
 // Call the function to change background every 1 second (1000 milliseconds)
 setInterval(changeBackground, 1000);
+
 
     </script>
 </head>
