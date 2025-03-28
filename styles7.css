@@ -47,8 +47,11 @@ button {
 
 a {
     text-decoration: none;
-  color: var(--bgcolor);
+  ;
     
+}
+.bttnlink {
+  color: var(--bgcolor)
 }
 
 /* Different link colors for various links */
