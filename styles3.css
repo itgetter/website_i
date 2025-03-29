@@ -241,7 +241,7 @@ a:focus {
         align-content: space-between;
         width: 100%;
         padding: 2.5rem 6vw;
-        pointer-events: none;
+        pointer-events: auto;
         grid-template-columns: 75% 25%;
         grid-template-rows: auto;
     }
