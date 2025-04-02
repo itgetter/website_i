@@ -232,6 +232,15 @@ a:focus {
         animation: none;
         opacity: 1;
     }
+    /* Enable pointer events for the menu and marquee items */
+    .menu, .marquee {
+        pointer-events: auto;
+    }
+
+    /* Ensure the menu items are still clickable */
+    .menu__item-link {
+        pointer-events: auto;
+    }
 }
 
 @media screen and (min-width: 53em) {
