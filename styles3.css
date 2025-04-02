@@ -249,7 +249,7 @@ a:focus {
         pointer-events: auto;
         user-select: text;
     }
-    menu__item-img {
+    .menu__item-img {
         display: none;
 }
 
