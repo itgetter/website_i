@@ -240,9 +240,14 @@ a:focus {
     /* Ensure the menu items are still clickable */
     .menu__item-link {
         pointer-events: auto;
+        
+    }
+    .menu {
+        user-select: none;
     }
     .menu__item-link::before {
         pointer-events: auto;
+        user-select: text;
     }
 }
 
