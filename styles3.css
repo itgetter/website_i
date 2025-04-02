@@ -241,6 +241,9 @@ a:focus {
     .menu__item-link {
         pointer-events: auto;
     }
+    .menu__item-link::before {
+        pointer-events: auto;
+    }
 }
 
 @media screen and (min-width: 53em) {
