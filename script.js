@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     { 
       src: 'https://i.ibb.co/8LTPtG9b/gaffportrait.png', 
-      infoText: 'I spent time gaffing for an independent film company in the Poconos, crafting light to hold the desolate and piercing beauty of "Genesis Valley"',
+      infoText: 'I spent time gaffing for an independent film company in the Poconos, helping to create the look and feel of "Genesis Valley"',
       bottomText: 'We worked day and night to properly illuminate the slow-burn, post-apocalyptic thriller.' 
     },
     { 
       src: 'https://i.ibb.co/QvxLT9T6/Image-Editor.jpg', 
       infoText: 'I provided script supervision for the film Marina, starring Peter Friedman ("Succession") and Grace McLean. An incredible honor to work with such talented actors and crewmembers.',
-      bottomText: 'The film involved an incredible amount of tension, pain, and beauty - a haunted, strange beauty that shows up especially in the final moments, where the art direction was able to shine its brightest.' 
+      bottomText: 'The film was a true work of art, written and directed by Eva Steinmetz. I was very lucky to share in the experience and see the set design come to life on screen.' 
     },
     { 
       src: 'https://i.ibb.co/Xx4JPHbd/Image-Editor-2.png', 
