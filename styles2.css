@@ -2,96 +2,20 @@
 :root {
   --bgcolor: #EFC7C2;
   --bttncolor: #694F5D;
+  --linkcolor: #68A691;
 }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevents horizontal overflow */
-  position: relative; /* Ensures that absolute elements are positioned relative to body */
-  box-sizing: border-box; /* Ensures consistent box-sizing */
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Ensures all elements use border-box model */
-}
-
 body {
   background-color: var(--bgcolor);
-  margin: 0;
-  padding: 0;
-}
-
-.main-wrapper {
-  padding: calc(5vw + 20px);
-  width: 100%;
-  position: relative;
-  overflow: hidden; /* Prevent overflow */
-  display: flex; /* Flexbox for column alignment */
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/* Image Styles */
-img {
-  width: clamp(30%, 30vw, 50%);  /* Make the image responsive to container */
-  height: auto; /* Maintain aspect ratio */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  border: 10px solid var(--bttncolor);
-  box-sizing: border-box;
-  object-fit: cover; /* Ensure the image covers the container without stretching */
-}
-
-/* The "Click Me" text */
-.clickme {
-  position: absolute;
-  left: 10%; /* Place the text to the left of the image */
-  top: 45%;
-  transform: translateY(-50%);
-  font-family: 'Parkinsans', sans-serif;
   color: var(--bttncolor);
-  pointer-events: none;
-  font-size: calc(0.5rem + 1vw);
-  animation: bounceInfinite 1s ease-in-out infinite, fadeOut 10s ease-out forwards;
+ 
 }
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
 
-@keyframes bounceInfinite {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.image-container {
-  position: relative;
-  display: flex;  /* Flexbox for aligning the image and text */
-  justify-content: center; /* Horizontally center the image */
-  align-items: center; /* Vertically align the image */
-  z-index: 1; /* Ensure image is below the text */
-  width: 100%; /* Ensure the image container is full width */
-  flex-direction: column; /* Keep text and image in a vertical stack */
-}
-
-/* Paragraph Styles */
-p {
-  font-family: 'Parkinsans', sans-serif;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1000px;
-  width: 100%;
-  background: var(--bttncolor);
-  border-radius: 55px;
-  padding: 50px;
-  color: var(--bgcolor);
-  text-align: center;
-  line-height: 2;
+:root {
+  --magnifier: 1.5;
+  --gap: 1vmin;
+  --transition: 0.5s;
 }
 
 h1 {
@@ -108,9 +32,48 @@ h1 {
   position: relative;
 }
 
-.italic-text {
-  font-style: italic;
+p {
+  font-family: 'Parkinsans', sans-serif;
+
+  max-width: 1000px;
+  width: 100%;
+  
+  
+  color: var(--bttncolor);
+  
+  line-height: 2;
 }
+
+.container {
+  width: 80vw;
+  height: 50vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  margin: 0 auto;
+}
+
+.container img {
+  --brightness: 0.75;
+  --grayscale: 1;
+  transition: flex var(--transition), filter var(--transition);
+  height: 100%;
+  filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+  object-fit: cover;
+  overflow: hidden;
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  background-color: black;
+}
+
+.container img:hover {
+  --brightness: 1.15;
+  --grayscale: 0;
+  flex: var(--magnifier);
+}
+
 
 button {
   position: absolute;
@@ -139,39 +102,100 @@ button {
 }
 
 .buttonfix { 
-  position: relative;
   padding: 2vh; 
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.img-block {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: flex var(--transition);
+}
+
+.img-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--transition);
+  filter: grayscale(1) brightness(0.75);
+}
+
+.img-block:hover {
+  flex: var(--magnifier);
+}
+
+.img-block:hover img {
+  filter: grayscale(0) brightness(1.15);
+}
+
+.img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-family: 'Parkinsans', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  color: var(--bgcolor);
+  text-align: center;
+}
+
+.img-block:hover .img-caption {
+  opacity: 1;
 }
 
 .intextlink {
   text-decoration: none;
-  color: var(--bttncolor);
-  font-weight: bold;
-  background-color: var(--bgcolor);
-  padding: 1px;
-  border-radius: 12px;
+  color: var(--linkcolor)
 }
 
-.intextlink:hover {
-  color: var(--bgcolor);
-  background-color: var(--bttncolor);
-  padding: 1px;
-  border-radius: 12px;
+/* Only apply hover styles on non-touch devices */
+body:not(.touch-enabled) .img-block:hover {
+  flex: var(--magnifier);
+}
+body:not(.touch-enabled) .img-block:hover img {
+  filter: grayscale(0) brightness(1.15);
+}
+body:not(.touch-enabled) .img-block:hover .img-caption {
+  opacity: 1;
 }
 
-.space { padding: 30px; }
+/* Apply same styles on tap for touch-enabled devices */
+.touch-enabled .img-block.active {
+  flex: var(--magnifier);
+}
+.touch-enabled .img-block.active img {
+  filter: grayscale(0) brightness(1.15);
+}
+.touch-enabled .img-block.active .img-caption {
+  opacity: 1;
+}
 
-/* Media Queries */
+
+
 
 @media (max-width: 768px) {
-  .clickme {
-    position: relative;
-    left:0;
-    top:20%
-  }
-  img {
-    width: 65%;
+  .container {
+    flex-direction: column;
     height: auto;
   }
-  
-  
+
+  .container img {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+}
