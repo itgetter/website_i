@@ -1,15 +1,20 @@
- // Add class to body if on touch device
-  window.addEventListener('DOMContentLoaded', () => {
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      document.body.classList.add('touch-enabled');
+document.addEventListener("DOMContentLoaded", function () {
+  // Add a class to the body if touch is supported
+  if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+    document.body.classList.add("touch-enabled");
 
-      const blocks = document.querySelectorAll('.img-block');
-
-      blocks.forEach(block => {
-        block.addEventListener('click', () => {
-          blocks.forEach(b => b.classList.remove('active')); // remove from others
-          block.classList.toggle('active'); // toggle current
+    // Make each image block toggle .active on tap
+    const imgBlocks = document.querySelectorAll(".img-block");
+    
+    imgBlocks.forEach(block => {
+      block.addEventListener("click", function () {
+        // Close all other blocks
+        imgBlocks.forEach(b => {
+          if (b !== block) b.classList.remove("active");
         });
+        // Toggle the tapped one
+        block.classList.toggle("active");
       });
-    }
-  });
+    });
+  }
+});
