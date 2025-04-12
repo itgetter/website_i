@@ -3,30 +3,28 @@
   --bgcolor: #EFC7C2;
   --bttncolor: #694F5D;
   --linkcolor: #68A691;
-}
-body {
-  background-color: var(--bgcolor);
-  color: var(--bttncolor);
- 
-}
-@import "https://unpkg.com/open-props";
-@import "https://unpkg.com/open-props/normalize.min.css";
-
-:root {
   --magnifier: 1.5;
   --gap: 1vmin;
   --transition: 0.5s;
 }
 
+body {
+  background-color: var(--bgcolor);
+  color: var(--bttncolor);
+}
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
 h1 {
   margin-left: calc(20px + 2vw);
   font-size: clamp(40px, 5vw, 70px);
   -webkit-text-stroke: 1.5px #000;
-	text-stroke: 1.5px #000;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
-	color: transparent;
-	transition: opacity 0.4s;
+  text-stroke: 1.5px #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: opacity 0.4s;
   font-family: 'Fascinate', cursive;
   padding: 20px;
   position: relative;
@@ -34,13 +32,9 @@ h1 {
 
 p {
   font-family: 'Parkinsans', sans-serif;
-
   max-width: 1000px;
   width: 100%;
-  
-  
   color: var(--bttncolor);
-  
   line-height: 2;
 }
 
@@ -64,7 +58,7 @@ p {
   overflow: hidden;
   flex: 1;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   background-color: black;
 }
 
@@ -73,7 +67,6 @@ p {
   --grayscale: 0;
   flex: var(--magnifier);
 }
-
 
 button {
   position: absolute;
@@ -89,11 +82,10 @@ button {
   cursor: pointer;
   border-radius: 12px;
   transition-duration: 0.4s;
-  background-size: contain;
-  width: auto;  
+  width: auto;
   height: auto;
-  min-width: 150px; 
-  min-height: 50px; 
+  min-width: 150px;
+  min-height: 50px;
 }
 
 .buttonlink {
@@ -101,15 +93,13 @@ button {
   color: var(--bgcolor);
 }
 
-.buttonfix { 
-  padding: 2vh; 
+.buttonfix {
+  padding: 2vh;
 }
 
 button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
-
 
 .img-block {
   position: relative;
@@ -117,7 +107,7 @@ button:hover {
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: flex var(--transition);
 }
 
@@ -151,6 +141,7 @@ button:hover {
   transition: opacity 0.4s ease-in-out;
   color: var(--bgcolor);
   text-align: center;
+  padding: 0 1rem;
 }
 
 .img-block:hover .img-caption {
@@ -163,39 +154,60 @@ button:hover {
 }
 
 /* Only apply hover styles on non-touch devices */
-body:not(.touch-enabled) .img-block:hover {
-  flex: var(--magnifier);
-}
-body:not(.touch-enabled) .img-block:hover img {
-  filter: grayscale(0) brightness(1.15);
-}
-body:not(.touch-enabled) .img-block:hover .img-caption {
-  opacity: 1;
-}
+
+
+
 
 /* Apply same styles on tap for touch-enabled devices */
-.touch-enabled .img-block.active {
-  flex: var(--magnifier);
-}
+
+
 .touch-enabled .img-block.active img {
   filter: grayscale(0) brightness(1.15);
 }
+
 .touch-enabled .img-block.active .img-caption {
   opacity: 1;
 }
 
-
-
+/*mediaquery here*/
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
     height: auto;
+    margin-top: 50px;
   }
 
   .container img {
     flex: none;
     width: 100%;
     height: auto;
+  }
+
+  .img-caption {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  button {
+    position: relative;
+    left: 40vw;
+    top: 10px;
+  }
+
+.img-caption {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.touch-enabled .img-block.active .img-caption {
+  max-height: 1000px; /* big enough to hold all text */
+  opacity: 1;
+}
+
+
+  .touch-enabled .img-block.active img {
+    filter: grayscale(0) brightness(1.15);
   }
 }
