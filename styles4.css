@@ -164,14 +164,7 @@ button:hover {
         
     }
 
-    button {
-    position: relative; /* Let it flow naturally with the layout */
-    top: auto;
-    right: auto;
-    margin: 20px auto; /* Center it horizontally */
-    display: block;
-    width: fit-content;
-  }
+
 }
 
 /* Existing Styles for General Layout */
