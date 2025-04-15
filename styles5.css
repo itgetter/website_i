@@ -164,9 +164,12 @@ button {
   }
 
     button {
-        left: auto;  /* Reset left positioning */
-        right: 10%;  /* Adjust right positioning */
-        top: 10%;  /* Adjust top positioning */
+      position: relative; /* Let it flow naturally with the layout */
+    top: auto;
+    right: auto;
+    margin: 20px auto; /* Center it horizontally */
+    display: block;
+    width: fit-content;
     }
 
 
@@ -192,7 +195,7 @@ button {
     padding: 10px 15px;
   }
 
-  {button font-size: 26px;
+  button {font-size: 26px;
     padding: 16px 36px;
     top: 25px;
     right: 25px;
