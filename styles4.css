@@ -44,6 +44,12 @@ button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.buttonfix {
+	 display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .video-gallery {
     display: grid;
     grid-template-columns: 1fr;  /* Default to 1 column on small screens */
@@ -159,10 +165,13 @@ button:hover {
     }
 
     button {
-        left: auto;  /* Reset left positioning */
-        right: 10%;  /* Adjust right positioning */
-        top: 10%;  /* Adjust top positioning */
-    }
+    position: relative; /* Let it flow naturally with the layout */
+    top: auto;
+    right: auto;
+    margin: 20px auto; /* Center it horizontally */
+    display: block;
+    width: fit-content;
+  }
 }
 
 /* Existing Styles for General Layout */
