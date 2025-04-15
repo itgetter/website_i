@@ -103,12 +103,12 @@ button {
   color: var(--bgcolor)
 }
 .button2 {
-   position: absolute;
+   position:
 }
 
 .button2:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  position: absolute;
+  position:
 }
 .buttonfix {
 	  display: flex;
@@ -257,9 +257,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* or center, depending on your layout vibe */
-  gap: 2rem; /* this gives you controlled space between title and button */
+  gap: 1rem; /* this gives you controlled space between title and button */
   padding-left: calc(5% + 20px); /* same as h1 */
-  margin-bottom: 3rem; /* push the rest of the content down a bit */
+  margin-bottom: 1rem /* push the rest of the content down a bit */
 }
 
 @media screen and (max-width: 768px) {
