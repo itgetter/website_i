@@ -15,9 +15,6 @@ body {
 }
 
 button {
-    position: absolute;
-    right:calc(3vw); /* Ensure the button is inside the viewport on mobile */
-    bottom: calc(15vh);
     background-color: var(--bttncolor);
     border: none;
     color: white;
@@ -180,7 +177,7 @@ button {
   align-items: flex-start; /* or center, depending on your layout vibe */
   gap: 1rem; /* this gives you controlled space between title and button */
   padding-left: calc(5% + 20px); /* same as h1 */
-  margin-bottom: 1rem; /* push the rest of the content down a bit */
+  margin-bottom: 3rem; /* push the rest of the content down a bit */
 }
 
 @media screen and (max-width: 768px) {
