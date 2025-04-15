@@ -189,10 +189,10 @@ button:hover {
   }
 
   button {
-    position: relative;
-    left: 40vw;
-    top: 10px;
-  }
+        left: auto;  /* Reset left positioning */
+        right: 10%;  /* Adjust right positioning */
+        top: 10%;  /* Adjust top positioning */
+    }
 
 .img-caption {
   max-height: 0;
