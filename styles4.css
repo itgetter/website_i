@@ -13,15 +13,18 @@ body {
 }
 
 h1 {
-    font-size: 40px;  /* Smaller font size for mobile */
-    color: var(--bttncolor);
-    font-family: Fascinate;
-    text-align: left;
-    margin-top: 20px;
-    padding: 20px;
-
- 
+  font-size: clamp(40px, 6vw, 70px);
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000;
+  text-stroke: 1.5px #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: opacity 0.4s;
+  font-family: Fascinate;
+  margin: 0;
+  padding: 20px 0;
 }
+
 
 button {
     background-color: var(--bttncolor);
@@ -37,7 +40,7 @@ button {
     cursor: pointer;
     border-radius: 12px;
     transition-duration: 0.4s;
-  position: absolute;
+  position: relative;
 }
 
 button:hover {
@@ -181,18 +184,6 @@ button:hover {
 
 
 
-h1 {
-    margin-left: 20px;
-    font-size: 70px;
-    -webkit-text-stroke: 1.5px #000;
-	text-stroke: 1.5px #000;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
-	color: transparent;
-	transition: opacity 0.4s;
-    font-family: Fascinate;
-    margin-left: 25px;
-}
 
 h2 {
     
