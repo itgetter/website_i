@@ -160,7 +160,8 @@ p {
 
   h1 { padding-left: calc(5% + 20px);}
   
-  .buttonfix {
-    position: relative;
-    padding-bottom: calc(10vh+5px)
-  }
+  button {
+        left: auto;  /* Reset left positioning */
+        right: 10%;  /* Adjust right positioning */
+        top: 10%;  /* Adjust top positioning */
+    }
