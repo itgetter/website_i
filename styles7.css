@@ -192,8 +192,8 @@ button {
 @media screen and (min-width: 769px) {
   .button2 {
     position: absolute;
-    top: 0;
-    right: 0;
+     top: 10%;
+  right: calc(20px + 2vw);
     margin: 0;
   }
 
