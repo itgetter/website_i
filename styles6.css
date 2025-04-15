@@ -138,10 +138,10 @@ p {
         padding-left: 15px;
     }
 
-    button {
-        font-size: 18px; /* Smaller button text for mobile */
-        padding: 10px 20px;
-      
+     button {
+        left: auto;  /* Reset left positioning */
+        right: 10%;  /* Adjust right positioning */
+        top: 10%;  /* Adjust top positioning */
     }
 
     .banner1, .banner2 {
