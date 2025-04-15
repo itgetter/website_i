@@ -12,14 +12,14 @@ body {
     overflow-x: hidden; /* Prevents horizontal overflow */
 }
 
-header h1 {
+h1 {
     font-size: 40px;  /* Smaller font size for mobile */
     color: var(--bttncolor);
     font-family: Fascinate;
     text-align: left;
     margin-top: 20px;
     padding: 20px;
-  display: flex;
+
  
 }
 
