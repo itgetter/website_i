@@ -94,7 +94,9 @@ button {
 }
 
 .buttonfix {
-  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 button:hover {
@@ -188,11 +190,17 @@ button:hover {
     font-size: 1rem; /* Adjust font size for mobile */
   }
 
+
   button {
-        left: auto;  /* Reset left positioning */
-        right: 10%;  /* Adjust right positioning */
-        top: 10%;  /* Adjust top positioning */
-    }
+    position: relative; /* Let it flow naturally with the layout */
+    top: auto;
+    right: auto;
+    margin: 20px auto; /* Center it horizontally */
+    display: block;
+    width: fit-content;
+  }
+
+
 
 .img-caption {
   max-height: 0;
