@@ -199,8 +199,8 @@ button {
 
   button {font-size: 26px;
     padding: 16px 36px;
-    top: 25px;
-    right: 25px;
+   top: 10%;
+  right: calc(20px + 2vw);
     position: absolute
      ;}
 }
