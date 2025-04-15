@@ -108,7 +108,7 @@ button:hover {
     }
 
     button {
-        font-size: 22px;  /* Adjust button size */
+         /* Adjust button size */
     }
 }
 
@@ -123,7 +123,7 @@ button:hover {
     }
 
     button {
-        font-size: 24px;  /* Adjust button size for large screens */
+         /* Adjust button size for large screens */
     }
 
     .video-item {
