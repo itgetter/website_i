@@ -157,14 +157,11 @@ button {
     width: 100%; /* Ensure each li takes full width available */
   }
 
-  button {
-    font-size: 18px;
-    padding: 12px 24px;
-    top: 15px;
-    right: 15px;
-    position: absolute;
-  }
-}
+    button {
+        left: auto;  /* Reset left positioning */
+        right: 10%;  /* Adjust right positioning */
+        top: 10%;  /* Adjust top positioning */
+    }
 
 
 /* Tablet and Larger Devices (600px and up) */
