@@ -27,7 +27,7 @@ h1 {
 
 
 
-button {
+.button {
   position: absolute;
   top: 5vh; /* Use vh for vertical position */
   background-color: var(--bttncolor);
@@ -48,7 +48,7 @@ button {
 }
 
 /* Hover shadow for both buttons */
-button:hover {
+.button:hover {
   box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -129,12 +129,12 @@ p {
   right: 5vw
 }
 
-/* Media query for mobile */
 @media (max-width: 600px) {
-  button {
-    font-size: 20px; /* Or any larger value that fits better on mobile */
+  h1 {
+    font-size: 50px;  /* Force the font size to 50px for smaller screens */
   }
 
-  h1 {
-    font-size: 10vw;
+  button {
+    font-size: 2rem;  /* Adjust button text size for smaller screens */
   }
+}
