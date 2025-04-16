@@ -86,8 +86,8 @@ a:hover {
 /* Button styling */
 button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+   top: 10%;
+  right: calc(20px + 2vw);
   background-color: var(--bttncolor);
   border: none;
   color: white;
