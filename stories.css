@@ -33,11 +33,11 @@ button {
   background-color: var(--bttncolor);
   border: none;
   color: var(--bgcolor);
-  padding: 2.5vh 5vw; /* Relative padding */
+  padding: 15px 32px; /* Relative padding */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: clamp(25px, 6vw, 35px); /* Ensure it's at least 18px on smaller screens */
+  font-size: 2rem; /* Ensure it's at least 18px on smaller screens */
   font-weight: bold;
   font-family: Fascinate;
   margin: 1vh; /* Relative margin */
@@ -103,7 +103,7 @@ p {
   background-color: var(--bttncolor);
   border: none;
   color: var(--bgcolor);
-  padding: 2.5vh 5vw; /* Responsive padding */
+  padding: 15px 32px; /* Responsive padding */
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -136,5 +136,5 @@ p {
   }
 
   h1 {
-    font-size: 8vw;
+    font-size: 10vw;
   }
