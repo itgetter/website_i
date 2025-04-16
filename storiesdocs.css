@@ -111,10 +111,12 @@ iframe {
 /* ================== RESPONSIVE =================== */
 
 @media (max-width: 650px) {
+  /* Hide iframe on mobile */
   .mobile-iframe {
     display: none;
   }
 
+  /* Show the link to view the document on mobile */
   .mobile-link {
     display: block;
   }
@@ -124,8 +126,22 @@ iframe {
     padding-top: 30px;
   }
 
+  /* Adjust buttons for mobile */
   .buttons a {
     font-size: 1.5rem;
     padding: 12px 24px;
+  }
+
+  /* Fix button positioning on mobile (give space) */
+  .back-button, .button2 {
+    top: 5%; /* Ensure they are not too far up */
+  }
+
+  .back-button {
+    left: 4vw;
+  }
+
+  .button2 {
+    right: 4vw;
   }
 }
