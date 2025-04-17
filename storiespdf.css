@@ -14,54 +14,54 @@ html, body {
   width: 100%;
 }
 
-button {
+.button {
   position: absolute;
-  top: 5vh;
+  top: 5vh; /* Adjusted to be more responsive */
   background-color: var(--bttncolor);
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: var(--bgcolor);
+  padding: 20px 40px; /* Increased button size */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: clamp(18px, 4vw, 25px);
+  font-size: clamp(20px, 5vw, 30px); /* Adjusted for readability */
   font-weight: bold;
   font-family: Fascinate;
-  margin: 1vh;
+  margin: 2vh;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 15px; /* Slightly bigger border radius */
   transition-duration: 0.4s;
   z-index: 10;
 }
 
 .button2 {
-  right: 2vw;
+  right: 2vw; /* Maintains distance from the right edge */
 }
 
-button a {
+.button a {
   text-decoration: none;
   color: var(--bgcolor);
 }
 
-button:hover {
+.button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .back-button {
-  left: 2vw;
+  left: 2vw; /* Maintains distance from the left edge */
 }
 
 h1 {
-  font-size: clamp(40px, 6vw, 80px); /* Adjusted the clamp for better resizing */
+  font-size: clamp(40px, 8vw, 80px); /* Adjusted clamp range for better responsiveness */
   -webkit-text-stroke: 1.5px #000;
-	text-stroke: 1.5px #000;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
-	color: transparent;
-	transition: opacity 0.4s;
+  text-stroke: 1.5px #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: opacity 0.4s;
   font-family: Fascinate;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 10vh; /* Top margin for balance */
   z-index: 5;
 }
 
@@ -100,17 +100,17 @@ iframe {
 
 @media (max-width: 650px) {
   button {
-    font-size: 25px;
-    padding: 3vh 7vw;
-    top: 10vh; /* Adjusted button top position for smaller screens */
+    font-size: 25px; /* Adjusted button text size for mobile */
+    padding: 4vh 8vw; /* More spacious padding on mobile */
+    top: 12vh; /* Adjusted button top position for smaller screens */
   }
 
   .back-button {
-    left: 4vw; /* Adjust left position of back button */
+    left: 4vw; /* Adjust left position of back button on mobile */
   }
 
   .button2 {
-    right: 4vw; /* Adjust right position of menu button */
+    right: 4vw; /* Adjust right position of menu button on mobile */
   }
 
   iframe {
@@ -119,7 +119,7 @@ iframe {
   }
 
   h1 {
-   
+    font-size: clamp(35px, 6vw, 70px); /* Adjusted font size for smaller screens */
     margin-top: 15vh; /* Adjust space above title for mobile */
   }
 }
