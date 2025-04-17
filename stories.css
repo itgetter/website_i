@@ -37,30 +37,32 @@ a {
 }
 
 .buttons {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 4vw;
   width: 100%;
+  max-width: 100%;
   height: 0;
-  padding-top: 2vh;
 }
 
 .buttons a,
 .button,
 .back-button,
 .menu-button {
-
-  top: 15%; /* Increased the top margin for spacing */
+  position: absolute;
+  top: 15%;
   background-color: var(--bttncolor);
   color: var(--bgcolor);
-  padding: 15px 32px; /* Adjusted padding to increase button size */
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 2.5rem; /* Increased font size for larger buttons */
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: Fascinate;
   border-radius: 12px;
   transition-duration: 0.4s;
   z-index: 100;
-  
 }
 
 .back-button {
@@ -78,13 +80,6 @@ a {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 
               0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.buttons {
-   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2vh 4vw;
-  max-width: 100%;
-}
 
 p {
   padding: 2vh 15vw;
@@ -97,26 +92,24 @@ p {
   padding-top: 1vh;
 }
 
-
-
-
 .top-header {
-
+  position: relative; /* Important for child positioning */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--bgcolor); /* Needed to separate it from body content */
+  background-color: var(--bgcolor);
   z-index: 10;
   text-align: center;
- 
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  box-sizing: border-box;
 }
 
 .main-content {
-   padding-top: 3vh
-  }
+  padding-top: 3vh;
+}
 
 /* ================== MOBILE STYLES =================== */
-
 @media (max-width: 650px) {
   h1 {
     font-size: 50px;
@@ -126,10 +119,9 @@ p {
   .button,
   .back-button,
   .menu-button {
-    font-size: 2rem; /* Adjusted to be larger on mobile */
-    padding: 12px 24px; /* Increased padding for larger buttons */
-    top: 5%; /* Adjusted position for better spacing */
-   
+    font-size: 2rem;
+    padding: 12px 24px;
+    top: 2vh; /* Adjusted from 5% for better spacing */
   }
 
   .back-button {
@@ -140,6 +132,4 @@ p {
   .button2 {
     right: 4vw;
   }
-
- 
-
+}
