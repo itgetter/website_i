@@ -106,11 +106,13 @@ p {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--bgcolor); /* Needed to separate it from body content */
   z-index: 10;
-  padding-top: 10vh;
-  
   text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
 }
+
 .main-content {
    padding-top: 30vh
   }
