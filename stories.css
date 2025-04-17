@@ -107,8 +107,7 @@ p {
   background-color: var(--bgcolor); /* Needed to separate it from body content */
   z-index: 10;
   text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+ 
 }
 
 .main-content {
