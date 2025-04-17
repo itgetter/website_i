@@ -113,8 +113,8 @@ p {
   .back-button,
   .menu-button {
     font-size: 2rem; /* Adjusted to be larger on mobile */
-    padding: 15px 30px; /* Increased padding for larger buttons */
-    top: 8%; /* Adjusted position for better spacing */
+    padding: 12px 24px; /* Increased padding for larger buttons */
+    top: 5%; /* Adjusted position for better spacing */
   }
 
   .back-button {
