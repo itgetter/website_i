@@ -3,60 +3,32 @@
   --bttncolor: #694F5D;
 }
 
-.center {
-  height: 100%; /* Ensure the body and html elements take up full height */
+html, body {
   margin: 0;
-  display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
+  padding: 0;
+  height: 100%;
+  background-color: var(--bgcolor);
+  font-family: Parkinsans, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bgcolor);
 }
 
 h1 {
-  margin-left: 2vw; /* Adjusting to a relative unit */
-  font-size: clamp(4vw, 30px, 10vw); /* Font size adjusts with viewport width */
-   -webkit-text-stroke: 1.5px #000;
-	text-stroke: 1.5px #000;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
-	color: transparent;
-	transition: opacity 0.4s;
+  font-size: clamp(50px, 6vw, 80px);
+  -webkit-text-stroke: 1.5px #000;
+  text-stroke: 1.5px #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
   font-family: Fascinate;
   text-align: center;
   margin-top: 20vh;
+  position: relative;
+  z-index: 5;
 }
-
-
-
-.button {
-  position: absolute;
-  top: 5vh; /* Use vh for vertical position */
-  background-color: var(--bttncolor);
-  border: none;
-  color: var(--bgcolor);
-  padding: 15px 32px; /* Relative padding */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 2rem; /* Ensure it's at least 18px on smaller screens */
-  font-weight: bold;
-  font-family: Fascinate;
-  margin: 1vh; /* Relative margin */
-  cursor: pointer;
-  border-radius: 12px; /* Border radius relative to viewport width */
-  transition-duration: 0.4s;
-  z-index: 10; /* Ensure the button stays above other content */
-}
-
-/* Hover shadow for both buttons */
-.button:hover {
-  box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
-}
-
-.button1, .button2 {
-  box-shadow: 0 0.8vw 1.6vw 0 rgba(0, 0, 0, 0.2), 0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19);
-}
-
-
 
 a {
   text-decoration: none;
@@ -64,77 +36,96 @@ a {
   color: var(--bgcolor);
 }
 
-.heading {
-  background-color: var(--bttncolor);
-  border-radius: 2vw; /* Border radius adjusted */
-  width: 30vw; /* Width in relative unit */
-  margin-left: 2vw; /* Adjusted for responsiveness */
-  padding-top: 2vh;
-  margin-top: 3vh; /* Adjusted margin */
+.buttons {
+  position: relative;
+  width: 100%;
+  height: 0;
 }
 
-body {
-  background-color: var(--bgcolor);
+.buttons a,
+.button,
+.back-button,
+.menu-button {
+  position: fixed;
+  top: 10%;
+  background-color: var(--bttncolor);
+  color: var(--bgcolor);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Fascinate;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  z-index: 100;
+}
+
+.back-button {
+  left: calc(20px + 2vw);
+}
+
+.menu-button,
+.button2 {
+  right: calc(20px + 2vw);
+}
+
+.buttons a:hover,
+.button:hover,
+.back-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 
+              0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 p {
-  padding: 2vh 15vw; /* Relative padding */
+  padding: 2vh 15vw;
   font-size: clamp(18px, 4vw, 25px);
   font-family: Parkinsans;
   color: var(--bttncolor);
 }
 
-.bottom {
-  padding-bottom: 25vh; /* Relative padding for bottom space */
-}
-
 .firstpar {
-  padding-top: 5vh; /* Adjusted for viewport height */
+  padding-top: 5vh;
 }
 
 .topcushion {
-  padding-bottom: 5vh; /* Adjusted padding */
+  padding-bottom: 5vh;
 }
 
-.back-button {
-  position: absolute;
-  left: 5vw; /* Positioned from the right edge */
-  top: 5vh; /* Adjusted for viewport height */
+.heading {
   background-color: var(--bttncolor);
-  border: none;
-  color: var(--bgcolor);
-  padding: 15px 32px; /* Responsive padding */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  font-family: Fascinate;
-  margin: 1vh 1vw; /* Responsive margin */
-  cursor: pointer;
-  border-radius: 12px; /* Border radius as relative unit */
-  transition-duration: 0.4s;
-  z-index: 10; /* Ensure the button stays above other content */
+  border-radius: 2vw;
+  width: 30vw;
+  margin-left: 2vw;
+  padding-top: 2vh;
+  margin-top: 3vh;
 }
 
-.back-button1 {
-  box-shadow: 0 0.8vw 1.6vw 0 rgba(0, 0, 0, 0.2), 0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19);
-}
-
-/* Hover effect for .back-button and .back-button1 */
-.back-button:hover, .back-button1:hover {
-  box-shadow: 0 1.2vw 1.6vw 0 rgba(0, 0, 0, 0.24), 0 1.7vw 5vw 0 rgba(0, 0, 0, 0.19);
-}
-
-.menu-button {
-  right: 5vw
-}
-
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   h1 {
-    font-size: 50px;  /* Force the font size to 50px for smaller screens */
+    font-size: 50px;
   }
 
-  button {
-    font-size: 2rem;  /* Adjust button text size for smaller screens */
+  .buttons a,
+  .button,
+  .back-button,
+  .menu-button {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+    top: 5%;
+  }
+
+  .back-button {
+    left: 4vw;
+  }
+
+  .menu-button,
+  .button2 {
+    right: 4vw;
+  }
+
+  .main-content {
+    margin-top: 8vh;
+    padding-top: 30px;
   }
 }
