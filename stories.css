@@ -46,7 +46,7 @@ a {
 .button,
 .back-button,
 .menu-button {
-  position: fixed;
+
   top: 15%; /* Increased the top margin for spacing */
   background-color: var(--bttncolor);
   color: var(--bgcolor);
@@ -100,7 +100,7 @@ p {
 }
 
 .top-header {
-  position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
