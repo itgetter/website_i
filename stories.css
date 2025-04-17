@@ -107,9 +107,8 @@ p {
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: var(--bgcolor);
   padding-top: 10vh;
-  padding-bottom: 5vh;
+  
   text-align: center;
 }
 .main-content {
