@@ -99,20 +99,24 @@ iframe {
 }
 
 @media (max-width: 650px) {
-  button {
-    font-size: 25px; /* Adjusted button text size for mobile */
-    padding: 4vh 8vw; /* More spacious padding on mobile */
-    top: 12vh; /* Adjusted button top position for smaller screens */
+   .buttons a {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
+
+  /* Fix button positioning on mobile (give space) */
+  .back-button, .button2 {
+    top: 5%; /* Ensure they are not too far up */
   }
 
   .back-button {
-    left: 4vw; /* Adjust left position of back button on mobile */
+    left: 4vw;
   }
 
   .button2 {
-    right: 4vw; /* Adjust right position of menu button on mobile */
+    right: 4vw;
   }
-
+}
   iframe {
     width: 90vw; /* Adjust iframe width on mobile */
     height: calc(90vw * 1.25); /* Adjust height for PDF aspect ratio on mobile */
