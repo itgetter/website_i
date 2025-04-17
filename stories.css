@@ -47,13 +47,13 @@ a {
 .back-button,
 .menu-button {
   position: fixed;
-  top: 10%;
+  top: 15%; /* Increased the top margin for spacing */
   background-color: var(--bttncolor);
   color: var(--bgcolor);
-  padding: 15px 32px;
+  padding: 18px 40px; /* Adjusted padding to increase button size */
   text-align: center;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Increased font size for larger buttons */
   font-weight: bold;
   font-family: Fascinate;
   border-radius: 12px;
@@ -101,6 +101,8 @@ p {
   margin-top: 3vh;
 }
 
+/* ================== MOBILE STYLES =================== */
+
 @media (max-width: 650px) {
   h1 {
     font-size: 50px;
@@ -110,9 +112,9 @@ p {
   .button,
   .back-button,
   .menu-button {
-    font-size: 1.5rem;
-    padding: 12px 24px;
-    top: 5%;
+    font-size: 2rem; /* Adjusted to be larger on mobile */
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    top: 8%; /* Adjusted position for better spacing */
   }
 
   .back-button {
