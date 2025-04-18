@@ -265,7 +265,7 @@ a:focus {
     /* Ensure the menu items are still clickable */
     .menu__item-link {
         pointer-events: auto;
-        font-size: 5rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
         
     }
