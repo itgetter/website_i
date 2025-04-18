@@ -205,6 +205,46 @@ a:focus {
     }
 }
 
+
+/* Loading screen that will cover the page */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgcolor); /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it's on top */
+}
+
+/* Simple spinner animation */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--bttncolor);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* The page content will be hidden by default */
+#page-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
 /* Media Query for mobile (max-width: 768px) */
 @media screen and (max-width: 768px) {
     /* Hide marquee text and disable animation on small screens */
