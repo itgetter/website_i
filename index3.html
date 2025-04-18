@@ -6,7 +6,6 @@
     <title>Inkpen Films Menu</title>
     <meta name="description" content="navigation menu for Inkpen Films" />
     <meta name="keywords" content="inkpen, films, website, independent film, filmmaking, writing" />
-    <meta name="author" content="Codrops (probably crying somewhere rn)" />
     <link rel="stylesheet" href="styles3.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/zhq0vyf.css">
@@ -21,44 +20,18 @@
     <link rel="preload" href="img/p55.jpg" as="image">
     <link rel="preload" href="img/p66.jpg" as="image">
 
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function() {
-            var e, t = document.createElement("style");
-            t.innerHTML = "root: { --tmp-var: bold; }";
-            document.head.appendChild(t);
-            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)"));
-            t.parentNode.removeChild(t);
-            return e;
-        };
-        supportsCssVars() || alert("Upgrade from Internet Explorer, my dude.");
-    </script>
-
-    <script>
-        let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg'];
-        let currentIndex = 0;
-        document.addEventListener('DOMContentLoaded', () => {
-            let mainElement = document.querySelector('main');
-            mainElement.style.setProperty('background-image', `url(${images[0]})`);
-            mainElement.style.setProperty('background-size', 'cover');
-            mainElement.style.transition = "background-image 1s ease-in-out";
-        });
-
-        function changeBackground() {
-            let mainElement = document.querySelector('main');
-            mainElement.style.transition = "none";
-            mainElement.offsetHeight; // it’s not a bug, it’s a feature
-            mainElement.style.transition = "background-image 1s ease-in-out";
-            mainElement.style.setProperty('background-image', `url(${images[currentIndex]})`);
-            mainElement.style.setProperty('background-size', 'cover');
-            currentIndex = (currentIndex + 1) % images.length;
-        }
-
-        setInterval(changeBackground, 1000); // gotta go fast
-    </script>
+   
 </head>
 
 <body class="demo-1">
+  
+   <div id="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Your entire page content goes inside here -->
+    <div id="page-wrapper">
+  
     <main>
         <div class="frame"></div>
         <nav class="menu">
@@ -98,5 +71,53 @@
             <p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
         </div>
     </main>
+      
+       </div>
+   </div>
+  
+   <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
+        };
+        supportsCssVars() || alert("Upgrade from Internet Explorer, my dude.");
+    </script>
+
+    <script>
+        let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg'];
+        let currentIndex = 0;
+        document.addEventListener('DOMContentLoaded', () => {
+            let mainElement = document.querySelector('main');
+            mainElement.style.setProperty('background-image', `url(${images[0]})`);
+            mainElement.style.setProperty('background-size', 'cover');
+            mainElement.style.transition = "background-image 1s ease-in-out";
+        });
+
+        function changeBackground() {
+            let mainElement = document.querySelector('main');
+            mainElement.style.transition = "none";
+            mainElement.offsetHeight; // it’s not a bug, it’s a feature
+            mainElement.style.transition = "background-image 1s ease-in-out";
+            mainElement.style.setProperty('background-image', `url(${images[currentIndex]})`);
+            mainElement.style.setProperty('background-size', 'cover');
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackground, 1000); // gotta go fast
+    </script>
+  <script>
+    window.addEventListener('load', function() {
+    // Hide the loading screen and show the page content
+    document.getElementById('loading-screen').style.display = 'none';
+    document.getElementById('page-wrapper').style.visibility = 'visible';
+    document.getElementById('page-wrapper').style.opacity = '1';
+});
+  </script>
+  
 </body>
 </html>
