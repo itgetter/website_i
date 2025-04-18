@@ -145,25 +145,10 @@ a:focus {
     opacity: 0;
 }
 
-.menu__item-img {
-    position: absolute;
-    height: 50vh;
-    max-height: 400px;
-    opacity: 0;
-    left: 100%;
-    top: 50%;
-    transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradual fade effect */
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For webkit-based browsers */
-    border-radius: 10px; /* Optional: Rounds the corners for a softer look */
-}
 
 
-.menu__item-link:hover + .menu__item-img {
-    opacity: 1;
-    transform: translate3d(calc(-100% - 6vw),-30%,0) rotate3d(0,0,1,4deg);
-    transition: all 0.4s;
-}
+
+
 
 /* Make sure 3 items are visible in the viewport by setting suitable font size. */
 
@@ -181,7 +166,7 @@ a:focus {
     display: flex;
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
-    animation: marquee 5s linear infinite;
+    animation: marquee 40s linear infinite;
     animation-play-state: paused;
     opacity: 0;
     transition: opacity 0.1s;
@@ -249,9 +234,7 @@ a:focus {
         pointer-events: auto;
         user-select: text;
     }
-    .menu__item-img {
-        display: none;
-}
+   
 
 @media screen and (min-width: 53em) {
     .frame {
