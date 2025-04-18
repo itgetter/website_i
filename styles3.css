@@ -129,7 +129,7 @@ a:focus {
     transition: opacity 0.4s;
 }
 
-.menu__item-link::before {
+/*.menu__item-link::before {
     all: initial;
     font-family: Fascinate;
     counter-increment: menu;
@@ -139,6 +139,7 @@ a:focus {
     left: 0;
     pointer-events: none;
 }
+*/
 
 .menu__item-link:hover {
     transition-duration: 0.1s;
