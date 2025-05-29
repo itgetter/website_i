@@ -31,7 +31,7 @@
       <h2 class= "title2">Concept Art</h2>
       <div class="gallery">
         <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
-        <img id="mainImage" src="conceptart2.png" alt="Gallery Image">
+        <img id="mainImage" src="img/conceptart2.png" alt="Gallery Image">
         <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
       </div>
     </div>
@@ -41,17 +41,17 @@
     <div class="gallery-wrapper">
       <h2 class= "title3">Character Bios</h2>
       <div class="thumbnails">
-        <img src="max.png" onclick="setImage(0)" class="thumb">
-        <img src="jenny.png" onclick="setImage(1)" class="thumb">
-        <img src="wills.png" onclick="setImage(2)" class="thumb">
-        <img src="wayne.png" onclick="setImage(3)" class="thumb">
-        <img src="ramone.png" onclick="setImage(4)" class="thumb">
+        <img src="img/max.png" onclick="setImage(0)" class="thumb">
+        <img src="img/jenny.png" onclick="setImage(1)" class="thumb">
+        <img src="img/wills.png" onclick="setImage(2)" class="thumb">
+        <img src="img/wayne.png" onclick="setImage(3)" class="thumb">
+        <img src="img/ramone.png" onclick="setImage(4)" class="thumb">
       </div>
     </div>
   </div>
 
   <script>
-    const images = ["max.png", "jenny.png", "wills.png", "wayne.png", "ramone.png"];
+    const images = ["img/max.png", "img/jenny.png", "img/wills.png", "img/wayne.png", "img/ramone.png"];
     let currentIndex = 0;
 
     function changeImage(direction) {
