@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="styles8.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+  <h1>New Projects</h1>
+
+  <div class="top-row">
+    <div class="text-block">
+      <h2 class= "title1">Believer's Club</h2>
+      <a href="https://www.instagram.com/believersclubfilm?igsh=ZzZzdGVrZHVneWRz&utm_source=qr">Instagram</a>
+      <p>fundraiser coming soon!</p>
+      
+      <p class= "text">
+       Welcome to the world of the “Believer’s Club” - a story about a D&D group where Max, the DM, gets into a forbidden relationship with one of the players. To keep the relationship a secret, the rules of the game are bent to the point of breaking - and with one slip up, the group could dissolve entirely! As the covert romance pulls at the seams of their friendship, can Max remain an impartial adjudicator of the game world, or will his forbidden love get the better of him?
+      </p>
+    </div>
+
+    <div class="gallery-wrapper">
+      <h2 class= "title2">Concept Art</h2>
+      <div class="gallery">
+        <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
+        <img id="mainImage" src="conceptart2.png" alt="Gallery Image">
+        <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="gallery-wrapper">
+      <h2 class= "title3">Character Bios</h2>
+      <div class="thumbnails">
+        <img src="max.png" onclick="setImage(0)" class="thumb">
+        <img src="jenny.png" onclick="setImage(1)" class="thumb">
+        <img src="wills.png" onclick="setImage(2)" class="thumb">
+        <img src="wayne.png" onclick="setImage(3)" class="thumb">
+        <img src="ramone.png" onclick="setImage(4)" class="thumb">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const images = ["max.png", "jenny.png", "wills.png", "wayne.png", "ramone.png"];
+    let currentIndex = 0;
+
+    function changeImage(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      updateMainImage();
+    }
+
+    function setImage(index) {
+      currentIndex = index;
+      updateMainImage();
+    }
+
+    function updateMainImage() {
+      document.getElementById("mainImage").src = images[currentIndex];
+      document.querySelectorAll('.thumb').forEach((thumb, index) => {
+        thumb.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    window.onload = updateMainImage;
+  </script>
+</body>
+</html>
