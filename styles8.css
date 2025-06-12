@@ -7,6 +7,9 @@
 
 body {
   background-color: var(--bgcolor);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -15,44 +18,22 @@ h1 {
   -webkit-text-stroke: 1.5px #000;
   text-stroke: 1.5px #000;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   color: transparent;
   transition: opacity 0.4s;
   font-family: 'Fascinate', cursive;
   padding: 20px;
-  position: relative;
 }
 
-.title1 {
+.title1, .title2, .title3 {
   font-family: 'Fascinate', cursive;
   color: var(--bttncolor);
-  margin-left: calc(20px + 2vw);
   font-size: 3.5rem;
-}
-.title2 {
-  font-family: 'Fascinate', cursive;
-  color: var(--bttncolor);
-  margin-right: calc(20px + 2vw);
-  font-size: 3.5rem;
-  
+  text-align: center;
 }
 
-.title3 {
-   font-family: 'Fascinate', cursive;
-  color: var(--bttncolor);
-  font-size: 3.5rem;
-}
-
-p {
+p, a {
   font-family: 'Parkinsans', sans-serif;
   color: var(--bttncolor);
-  margin-left: calc(20px + 2vw);
-  
-}
-
-a {
-  font-family: 'Parkinsans', sans-serif;
-  color: var(--linkcolor);
   margin-left: calc(20px + 2vw);
 }
 
@@ -74,14 +55,16 @@ a {
   margin: auto;
 }
 
-.gallery img {
+.gallery img,
+.gallery a {
+  display: block;
   width: 100%;
   height: auto;
-  transition: opacity 0.3s ease-in-out;
+  text-align: center;
 }
 
 .arrow {
-  background: none;
+  background: rgba(0,0,0,0.5);
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -91,7 +74,6 @@ a {
   z-index: 10;
   color: white;
   padding: 10px;
-  background-color: rgba(0,0,0,0.5);
 }
 
 .arrow.left {
@@ -111,15 +93,6 @@ a {
   margin-bottom: 20vh;
 }
 
-.thumbnails a {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  line-height: 0; /* Removes extra space below image */
-}
-
-
 .thumb {
   width: 80px;
   height: auto;
@@ -127,6 +100,29 @@ a {
   opacity: 0.6;
   transition: opacity 0.3s;
   border: 2px solid transparent;
+  position: relative;
+}
+
+/* Hover text using alt */
+.thumb::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bttncolor);
+  color: var(--bgcolor);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.thumb:hover::after {
+  opacity: 1;
 }
 
 .thumb:hover,
@@ -152,15 +148,14 @@ a {
 
 .text-block {
   max-width: 600px;
-  margin-right: 20vw;
-  margin-bottom:20vh;
+  margin-bottom: 20vh;
 }
 
 .gallery-wrapper {
   max-width: 600px;
 }
 
-/* Optional Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .top-row {
     flex-direction: column;
@@ -170,5 +165,6 @@ a {
   h2, p, a {
     margin-left: 20px;
     margin-right: 20px;
+    text-align: center;
   }
 }
