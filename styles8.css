@@ -9,17 +9,15 @@ body {
   background-color: var(--bgcolor);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 h1 {
   margin-left: calc(20px + 2vw);
   font-size: clamp(40px, 5vw, 70px);
   -webkit-text-stroke: 1.5px #000;
-  text-stroke: 1.5px #000;
-  -webkit-text-fill-color: transparent;
   color: transparent;
-  transition: opacity 0.4s;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   font-family: 'Fascinate', cursive;
   padding: 20px;
 }
@@ -55,33 +53,32 @@ p, a {
   margin: auto;
 }
 
-.gallery img,
-.gallery a {
-  display: block;
+.gallery img {
   width: 100%;
   height: auto;
-  text-align: center;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .arrow {
-  background: rgba(0,0,0,0.5);
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 2rem;
   color: white;
   padding: 10px;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .arrow.left {
-  left: 10px;
+  left: 0;
 }
 
 .arrow.right {
-  right: 10px;
+  right: 0;
 }
 
 .thumbnails {
@@ -93,36 +90,16 @@ p, a {
   margin-bottom: 20vh;
 }
 
-.thumb {
-  width: 80px;
-  height: auto;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-  border: 2px solid transparent;
+.thumb-container {
   position: relative;
 }
 
-/* Hover text using alt */
-.thumb::after {
-  content: attr(alt);
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--bttncolor);
-  color: var(--bgcolor);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.thumb:hover::after {
-  opacity: 1;
+.thumb {
+  width: 80px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
 }
 
 .thumb:hover,
@@ -131,7 +108,28 @@ p, a {
   border-color: #333;
 }
 
-/* Layout */
+/* Hover Text Styling */
+.thumb-container::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bttncolor);
+  color: var(--bgcolor);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.thumb-container:hover::after {
+  opacity: 1;
+}
+
 .top-row {
   display: flex;
   justify-content: center;
@@ -153,9 +151,10 @@ p, a {
 
 .gallery-wrapper {
   max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .top-row {
     flex-direction: column;
@@ -167,4 +166,3 @@ p, a {
     margin-right: 20px;
     text-align: center;
   }
-}
