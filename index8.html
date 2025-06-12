@@ -15,7 +15,7 @@
     <div class="text-block">
       <h2 class="title1">Believer's Club</h2>
       <a href="https://www.instagram.com/believersclubfilm?igsh=ZzZzdGVrZHVneWRz&utm_source=qr">Instagram</a>
-     <a href= "https://gofund.me/04e5407d">Fundraiser Live Now!</a>
+      <a href="https://gofund.me/04e5407d">Fundraiser Live Now!</a>
       <p class="text">
         Welcome to the world of the “Believer’s Club” - a story about a D&D group where Max, the DM, gets into a forbidden relationship with one of the players...
       </p>
@@ -25,7 +25,7 @@
       <h2 class="title2">Concept Art</h2>
       <div class="gallery">
         <button class="arrow left" onclick="changeConceptImage(-1)">&#10094;</button>
-        <a href="https://ibb.co/jvfhVjgw"><img src="https://i.ibb.co/cc3JbsD8/Untitled-Artwork-4-copy.png" alt="Concept-Art" border="0" /></a>
+        <img id="mainConceptImage" src="img/concept1.png" alt="Concept Art">
         <button class="arrow right" onclick="changeConceptImage(1)">&#10095;</button>
       </div>
     </div>
@@ -78,7 +78,6 @@
 
     function setCharacterImage(index) {
       characterIndex = index;
-      // You can update a larger character display image here if needed.
       document.querySelectorAll('.thumb').forEach((thumb, i) => {
         thumb.classList.toggle('active', i === index);
       });
