@@ -27,40 +27,65 @@
       </p>
     </div>
 
-    <div class="gallery-wrapper">
-      <h2 class="title2">Concept Art</h2>
-      <div class="gallery">
-        <button class="arrow left" onclick="changeConceptImage(-1)">&#10094;</button>
-        <a href="https://ibb.co/jvfhVjgw" id="conceptImageLink">
-          <img src="https://i.ibb.co/cc3JbsD8/Untitled-Artwork-4-copy.png" alt="Concept art of Believer's Club" id="mainConceptImage" />
-        </a>
-        <button class="arrow right" onclick="changeConceptImage(1)">&#10095;</button>
-      </div>
+    <div class="gallery-wrapper1">
+  <h2 class="title2">Concept Art</h2>
+  <div class="carousel">
+    <button class="carousel-arrow left" onclick="changeConceptImage(-1)">&#10094;</button>
+    <div class="carousel-image-wrapper">
+      <a href="https://ibb.co/jvfhVjgw" id="conceptImageLink">
+        <img
+          src="https://i.ibb.co/cc3JbsD8/Untitled-Artwork-4-copy.png"
+          alt="Concept art of Believer's Club"
+          id="mainConceptImage"
+        />
+      </a>
     </div>
+    <button class="carousel-arrow right" onclick="changeConceptImage(1)">&#10095;</button>
   </div>
+</div>
 
+  </div>
   <div class="bottom-row">
-    <div class="gallery-wrapper">
-      <h2 class="title3">Character Bios</h2>
-      <div class="thumbnails">
-        <div class="thumb-container" alt="Max – The DM">
-          <img src="img/mprof.png" alt="Max – The DM" onclick="setCharacterImage(0)" class="thumb" />
-        </div>
-        <div class="thumb-container" alt="Jenny – Player">
-          <img src="img/jprof.png" alt="Jenny – Player" onclick="setCharacterImage(1)" class="thumb" />
-        </div>
-        <div class="thumb-container" alt="Wills – Rules Lawyer: Wills is a great person to have on your side. Fiery, persistent and strong-willed, they always get what they want. These meetups mean more to them than they let on, so when the group dynamic shifts dramatically, Wills is hurt - why did things have to change when it was all going so well? In retaliation, they decide to bend the game in their favor - which has consequences no one yet understands.">
-          <img src="https://i.ibb.co/xqSKqBCL/IMG-0868.png" alt="Wills – Rules Lawyer" onclick="setCharacterImage(2)" class="thumb" />
-        </div>
-        <div class="thumb-container" alt="Wayne – The Wildcard">
-          <img src="https://i.ibb.co/kgCpVrVv/IMG-0869.png" alt="Wayne – The Wildcard" onclick="setCharacterImage(3)" class="thumb" />
-        </div>
-        <div class="thumb-container" alt="Ramone – The Heart">
-          <img src="https://i.ibb.co/C36gFS8s/IMG-0870.png" alt="Ramone – The Heart" onclick="setCharacterImage(4)" class="thumb" />
-        </div>
+  <div class="gallery-wrapper2">
+    <h2 class="title3">Character Bios</h2>
+    <div class="thumbnails">
+
+      <div class="thumb-container">
+        <p class="thumb-caption">Max – The DM: Max is a hapless dungeon master whose grand plans for a finale are cut short when his secret relationship with jenny, a player, is uncovered. In the face of a potential cataclysm, he will do whatever it takes to hold on to both his friends and his newfound love.</p>
+        <img src="img/mprof.png" alt="Max – The DM" onclick="setCharacterImage(0)" class="thumb" />
+        
       </div>
+
+      <div class="thumb-container">
+        <p class="thumb-caption">Jenny – The Performer: Jenny is a theater kid with a deep appreciation for nature. She loves these weekly meetups, getting together with her best friends and playing a character - like she used to do all the time. After falling for Max, the DM, she's doing her best to keep their relationship a secret, but the cracks are starting to show.</p>
+        <img src="img/jprof.png" alt="Jenny – Player" onclick="setCharacterImage(1)" class="thumb" />
+        
+      </div>
+
+      <div class="thumb-container">
+        <p class="thumb-caption">
+          Wills – Rules Lawyer: Wills is a great person to have on your side. Fiery, persistent, and strong-willed, they always get what they want. These meetups mean more to them than they let on, so when the group dynamic shifts dramatically, Wills is hurt — why did things have to change when it was all going so well? In retaliation, they decide to bend the game in their favor — which has consequences no one yet understands.
+        </p>
+        <img src="https://i.ibb.co/xqSKqBCL/IMG-0868.png" alt="Wills – Rules Lawyer" onclick="setCharacterImage(2)" class="thumb" />
+        
+      </div>
+
+      <div class="thumb-container">
+        <p class="thumb-caption">Wayne – The Wildcard: Wayne is a pretty chill dude, trying to get over his crush on Jenny. He knows the two of them are complete opposites - she loves nature and theatre, he loves video games and rock-and-roll - but he can't quite get over the feelings he's developed.</p>
+        <img src="https://i.ibb.co/kgCpVrVv/IMG-0869.png" alt="Wayne – The Wildcard" onclick="setCharacterImage(3)" class="thumb" />
+        
+      </div>
+
+      <div class="thumb-container">
+        <p class="thumb-caption">Ramone – The Heart: Ramone is the heart of the group, an even keel through rough waters. He's got a calm, quiet wisom that everyone loves. These meetups are his favorite way to spend time together, short of the competitive gaming tournaments that he adores.</p>
+        <img src="https://i.ibb.co/C36gFS8s/IMG-0870.png" alt="Ramone – The Heart" onclick="setCharacterImage(4)" class="thumb" />
+        
+      </div>
+
     </div>
   </div>
+</div>
+
 
   <script>
     const conceptImages = [
