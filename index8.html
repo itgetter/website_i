@@ -88,20 +88,28 @@
   </div>
 </div>
 
-
   <script>
     const conceptImages = [
-      "img/concept1.png",
-      "img/concept2.png",
-      "img/concept3.png"
+      "https://i.ibb.co/cc3JbsD8/Untitled-Artwork-4-copy.png", // Your original image
+      "https://i.ibb.co/VcZVCzMC/IMG-0816.png", // New image 1
+      "https://i.ibb.co/rKfNTG6t/image0.jpg" // New image 2
     ];
+
+    const conceptImageLinks = [
+      "https://ibb.co/jvfhVjgw", // Original link
+      "https://ibb.co/PvnxWP1W", // New link 1
+      "https://ibb.co/hx1whRWM" // New link 2
+    ];
+
     let conceptIndex = 0;
 
     function changeConceptImage(direction) {
       conceptIndex = (conceptIndex + direction + conceptImages.length) % conceptImages.length;
       document.getElementById("mainConceptImage").src = conceptImages[conceptIndex];
+      document.getElementById("conceptImageLink").href = conceptImageLinks[conceptIndex];
     }
 
+    // Character images code remains the same
     const characterImages = [
       "img/max.png",
       "img/jenny.png",
