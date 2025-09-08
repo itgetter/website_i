@@ -9,9 +9,17 @@
 }
 
 body {
-  background-color: var(--bgcolor);
-  color: var(--bttncolor);
+  background-image: url("https://i.ibb.co/nqKt75Rp/Screenshot-2025-09-08-at-12-15-59-PM.jpg");
+  background-size: 40%; /* First value for gradient (cover full area), second for image (40%) */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  padding-top:20em;
+  padding-bottom: 20em;
+  
+  
 }
+
 
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
@@ -34,7 +42,7 @@ p {
   font-family: 'Parkinsans', sans-serif;
   max-width: 1000px;
   width: 100%;
-  color: var(--bttncolor);
+  color: white);
   line-height: 2;
 }
 
@@ -74,10 +82,10 @@ button {
   right: calc(20px + 2vw);
   font-size: 2rem;
   padding: 15px 32px;
-  background-color: var(--bttncolor);
+  background-color: white;
   background-size: cover;
   border: none;
-  color: var(--bgcolor);
+  color: black;
   font-family: 'Fascinate';
   cursor: pointer;
   border-radius: 12px;
@@ -90,7 +98,7 @@ button {
 
 .buttonlink {
   text-decoration: none;
-  color: var(--bgcolor);
+  color: black;
 }
 
 .buttonfix {
@@ -152,7 +160,7 @@ button:hover {
 
 .intextlink {
   text-decoration: none;
-  color: var(--linkcolor)
+  color: grey;
 }
 
 /* Only apply hover styles on non-touch devices */
