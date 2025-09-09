@@ -149,7 +149,8 @@ button:hover {
 .img-block img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* 💥 This is what crops the image properly */
+  object-position: center; /* optional: centers the crop */
   transition: all var(--transition);
   filter: grayscale(0.6) brightness(0.8) contrast(1.1);
 }
