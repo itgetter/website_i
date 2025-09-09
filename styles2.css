@@ -25,8 +25,8 @@ body {
 h1 {
   margin-left: calc(20px + 2vw);
   font-size: clamp(40px, 5vw, 70px);
-  -webkit-text-stroke: 1.5px #000;
-  text-stroke: 1.5px #000;
+  -webkit-text-stroke: 1.5px #fff;
+  text-stroke: 1.5px #fff;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
@@ -42,7 +42,7 @@ p {
   font-family: 'Parkinsans', sans-serif;
   max-width: 1000px;
   width: 100%;
-  color: white;
+  color: black;
   line-height: 2;
 }
 
