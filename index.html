@@ -4,17 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
   <title>Inkpen Films</title>
-  <meta name= "description" content= "Welcome to the portfolio of me, Shay Inkpen! Within, you'll find the short films and writing I've done, and information to contact me for services. Enjoy!">
+  <meta name="description" content="Welcome to the portfolio of me, Shay Inkpen! Within, you'll find the short films and writing I've done, and information to contact me for services. Enjoy!">
   <link rel="stylesheet" href="styles2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <script src="script.js"></script>
 </head>
-  
-  
+
 <body>
   <h1>About Me</h1>
   
@@ -25,38 +23,223 @@
   <div class="space"></div>
   
   <div class="main-wrapper">
-   
-
-
-    
-
-  
-   
-
-     <div class="container">
-       <div class= "img-block">
-  <img src="https://i.ibb.co/Z1cMFSFy/portrait.png">
-          <div class="img-caption">I’m Shay Inkpen, Temple University 2024, Film and Media Arts. You can find my scripts, short stories, and essays <a class="intextlink" href="index5.html">here</a>, and my video projects <a class="intextlink" href="index4.html">here</a>. If you’re interested in collaborating on a project or starting something new, feel free to <a class="intextlink" href="index7.html">reach out!</a> I’d love to connect. (Photo by Victoria Wilcox, @torian.studios)</div>
-       </div>
-        <div class= "img-block">
-  <img src="https://i.ibb.co/8LTPtG9b/gaffportrait.png">
-          <div class="img-caption">I spent time gaffing for an independent film company in the Poconos, helping to create the look and feel of "Genesis Valley". We worked day and night to properly illuminate the slow-burn, post-apocalyptic thriller. (BTS by Rebecca Judd, @rebeccajuddphoto ).</div>
-          </div>
-          <div class= "img-block">
-  <img src="img/marina_BTS.jpg">
-                <div class="img-caption">I provided script supervision for the film Marina, starring Peter Friedman ("Succession") and Grace McLean. An incredible honor to work with such talented actors and crewmembers. (BTS by Victoria Wilcox, @torian.studios).</div>
-            </div>
-            <div class= "img-block">
-  <img src="img/pvilleffpic.jpg">
-                <div class="img-caption">I had the rare privilege of having my script read at the Phoenixville Film Festival. It was a great experience to meet new people, hear new stories, and experience the storytelling techniques others use to navigate their worlds. Looking forward to next year!</div>
-              </div>
-</div>
-
+    <div class="web-container">
+      <!-- SVG for web connections -->
+      <svg class="web-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#68A691;stop-opacity:0.6" />
+            <stop offset="50%" style="stop-color:#EFC7C2;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#694F5D;stop-opacity:0.6" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge> 
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        
+        <!-- Connecting lines between images -->
+        <path class="web-line line-1-2" d="" stroke="url(#lineGradient)" stroke-width="2" fill="none" filter="url(#glow)"/>
+        <path class="web-line line-1-3" d="" stroke="url(#lineGradient)" stroke-width="1.5" fill="none" filter="url(#glow)"/>
+        <path class="web-line line-2-4" d="" stroke="url(#lineGradient)" stroke-width="2" fill="none" filter="url(#glow)"/>
+        <path class="web-line line-3-4" d="" stroke="url(#lineGradient)" stroke-width="1.5" fill="none" filter="url(#glow)"/>
+        <path class="web-line line-1-4" d="" stroke="url(#lineGradient)" stroke-width="1" fill="none" filter="url(#glow)"/>
+        <path class="web-line line-2-3" d="" stroke="url(#lineGradient)" stroke-width="1" fill="none" filter="url(#glow)"/>
+        
+        <!-- Web nodes (circles at intersections) -->
+        <circle class="web-node node-center" cx="50%" cy="50%" r="4" fill="#EFC7C2" opacity="0.7" filter="url(#glow)"/>
+        <circle class="web-node node-1" cx="" cy="" r="3" fill="#68A691" opacity="0.6"/>
+        <circle class="web-node node-2" cx="" cy="" r="3" fill="#68A691" opacity="0.6"/>
+        <circle class="web-node node-3" cx="" cy="" r="3" fill="#68A691" opacity="0.6"/>
+        <circle class="web-node node-4" cx="" cy="" r="3" fill="#68A691" opacity="0.6"/>
+      </svg>
+      
+      <div class="img-block web-node-1" data-node="1" tabindex="0">
+        <img src="https://i.ibb.co/Z1cMFSFy/portrait.png" alt="Portrait of Shay Inkpen">
+        <div class="img-caption"><span>I'm Shay Inkpen, Temple University 2024, Film and Media Arts. You can find my scripts, short stories, and essays <a class="intextlink" href="index5.html">here</a>, and my video projects <a class="intextlink" href="index4.html">here</a>. If you're interested in collaborating on a project or starting something new, feel free to <a class="intextlink" href="index7.html">reach out!</a> I'd love to connect. (Photo by Victoria Wilcox, @torian.studios)</span></div>
+      </div>
+      
+      <div class="img-block web-node-2" data-node="2" tabindex="0">
+        <img src="https://i.ibb.co/8LTPtG9b/gaffportrait.png" alt="Gaffer work behind the scenes">
+        <div class="img-caption"><span>I spent time gaffing for an independent film company in the Poconos, helping to create the look and feel of "Genesis Valley". We worked day and night to properly illuminate the slow-burn, post-apocalyptic thriller. (BTS by Rebecca Judd, @rebeccajuddphoto).</span></div>
+      </div>
+      
+      <div class="img-block web-node-3" data-node="3" tabindex="0">
+        <img src="https://via.placeholder.com/400x300/444/fff?text=Marina+BTS" alt="Marina film behind the scenes">
+        <div class="img-caption"><span>I provided script supervision for the film Marina, starring Peter Friedman ("Succession") and Grace McLean. An incredible honor to work with such talented actors and crewmembers. (BTS by Victoria Wilcox, @torian.studios).</span></div>
+      </div>
+      
+      <div class="img-block web-node-4" data-node="4" tabindex="0">
+        <img src="https://via.placeholder.com/400x300/333/fff?text=Phoenixville+Film+Festival" alt="Phoenixville Film Festival">
+        <div class="img-caption"><span>I had the rare privilege of having my script read at the Phoenixville Film Festival. It was a great experience to meet new people, hear new stories, and experience the storytelling techniques others use to navigate their worlds. Looking forward to next year!</span></div>
+      </div>
     </div>
-
-    <div class="space"></div>
-
-    
   </div>
+  
+  <div class="space"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const imgBlocks = document.querySelectorAll('.img-block');
+      const webLines = document.querySelectorAll('.web-line');
+      const webNodes = document.querySelectorAll('.web-node');
+      
+      // Position images in web formation and calculate connection lines
+      function setupWebLayout() {
+        const container = document.querySelector('.web-container');
+        const containerRect = container.getBoundingClientRect();
+        const centerX = containerRect.width / 2;
+        const centerY = containerRect.height / 2;
+        
+        // Define positions for each node (relative to container)
+        const positions = {
+          1: { x: centerX - 300, y: centerY - 200 }, // top-left
+          2: { x: centerX + 300, y: centerY - 150 }, // top-right  
+          3: { x: centerX - 250, y: centerY + 180 }, // bottom-left
+          4: { x: centerX + 250, y: centerY + 120 }  // bottom-right
+        };
+        
+        // Position image blocks
+        imgBlocks.forEach((block, index) => {
+          const nodeNum = index + 1;
+          const pos = positions[nodeNum];
+          if (pos) {
+            block.style.left = pos.x - 80 + 'px'; // offset for image center
+            block.style.top = pos.y - 80 + 'px';
+          }
+        });
+        
+        // Update SVG node positions
+        document.querySelector('.node-1').setAttribute('cx', positions[1].x);
+        document.querySelector('.node-1').setAttribute('cy', positions[1].y);
+        document.querySelector('.node-2').setAttribute('cx', positions[2].x);
+        document.querySelector('.node-2').setAttribute('cy', positions[2].y);
+        document.querySelector('.node-3').setAttribute('cx', positions[3].x);
+        document.querySelector('.node-3').setAttribute('cy', positions[3].y);
+        document.querySelector('.node-4').setAttribute('cx', positions[4].x);
+        document.querySelector('.node-4').setAttribute('cy', positions[4].y);
+        
+        // Create curved connection paths
+        const createCurvedPath = (start, end) => {
+          const midX = (start.x + end.x) / 2;
+          const midY = (start.y + end.y) / 2;
+          const offsetX = (start.y - end.y) * 0.3; // perpendicular offset for curve
+          const offsetY = (end.x - start.x) * 0.3;
+          return `M ${start.x} ${start.y} Q ${midX + offsetX} ${midY + offsetY} ${end.x} ${end.y}`;
+        };
+        
+        // Set up connection paths
+        document.querySelector('.line-1-2').setAttribute('d', createCurvedPath(positions[1], positions[2]));
+        document.querySelector('.line-1-3').setAttribute('d', createCurvedPath(positions[1], positions[3]));
+        document.querySelector('.line-2-4').setAttribute('d', createCurvedPath(positions[2], positions[4]));
+        document.querySelector('.line-3-4').setAttribute('d', createCurvedPath(positions[3], positions[4]));
+        document.querySelector('.line-1-4').setAttribute('d', createCurvedPath(positions[1], positions[4]));
+        document.querySelector('.line-2-3').setAttribute('d', createCurvedPath(positions[2], positions[3]));
+      }
+      
+      // Enhanced interaction effects
+      imgBlocks.forEach((block, index) => {
+        const nodeNum = index + 1;
+        
+        block.addEventListener('mouseenter', function() {
+          // Highlight connected lines
+          webLines.forEach(line => {
+            if (line.classList.contains(`line-${nodeNum}-`) || 
+                line.classList.contains(`line-${nodeNum}`) ||
+                line.className.includes(`-${nodeNum}`)) {
+              line.style.strokeWidth = '3';
+              line.style.opacity = '1';
+            }
+          });
+          
+          // Pulse connected nodes
+          webNodes.forEach(node => {
+            if (node.classList.contains(`node-${nodeNum}`) || node.classList.contains('node-center')) {
+              node.style.r = '6';
+              node.style.opacity = '1';
+            }
+          });
+          
+          // Dim other images
+          imgBlocks.forEach(otherBlock => {
+            if (otherBlock !== this) {
+              otherBlock.style.opacity = '0.4';
+              otherBlock.style.transform = 'scale(0.85)';
+            }
+          });
+        });
+        
+        block.addEventListener('mouseleave', function() {
+          // Reset all effects
+          webLines.forEach(line => {
+            line.style.strokeWidth = '';
+            line.style.opacity = '';
+          });
+          
+          webNodes.forEach(node => {
+            node.style.r = '';
+            node.style.opacity = '';
+          });
+          
+          imgBlocks.forEach(otherBlock => {
+            otherBlock.style.opacity = '';
+            otherBlock.style.transform = '';
+          });
+        });
+        
+        // Touch support
+        let touchTimer;
+        block.addEventListener('touchstart', function(e) {
+          e.preventDefault();
+          this.classList.add('active');
+          
+          imgBlocks.forEach(otherBlock => {
+            if (otherBlock !== this) {
+              otherBlock.classList.remove('active');
+            }
+          });
+          
+          clearTimeout(touchTimer);
+        });
+        
+        block.addEventListener('touchend', function() {
+          const self = this;
+          touchTimer = setTimeout(() => {
+            self.classList.remove('active');
+          }, 5000);
+        });
+        
+        // Keyboard navigation
+        block.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.classList.toggle('active');
+          }
+        });
+      });
+      
+      // Initialize layout
+      setupWebLayout();
+      
+      // Recalculate on resize
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setupWebLayout, 250);
+      });
+      
+      // Close active states when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.img-block')) {
+          imgBlocks.forEach(block => {
+            block.classList.remove('active');
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
