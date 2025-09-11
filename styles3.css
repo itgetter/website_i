@@ -7,7 +7,7 @@
 :root {
     font-size: 15px;
     --bgcolor: black;
-    --bttncolor: #f5f5f5;
+    --bttncolor: #E3DEDC;
     --bg-image: url('https://i.ibb.co/ycGtndVQ/Screenshot-2025-09-08-at-3-19-09-PM.jpg');
 }
 
@@ -127,8 +127,8 @@ a:focus {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    -webkit-text-stroke: 1.5px #fff;
-    text-stroke: 1.5px #fff;
+    -webkit-text-stroke: 1.5px #E3DEDC;
+    text-stroke: 1.5px #E3DEDC;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     color: transparent;
