@@ -18,72 +18,66 @@
     <link rel="preload" href="https://i.ibb.co/XrfsNGr8/Screenshot-2025-09-08-at-3-25-01-PM.jpg" as="image">
     <link rel="preload" href="https://i.ibb.co/mCcPrPbD/Screenshot-2025-09-08-at-3-26-07-PM.jpg" as="image">
     <link rel="preload" href="https://i.ibb.co/hxhxmQDm/websitebg1.jpg" as="image">
-
-   
 </head>
 
 <body class="demo-1">
-  
    <div id="loading-screen">
         <div class="spinner"></div>
     </div>
 
-    <!-- Your entire page content goes inside here -->
     <div id="page-wrapper">
-  
-    <main>
-        <div class="frame"></div>
-        <nav class="menu">
-            <div class="menu__item">
-                <a class="menu__item-link" href="index.html">About</a>
-                <div class="marquee"><div class="marquee__inner" aria-hidden="true">
-                    <span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span>
-                </div></div>
-            </div>
-            <div class="menu__item">
-                <a class="menu__item-link" href="index4.html">Videos</a>
-                <div class="marquee"><div class="marquee__inner" aria-hidden="true">
-                    <span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span>
-                </div></div>
-            </div>
-            <div class="menu__item">
-                <a class="menu__item-link" href="index5.html">Writing</a>
-                <div class="marquee"><div class="marquee__inner" aria-hidden="true">
-                    <span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span>
-                </div></div>
-            </div>
-
-            <div class="menu__item">
-                <a class="menu__item-link" href="index8.html">Projects</a>
-                <div class="marquee"><div class="marquee__inner" aria-hidden="true">
-                     <span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span>
-                </div></div>
-            </div>
-
+        <main>
+            <!-- Dedicated background layer for smooth transitions -->
+            <div id="background-layer"></div>
             
-            <div class="menu__item">
-                <a class="menu__item-link" href="index6.html">Services</a>
-                <div class="marquee"><div class="marquee__inner" aria-hidden="true">
-                    <span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span>
-                </div></div>
+            <div class="frame"></div>
+            <nav class="menu">
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index.html">About</a>
+                    <div class="marquee"><div class="marquee__inner" aria-hidden="true">
+                        <span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span><span>About</span>
+                    </div></div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index4.html">Videos</a>
+                    <div class="marquee"><div class="marquee__inner" aria-hidden="true">
+                        <span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span><span>Videos</span>
+                    </div></div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index5.html">Writing</a>
+                    <div class="marquee"><div class="marquee__inner" aria-hidden="true">
+                        <span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span><span>Writing</span>
+                    </div></div>
+                </div>
+
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index8.html">Projects</a>
+                    <div class="marquee"><div class="marquee__inner" aria-hidden="true">
+                         <span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span><span>Projects</span>
+                    </div></div>
+                </div>
+
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index6.html">Services</a>
+                    <div class="marquee"><div class="marquee__inner" aria-hidden="true">
+                        <span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span><span>Services</span>
+                    </div></div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index7.html">Contact</a>
+                    <div class="marquee"><div class="marquee__inner" aria-hidden="true">
+                        <span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span>
+                    </div></div>
+                </div>
+            </nav>
+            <div class="frame">
+                <h1 class="frame__title">CSS-only Marquee Menu Effect</h1>
+                <p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
             </div>
-            <div class="menu__item">
-                <a class="menu__item-link" href="index7.html">Contact</a>
-                <div class="marquee"><div class="marquee__inner" aria-hidden="true">
-                    <span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span><span>Contact</span>
-                </div></div>
-            </div>
-        </nav>
-        <div class="frame">
-            <h1 class="frame__title">CSS-only Marquee Menu Effect</h1>
-            <p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
-        </div>
-      
-    </main>
-      
-       </div>
-   </div>
-  
+        </main>
+    </div>
+   
    <script>
         document.documentElement.className = "js";
         var supportsCssVars = function() {
@@ -98,11 +92,10 @@
     </script>
 
     <script>
-        // You can customize position for each image - just change the 'position' values below
         let images = [
             {
                 url: 'https://i.ibb.co/ycGtndVQ/Screenshot-2025-09-08-at-3-19-09-PM.jpg',
-                position: 'right 75%' // Options: 'center', 'top', 'bottom', 'left', 'right', 'top left', 'top right', 'bottom left', 'bottom right', or custom like '20% 30%'
+                position: 'right 75%'
             },
             {
                 url: "https://i.ibb.co/Y4dBh4zK/websitebg2.jpg",
@@ -121,46 +114,48 @@
                 position: 'right 75%'
             }
         ];
+        
         let currentIndex = 0;
+        
         document.addEventListener('DOMContentLoaded', () => {
-            let mainElement = document.querySelector('main');
-            mainElement.style.setProperty('--bg-image', `url(${images[0].url})`);
-            mainElement.style.setProperty('background-size', 'contain');
-            mainElement.style.setProperty('background-repeat', 'no-repeat');
-            mainElement.style.setProperty('background-position', images[0].position);
-            mainElement.style.transition = "opacity 2s ease-in-out";
+            let backgroundLayer = document.getElementById('background-layer');
+            
+            // Set initial background
+            backgroundLayer.style.backgroundImage = `url(${images[0].url})`;
+            backgroundLayer.style.backgroundPosition = images[0].position;
+            
+            currentIndex = 1; // Start with next image for the first transition
         });
 
         function changeBackground() {
-            let mainElement = document.querySelector('main');
+            let backgroundLayer = document.getElementById('background-layer');
             
-            // Fade out
-            mainElement.style.opacity = '0.3';
+            // Fade out the background layer only
+            backgroundLayer.style.opacity = '0';
             
+            // Wait for fade out to complete, then change image and fade back in
             setTimeout(() => {
-                // Change the image while faded
-                mainElement.style.setProperty('background-image', `url(${images[currentIndex].url})`);
-                mainElement.style.setProperty('background-size', 'contain');
-                mainElement.style.setProperty('background-repeat', 'no-repeat');
-                mainElement.style.setProperty('background-position', images[currentIndex].position);
+                backgroundLayer.style.backgroundImage = `url(${images[currentIndex].url})`;
+                backgroundLayer.style.backgroundPosition = images[currentIndex].position;
                 
                 // Fade back in
-                mainElement.style.opacity = '1';
+                backgroundLayer.style.opacity = '1';
                 
                 currentIndex = (currentIndex + 1) % images.length;
-            }, 1000); // Wait 1 second for fade out to complete
+            }, 1000); // 1 second matches the CSS transition duration
         }
 
-        setInterval(changeBackground, 4000); // Slower transition - every 4 seconds
+        // Start the background transitions after initial load
+        setInterval(changeBackground, 5000); // Change every 5 seconds
     </script>
-  <script>
-    window.addEventListener('load', function() {
-    // Hide the loading screen and show the page content
-    document.getElementById('loading-screen').style.display = 'none';
-    document.getElementById('page-wrapper').style.visibility = 'visible';
-    document.getElementById('page-wrapper').style.opacity = '1';
-});
-  </script>
+    
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('page-wrapper').style.visibility = 'visible';
+            document.getElementById('page-wrapper').style.opacity = '1';
+        });
+    </script>
   
 </body>
 </html>
