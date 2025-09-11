@@ -6,15 +6,37 @@
 
 :root {
     font-size: 15px;
-    --bgcolor: #EFC7C2;
-    --bttncolor: #694F5D;
+    --bgcolor: black;
+    --bttncolor: white;
+    --bg-image: url('https://i.ibb.co/ycGtndVQ/Screenshot-2025-09-08-at-3-19-09-PM.jpg');
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right 75%;
+    background-color: black;
+    transition: background-image 2s ease-in-out, opacity 2s ease-in-out;
+    min-height: 100vh;
+}
+
+/* ✅ Removed the radial-gradient background overlay previously here */
+/* Removed main::after */
+
+main > * {
+    position: relative;
+    z-index: 1;
 }
 
 body {
     margin: 0;
-    --color-text: #111;
-    --color-bg: #f8ecde;
-    --color-link: #b19e7f;
+    --color-text: black;
+    --color-bg: black;
+    --color-link: black;
 
     color: var(--bttncolor);
     background-color: var(--bgcolor);
@@ -23,34 +45,15 @@ body {
     font-family: Fascinate;
 }
 
-/* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
-
+/* Grainy texture animation placeholder */
 main::before {
-    animation: grain 8s steps(10) infinite;
-    background-image: url('img/noise.png'); /* Default image */
-     /* Make the background cover the screen */
-    background-position: center;  /* Keep the image centered */
-    content: '';
-    height: 300%;
-    left: -50%;
-    opacity: 0.6;
-    position: fixed;
-    top: -100%;
-    width: 300%;
+    background-image: url('img/noise.png');
+    background-position: center;
 }
 
-@keyframes grain {
-    0%, 100% { transform:translate(0, 0); }
-    10% { transform:translate(-5%, -10%); }
-    20% { transform:translate(-15%, 5%); }
-    30% { transform:translate(7%, -25%); }
-    40% { transform:translate(-5%, 25%); }
-    50% { transform:translate(-15%, 10%); }
-    60% { transform:translate(15%, 0%); }
-    70% { transform:translate(0%, 15%); }
-    80% { transform:translate(3%, 35%); }
-    90% { transform:translate(-10%, 10%); }
-}
+/* All other CSS remains unchanged below this */
+
+
 
 a {
     text-decoration: none;
@@ -121,8 +124,8 @@ a:focus {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    -webkit-text-stroke: 1.5px #000;
-    text-stroke: 1.5px #000;
+    -webkit-text-stroke: 1.5px #fff;
+    text-stroke: 1.5px #fff;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     color: transparent;
