@@ -12,13 +12,12 @@
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 
-    <!-- Preloading like it's 56k -->
-    <link rel="preload" href="img/p11.jpg" as="image">
-    <link rel="preload" href="img/p22.jpg" as="image">
-    <link rel="preload" href="img/p33.jpg" as="image">
-    <link rel="preload" href="img/p44.jpg" as="image">
-    <link rel="preload" href="img/p55.jpg" as="image">
-    <link rel="preload" href="img/p66.jpg" as="image">
+    <!-- Preloading external images -->
+    <link rel="preload" href="https://i.ibb.co/ycGtndVQ/Screenshot-2025-09-08-at-3-19-09-PM.jpg" as="image">
+    <link rel="preload" href="https://i.ibb.co/vRFdZs6/Screenshot-2025-09-08-at-3-23-22-PM.jpg" as="image">
+    <link rel="preload" href="https://i.ibb.co/XrfsNGr8/Screenshot-2025-09-08-at-3-25-01-PM.jpg" as="image">
+    <link rel="preload" href="https://i.ibb.co/mCcPrPbD/Screenshot-2025-09-08-at-3-26-07-PM.jpg" as="image">
+    <link rel="preload" href="https://i.ibb.co/hxhxmQDm/websitebg1.jpg" as="image">
 
    
 </head>
@@ -79,6 +78,7 @@
             <h1 class="frame__title">CSS-only Marquee Menu Effect</h1>
             <p class="frame__info">based on Francesco Zagami's <a href="https://dribbble.com/shots/9524661-Homepage-Menu-Interaction">Dribbble shot</a></p>
         </div>
+      
     </main>
       
        </div>
@@ -98,26 +98,60 @@
     </script>
 
     <script>
-        let images = ['img/p11.jpg', 'img/p22.jpg', 'img/p33.jpg', 'img/p44.jpg', 'img/p55.jpg', 'img/p66.jpg'];
+        // You can customize position for each image - just change the 'position' values below
+        let images = [
+            {
+                url: 'https://i.ibb.co/ycGtndVQ/Screenshot-2025-09-08-at-3-19-09-PM.jpg',
+                position: 'right 75%' // Options: 'center', 'top', 'bottom', 'left', 'right', 'top left', 'top right', 'bottom left', 'bottom right', or custom like '20% 30%'
+            },
+            {
+                url: "https://i.ibb.co/Y4dBh4zK/websitebg2.jpg",
+                position: 'right 75%'
+            },
+            {
+                url: "https://i.ibb.co/bMGrBMx9/websitebg3.jpg",
+                position: 'right 75%'
+            },
+            {
+                url: 'https://i.ibb.co/mCcPrPbD/Screenshot-2025-09-08-at-3-26-07-PM.jpg',
+                position: 'right 75%'
+            },
+            {
+                url: "https://i.ibb.co/KzxDb1Bf/websitebg1.jpg",
+                position: 'right 75%'
+            }
+        ];
         let currentIndex = 0;
         document.addEventListener('DOMContentLoaded', () => {
             let mainElement = document.querySelector('main');
-            mainElement.style.setProperty('background-image', `url(${images[0]})`);
-            mainElement.style.setProperty('background-size', 'cover');
-            mainElement.style.transition = "background-image 1s ease-in-out";
+            mainElement.style.setProperty('--bg-image', `url(${images[0].url})`);
+            mainElement.style.setProperty('background-size', 'contain');
+            mainElement.style.setProperty('background-repeat', 'no-repeat');
+            mainElement.style.setProperty('background-position', images[0].position);
+            mainElement.style.transition = "opacity 2s ease-in-out";
         });
 
         function changeBackground() {
             let mainElement = document.querySelector('main');
-            mainElement.style.transition = "none";
-            mainElement.offsetHeight; // it’s not a bug, it’s a feature
-            mainElement.style.transition = "background-image 1s ease-in-out";
-            mainElement.style.setProperty('background-image', `url(${images[currentIndex]})`);
-            mainElement.style.setProperty('background-size', 'cover');
-            currentIndex = (currentIndex + 1) % images.length;
+            
+            // Fade out
+            mainElement.style.opacity = '0.3';
+            
+            setTimeout(() => {
+                // Change the image while faded
+                mainElement.style.setProperty('background-image', `url(${images[currentIndex].url})`);
+                mainElement.style.setProperty('background-size', 'contain');
+                mainElement.style.setProperty('background-repeat', 'no-repeat');
+                mainElement.style.setProperty('background-position', images[currentIndex].position);
+                
+                // Fade back in
+                mainElement.style.opacity = '1';
+                
+                currentIndex = (currentIndex + 1) % images.length;
+            }, 1000); // Wait 1 second for fade out to complete
         }
 
-        setInterval(changeBackground, 1000); // gotta go fast
+        setInterval(changeBackground, 4000); // Slower transition - every 4 seconds
     </script>
   <script>
     window.addEventListener('load', function() {
