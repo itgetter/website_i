@@ -1,348 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inkpen Films - Organic Video Gallery</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-    
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles4.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inkpen Films - Organic Video Gallery</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+
+  <!-- CSS will be plugged in later -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Organic background orbs -->
-    <div class="bg-orbs">
-        <div class="orb"></div>
-        <div class="orb"></div>
-        <div class="orb"></div>
-        <div class="orb"></div>
+  <!-- Particle container -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- Background overlay (disabled gradient) -->
+  <div class="bg-orbs" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header-section">
+    <h1>Videos</h1>
+    <a href="index3.html" class="menu-button">Menu</a>
+
+    <nav class="filter-bubbles" role="tablist" aria-label="Video filters">
+      <button class="filter-bubble active" data-filter="all">All Videos</button>
+      <button class="filter-bubble" data-filter="short-film">Short Films</button>
+      <button class="filter-bubble" data-filter="animation">Animations</button>
+      <button class="filter-bubble" data-filter="comedy">Comedy</button>
+      <button class="filter-bubble" data-filter="drama">Drama</button>
+    </nav>
+  </header>
+
+  <!-- Video constellation -->
+  <section class="video-constellation">
+  
+
+    <!-- Video grid -->
+    <div class="video-web">
+      <div class="video-grid">
+
+        <!-- Video 1 -->
+        <article class="video-planet" data-category="short-film drama" aria-labelledby="title-1">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/6WDQC9T/9-Yig-Wwf-XUHE-HD.jpg" alt="Neurocapital">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/9YigWwfXUHE" aria-label="Open Neurocapital"></a>
+          </div>
+          <h2 id="title-1" class="video-title">Neurocapital</h2>
+          <div class="category-constellation">
+            <span class="category-star">Short Film</span>
+            <span class="category-star">Drama</span>
+            <span class="category-star">Low Budget</span>
+          </div>
+          <p class="video-description">How low budget can you go? I made this short film with just me, the actors, a camera and some basic lighting equipment. It was an exercise in creativity, patience and hustle to get it done, and I'm proud of that.</p>
+        </article>
+
+        <!-- Video 2 -->
+        <article class="video-planet" data-category="short-film comedy" aria-labelledby="title-2">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/8YBB8NS/ipg-ORAw-Ebn4-SD.jpg" alt="Happy Horrordays">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/ipgORAwEbn4" aria-label="Open Happy Horrordays"></a>
+          </div>
+          <h2 id="title-2" class="video-title">Happy Horrordays</h2>
+          <div class="category-constellation">
+            <span class="category-star">Short Film</span>
+            <span class="category-star">Comedy</span>
+            <span class="category-star">Horror</span>
+          </div>
+          <p class="video-description">This was a fun adventure, exploring the things in horror that I find really funny, and a gift to work with two excellent actors. Their commitment to the parts did a lot of the heavy lifting in what was ultimately a very silly short.</p>
+        </article>
+
+        <!-- Video 3 -->
+        <article class="video-planet" data-category="short-film drama" aria-labelledby="title-3">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/nrvdJXW/3x-WPJ3-SEZNQ-HD.jpg" alt="MANIA!">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/3xWPJ3SEZNQ" aria-label="Open MANIA!"></a>
+          </div>
+          <h2 id="title-3" class="video-title">MANIA!</h2>
+          <div class="category-constellation">
+            <span class="category-star">Short Film</span>
+            <span class="category-star">Drama</span>
+            <span class="category-star">Wrestling</span>
+          </div>
+          <p class="video-description">I love pro wrestling. I think it's so fun that so many people still get together to play and pretend. That being said, there's no ignoring its dark side. I wanted to try to skate the line between the highs and lows of a (very very) small-time wrestler.</p>
+        </article>
+
+        <!-- Video 4 -->
+        <article class="video-planet" data-category="short-film drama" aria-labelledby="title-4">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/qFWpGvK/c-Kqbme-Dj-Wqk-HD.jpg" alt="A Yearly Occasion">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/cKqbmeDjWqk" aria-label="Open A Yearly Occasion"></a>
+          </div>
+          <h2 id="title-4" class="video-title">A Yearly Occasion</h2>
+          <div class="category-constellation">
+            <span class="category-star">Short Film</span>
+            <span class="category-star">Drama</span>
+            <span class="category-star">Experimental</span>
+          </div>
+          <p class="video-description">This was my kind of experimental short film - the kind where I wanted to see if I could go from having you hate a character to sympathize with them in under 5 minutes.</p>
+        </article>
+
+        <!-- Video 5 -->
+        <article class="video-planet" data-category="short-film comedy" aria-labelledby="title-5">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/QDWCjSB/f-HL7z-Hkr5-MM-HD.jpg" alt="The Great Clone Chase of '23">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/fHL7zHkr5MM" aria-label="Open The Great Clone Chase of '23"></a>
+          </div>
+          <h2 id="title-5" class="video-title">The Great Clone Chase of '23</h2>
+          <div class="category-constellation">
+            <span class="category-star">Short Film</span>
+            <span class="category-star">Comedy</span>
+            <span class="category-star">Solo</span>
+          </div>
+          <p class="video-description">Guess who couldn't find anyone to be in their short film? Oh, the plight of the long-distance commuter. So I did what any self respecting filmmaker does and made a film about clones. For what it is, I put a lot of thought into it, and I think that comes across.</p>
+        </article>
+
+        <!-- Video 6 -->
+        <article class="video-planet" data-category="animation comedy" aria-labelledby="title-6">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/yBRxF1S/Screenshot-2025-04-18-at-10-32-37-AM.png" alt="Outsidexbox Animated: Bozak">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/0K5LtzFNCoU" aria-label="Open Outsidexbox Animated: Bozak"></a>
+          </div>
+          <h2 id="title-6" class="video-title">Outsidexbox Animated: Bozak ;_;</h2>
+          <div class="category-constellation">
+            <span class="category-star">Animation</span>
+            <span class="category-star">Comedy</span>
+            <span class="category-star">Fan Art</span>
+          </div>
+          <p class="video-description">This animation took me a long while to complete, but it was so worth it. I spent a ton of time working on the lip sync, and I'm super proud of the result!</p>
+        </article>
+
+        <!-- Video 7 -->
+        <article class="video-planet" data-category="animation comedy" aria-labelledby="title-7">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/jk12qJN/o-Z7qan4-t-BE-SD.jpg" alt="Oxventure Animated - For God's Sake Chairs!">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtube.com/watch?v=oZ7qan4-tBE" aria-label="Open Oxventure Animated - For God's Sake Chairs!"></a>
+          </div>
+          <h2 id="title-7" class="video-title">Oxventure Animated - For God's Sake Chairs!</h2>
+          <div class="category-constellation">
+            <span class="category-star">Animation</span>
+            <span class="category-star">Comedy</span>
+            <span class="category-star">RPG</span>
+          </div>
+          <p class="video-description">Oxventure is the most highly underrated tabletop RPG series on the internet, and that's saying something. I made this, a fun little animation, as a thank you for the many years of laughs.</p>
+        </article>
+
+        <!-- Video 8 -->
+        <article class="video-planet" data-category="animation comedy" aria-labelledby="title-8">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/HdFSyN1/39-NY5n1z2-W4-HD.jpg" alt="Outsidexbox Animated - The Standup">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/39NY5n1z2W4" aria-label="Open Outsidexbox Animated - The Standup"></a>
+          </div>
+          <h2 id="title-8" class="video-title">Outsidexbox Animated - The Standup</h2>
+          <div class="category-constellation">
+            <span class="category-star">Animation</span>
+            <span class="category-star">Comedy</span>
+            <span class="category-star">Practice</span>
+          </div>
+          <p class="video-description">The best way for me to practice animation is to try to sync it with some sound...and why not use a clip from one of the livestreams that got me through the pandemic?</p>
+        </article>
+
+        <!-- Video 9 -->
+        <article class="video-planet" data-category="animation comedy" aria-labelledby="title-9">
+          <div class="thumbnail-ring">
+            <img class="video-thumb" src="https://i.ibb.co/BCPBbN4/Aeqg-Qzb6-ZKU-HD.jpg" alt="Oxventure Animated - The Strangetide Negotiation">
+            <div class="play-ring"><div class="play-triangle"></div></div>
+            <a class="cosmic-link" href="https://youtu.be/AeqgQzb6ZKU" aria-label="Open Oxventure Animated - The Strangetide Negotiation"></a>
+          </div>
+          <h2 id="title-9" class="video-title">Oxventure Animated - The Strangetide Negotiation</h2>
+          <div class="category-constellation">
+            <span class="category-star">Animation</span>
+            <span class="category-star">Comedy</span>
+            <span class="category-star">First</span>
+          </div>
+          <p class="video-description">This was the first animation that I made. It appeared fully formed in my head and I had to bring it to life. It's a little choppy compared to the later animations I did, but I'm proud to show where I started!</p>
+        </article>
+
+      </div>
     </div>
+  </section>
 
-    <div class="header-section">
-        <h1>Videos</h1>
-        <a href="index3.html" class="menu-button">Menu</a>
-        
-        <div class="filter-bubbles">
-            <button class="filter-bubble active" data-filter="all">All Videos</button>
-            <button class="filter-bubble" data-filter="short-film">Short Films</button>
-            <button class="filter-bubble" data-filter="animation">Animations</button>
-            <button class="filter-bubble" data-filter="comedy">Comedy</button>
-            <button class="filter-bubble" data-filter="drama">Drama</button>
-        </div>
-    </div>
+  <!-- Scripts -->
+  <script>
+    // Particles
+    function createParticles() {
+      const container = document.getElementById('particles');
+      if (!container) return;
+      container.innerHTML = '';
+      const particleCount = 18;
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        const size = Math.random() * 6 + 4;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.animationDelay = (Math.random() * 10) + 's';
+        particle.style.opacity = (Math.random() * 0.6 + 0.05).toFixed(2);
+        container.appendChild(particle);
+      }
+    }
 
-    <section class="video-constellation">
-        <div class="video-orbit">
-            <!-- Video 1 -->
-            <div class="video-planet" data-category="short-film drama">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/6WDQC9T/9-Yig-Wwf-XUHE-HD.jpg" alt="Neurocapital">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">Neurocapital</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Short Film</span>
-                    <span class="category-star">Drama</span>
-                    <span class="category-star">Low Budget</span>
-                </div>
-                <p class="video-description">How low budget can you go? I made this short film with just me, the actors, a camera and some basic lighting equipment. It was an exercise in creativity, patience and hustle to get it done, and I'm proud of that.</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value"></span>
-                        <div class="stat-label"></div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">Private</span>
-                        <div class="stat-label">Video</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/9YigWwfXUHE" class="cosmic-link"></a>
-            </div>
+    // Filters
+    function setupFilters() {
+      const filterBtns = document.querySelectorAll('.filter-bubble');
+      const videoItems = document.querySelectorAll('.video-planet');
 
-            <!-- Video 2 -->
-            <div class="video-planet" data-category="short-film comedy">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/8YBB8NS/ipg-ORAw-Ebn4-SD.jpg" alt="Happy Horrordays">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">Happy Horrordays</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Short Film</span>
-                    <span class="category-star">Comedy</span>
-                    <span class="category-star">Horror</span>
-                </div>
-                <p class="video-description">This was a fun adventure, exploring the things in horror that I find really funny, and a gift to work with two excellent actors. Their commitment to the parts did a lot of the heavy lifting in what was ultimately a very silly short.</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value"></span>
-                        <div class="stat-label"></div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">Private</span>
-                        <div class="stat-label">Video</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/ipgORAwEbn4" class="cosmic-link"></a>
-            </div>
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
 
-            <!-- Video 3 -->
-            <div class="video-planet" data-category="short-film drama">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/nrvdJXW/3x-WPJ3-SEZNQ-HD.jpg" alt="MANIA!">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">MANIA!</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Short Film</span>
-                    <span class="category-star">Drama</span>
-                    <span class="category-star">Wrestling</span>
-                </div>
-                <p class="video-description">I love pro wrestling. I think it's so fun that so many people still get together to play and pretend. That being said, there's no ignoring its dark side. I wanted to try to skate the line between the highs and lows of a (very very) small-time wrestler.</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value"></span>
-                        <div class="stat-label"></div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">Private</span>
-                        <div class="stat-label">Video</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/3xWPJ3SEZNQ" class="cosmic-link"></a>
-            </div>
+          const filter = btn.getAttribute('data-filter');
 
-            <!-- Video 4 -->
-            <div class="video-planet" data-category="short-film drama">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/qFWpGvK/c-Kqbme-Dj-Wqk-HD.jpg" alt="A Yearly Occasion">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">A Yearly Occasion</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Short Film</span>
-                    <span class="category-star">Drama</span>
-                    <span class="category-star">Experimental</span>
-                </div>
-                <p class="video-description">This was my kind of experimental short film - the kind where I wanted to see if I could go from having you hate a character to sympathize with them in under 5 minutes.</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value"></span>
-                        <div class="stat-label"></div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">Private</span>
-                        <div class="stat-label">Video</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/cKqbmeDjWqk" class="cosmic-link"></a>
-            </div>
+          videoItems.forEach((item, index) => {
+            const categories = (item.getAttribute('data-category') || '').trim();
+            const categoryList = categories ? categories.split(/\s+/) : [];
+            const shouldShow = filter === 'all' || categoryList.includes(filter);
 
-            <!-- Video 5 -->
-            <div class="video-planet" data-category="short-film comedy">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/QDWCjSB/f-HL7z-Hkr5-MM-HD.jpg" alt="The Great Clone Chase of '23">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">The Great Clone Chase of '23</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Short Film</span>
-                    <span class="category-star">Comedy</span>
-                    <span class="category-star">Solo</span>
-                </div>
-                <p class="video-description">Guess who couldn't find anyone to be in their short film? Oh, the plight of the long-distance commuter. So I did what any self respecting filmmaker does and made a film about clones. For what it is, I put a lot of thought into it, and I think that comes across.</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value"></span>
-                        <div class="stat-label"></div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">Private</span>
-                        <div class="stat-label">Video</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/fHL7zHkr5MM" class="cosmic-link"></a>
-            </div>
-
-            <!-- Video 6 -->
-            <div class="video-planet" data-category="animation comedy">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/yBRxF1SX/Screenshot-2025-04-18-at-10-32-37-AM.png" alt="Outsidexbox Animated: Bozak">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">Outsidexbox Animated: Bozak ;_;</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Animation</span>
-                    <span class="category-star">Comedy</span>
-                    <span class="category-star">Fan Art</span>
-                </div>
-                <p class="video-description">This animation took me a long while to complete, but it was so worth it. I spent a ton of time working on the lip sync, and I'm super proud of the result!</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value">200+</span>
-                        <div class="stat-label">Views</div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">★ 5</span>
-                        <div class="stat-label">Rating</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/0K5LtzFNCoU" class="cosmic-link"></a>
-            </div>
-
-            <!-- Video 7 -->
-            <div class="video-planet" data-category="animation comedy">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/jk12qJN/o-Z7qan4-t-BE-SD.jpg" alt="Oxventure Animated - For God's Sake Chairs!">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">Oxventure Animated - For God's Sake Chairs!</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Animation</span>
-                    <span class="category-star">Comedy</span>
-                    <span class="category-star">RPG</span>
-                </div>
-                <p class="video-description">Oxventure is the most highly underrated tabletop RPG series on the internet, and that's saying something. I made this, a fun little animation, as a thank you for the many years of laughs.</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value">1k +</span>
-                        <div class="stat-label">Views</div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">★ 5</span>
-                        <div class="stat-label">Rating</div>
-                    </div>
-                </div>
-                <a href="https://youtube.com/watch?v=oZ7qan4-tBE" class="cosmic-link"></a>
-            </div>
-
-            <!-- Video 8 -->
-            <div class="video-planet" data-category="animation comedy">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/HdFSyN1/39-NY5n1z2-W4-HD.jpg" alt="Outsidexbox Animated - The Standup">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">Outsidexbox Animated - The Standup</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Animation</span>
-                    <span class="category-star">Comedy</span>
-                    <span class="category-star">Practice</span>
-                </div>
-                <p class="video-description">The best way for me to practice animation is to try to sync it with some sound...and why not use a clip from one of the livestreams that got me through the pandemic?</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value">500+ </span>
-                        <div class="stat-label">Views</div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">★ 5</span>
-                        <div class="stat-label">Rating</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/39NY5n1z2W4" class="cosmic-link"></a>
-            </div>
-
-            <!-- Video 9 -->
-            <div class="video-planet" data-category="animation comedy">
-                <div class="thumbnail-ring">
-                    <img class="video-thumb" src="https://i.ibb.co/BCPBbN4/Aeqg-Qzb6-ZKU-HD.jpg" alt="Oxventure Animated - The Strangetide Negotiation">
-                    <div class="play-ring">
-                        <div class="play-triangle"></div>
-                    </div>
-                </div>
-                <h2 class="video-title">Oxventure Animated - The Strangetide Negotiation</h2>
-                <div class="category-constellation">
-                    <span class="category-star">Animation</span>
-                    <span class="category-star">Comedy</span>
-                    <span class="category-star">First</span>
-                </div>
-                <p class="video-description">This was the first animation that I made. It appeared fully formed in my head and I had to bring it to life. It's a little choppy compared to the later animations I did, but I'm proud to show where I started!</p>
-                <div class="cosmic-stats">
-                    <div class="stat-orb">
-                        <span class="stat-value">600+ </span>
-                        <div class="stat-label">Views</div>
-                    </div>
-                    <div class="stat-orb">
-                        <span class="stat-value">★ 5</span>
-                        <div class="stat-label">Rating</div>
-                    </div>
-                </div>
-                <a href="https://youtu.be/AeqgQzb6ZKU" class="cosmic-link"></a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Create animated background particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            const particleCount = 20;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.width = Math.random() * 4 + 2 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                container.appendChild(particle);
+            if (shouldShow) {
+              setTimeout(() => item.classList.remove('filtered-out'), index * 50);
+            } else {
+              item.classList.add('filtered-out');
             }
-        }
-
-        // Filter functionality
-        function setupFilters() {
-            const filterBtns = document.querySelectorAll('.filter-bubble');
-            const videoItems = document.querySelectorAll('.video-planet');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Update active button
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    const filter = btn.getAttribute('data-filter');
-
-                    // Filter videos with smooth animation
-                    videoItems.forEach((item, index) => {
-                        const categories = item.getAttribute('data-category') || '';
-                        const shouldShow = filter === 'all' || categories.includes(filter);
-
-                        if (shouldShow) {
-                            setTimeout(() => {
-                                item.classList.remove('filtered-out');
-                            }, index * 50);
-                        } else {
-                            item.classList.add('filtered-out');
-                        }
-                    });
-                });
-            });
-        }
-
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            setupFilters();
+          });
         });
-    </script>
+      });
+    }
+
+    // Animate web lines
+    function animateWebLines() {
+      const webLines = document.querySelectorAll('.web-line');
+      webLines.forEach((line, index) => {
+        line.style.strokeDasharray = '10 6';
+        line.style.strokeDashoffset = '0';
+        line.style.animation = `dash-flow ${4 + index * 0.4}s linear infinite`;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      createParticles();
+      setupFilters();
+      animateWebLines();
+    });
+  </script>
 </body>
 </html>
