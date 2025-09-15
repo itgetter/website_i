@@ -1,7 +1,7 @@
 /* Main styles */
 :root {
-    --bgcolor: #EFC7C2;
-    --bttncolor: #694F5D;
+    --bgcolor: black;
+    --bttncolor: white;
 }
 html, body {
     overflow-x: hidden; /* Prevents horizontal overflow */
@@ -78,8 +78,8 @@ a:hover {
 h1 {
     font-size: 70px;
     font-family: Fascinate;
-    -webkit-text-stroke: 1.5px #000;
-	text-stroke: 1.5px #000;
+    -webkit-text-stroke: 1.5px #fff;
+	text-stroke: 1.5px #fff;
 	-webkit-text-fill-color: transparent;
 	text-fill-color: transparent;
 	color: transparent;
