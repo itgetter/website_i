@@ -1,6 +1,6 @@
 :root { 
-  	--bgcolor: #EFC7C2;
-	--bttncolor: #694F5D;
+  	--bgcolor: black;
+	--bttncolor: white;
 }
 
 body {
@@ -12,8 +12,8 @@ body {
 
 h1 {
   font-size: 70px;
-  -webkit-text-stroke: 1.5px #000;
-	text-stroke: 1.5px #000;
+  -webkit-text-stroke: 1.5px #fff;
+	text-stroke: 1.5px #fff;
 	-webkit-text-fill-color: transparent;
 	text-fill-color: transparent;
 	color: transparent;
@@ -27,13 +27,18 @@ h2 {
   font-family: 'Fascinate', sans-serif;
   font-size: 40px;
   color: var(--bttncolor);
-	positions: relative;
+	position: relative;
 	display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul {
   list-style: none;
   padding-left: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 li {
@@ -85,31 +90,29 @@ a:hover {
 
 /* Button styling */
 button {
-  position: absolute;
-   top: 10%;
-  right: calc(20px + 2vw);
-  background-color: var(--bttncolor);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
   font-size: 2rem;
-  font-weight: bold;
-  font-family: 'Fascinate', sans-serif;
-  margin: 4px 2px;
+  padding: 55px 32px;
+  background-color: white;
+  border: none;
+  color: black;
+  font-family: 'Fascinate';
   cursor: pointer;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-  color: var(--bgcolor)
-}
-.button2 {
-   position:
+  border-radius: 120px;
+  transition: all 0.4s ease;
+  min-width: 150px;
+  min-height: 50px;
 }
 
-.button2:hover {
+button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  position:
+  transform: translateY(-2px);
 }
+
+.buttonlink {
+  text-decoration: none;
+  color: black;
+}
+
 .buttonfix {
 	  display: flex;
   justify-content: center;
@@ -136,6 +139,16 @@ button {
   padding-top: 0; /* Removed invalid padding */
   margin-top: 20px;
 }
+ .footer {
+  color: white;
+  background: white;   /* so it stands out */
+  height: 10vh;       /* makes it tall enough to require scrolling */
+  display: flex;       
+  justify-content: center;
+  align-items: center;
+   margin-top: 200px;
+   
+}
 
 /* Make the design responsive */
 
@@ -153,7 +166,8 @@ button {
 
   ul {
     padding-left: 0; /* Remove left padding */
-    display: block;  /* Ensures it stacks vertically */
+    display: block;
+    justify-content: 
   }
 
   li {
@@ -174,7 +188,8 @@ button {
     width: fit-content;
     }
 
-
+  
+  
 /* Tablet and Larger Devices (600px and up) */
 @media (min-width: 600px) {
   h1 {
@@ -270,5 +285,3 @@ button {
     padding-right: 0;
   }
 }
-
-
