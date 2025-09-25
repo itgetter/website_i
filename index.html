@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <title>Inkpen Films</title>
   <meta name="description" content="Welcome to the portfolio of me, Shay Inkpen! Within, you'll find the short films and writing I've done, and information to contact me for services. Enjoy!">
-  <link rel="stylesheet" href="styles2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="styles2.css">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
       
       <div class="img-block web-node-4" data-node="4" tabindex="0">
         <img src="img/pvilleffpic.jpg" alt="Phoenixville Film Festival">
-        <div class="img-caption"><span>My scripts have been selected for the Phoenixville Film Festival 2 years running! <a class="intextlink href="index8.html">Believer's Club"</a> is currently in post-production, stay tuned for more on "Neurocapital"!</span></div>
+        <div class="img-caption"><span>My scripts have been selected for the Phoenixville Film Festival 2 years running, and my script "Nuerocapital" won Best Short Screenplay in 2025! My first short script, <a class="intextlink" href="index8.html">Believer's Club</a>, is in post-production. Stay tuned for more! </span></div>
       </div>
     </div>
   </div>
@@ -94,21 +94,34 @@
         const centerX = containerRect.width / 2;
         const centerY = containerRect.height / 2;
         
+        // Responsive positioning based on screen size
+        const isMobile = window.innerWidth <= 768;
+        const isSmallMobile = window.innerWidth <= 480;
+        
+        let spacing = {
+          x: isMobile ? (isSmallMobile ? 120 : 180) : 300,
+          y: isMobile ? (isSmallMobile ? 100 : 150) : 200
+        };
+        
         // Define positions for each node (relative to container)
         const positions = {
-          1: { x: centerX - 300, y: centerY - 200 }, // top-left
-          2: { x: centerX + 300, y: centerY - 150 }, // top-right  
-          3: { x: centerX - 250, y: centerY + 180 }, // bottom-left
-          4: { x: centerX + 250, y: centerY + 120 }  // bottom-right
+          1: { x: centerX - spacing.x, y: centerY - spacing.y }, // top-left
+          2: { x: centerX + spacing.x, y: centerY - (spacing.y * 0.75) }, // top-right  
+          3: { x: centerX - (spacing.x * 0.83), y: centerY + (spacing.y * 0.9) }, // bottom-left
+          4: { x: centerX + (spacing.x * 0.83), y: centerY + (spacing.y * 0.6) }  // bottom-right
         };
+        
+        // Get image block dimensions
+        const blockSize = imgBlocks[0] ? imgBlocks[0].getBoundingClientRect().width : 100;
+        const offset = blockSize / 2;
         
         // Position image blocks
         imgBlocks.forEach((block, index) => {
           const nodeNum = index + 1;
           const pos = positions[nodeNum];
           if (pos) {
-            block.style.left = pos.x - 80 + 'px'; // offset for image center
-            block.style.top = pos.y - 80 + 'px';
+            block.style.left = (pos.x - offset) + 'px';
+            block.style.top = (pos.y - offset) + 'px';
           }
         });
         
@@ -126,8 +139,9 @@
         const createCurvedPath = (start, end) => {
           const midX = (start.x + end.x) / 2;
           const midY = (start.y + end.y) / 2;
-          const offsetX = (start.y - end.y) * 0.3; // perpendicular offset for curve
-          const offsetY = (end.x - start.x) * 0.3;
+          const offsetMultiplier = isMobile ? 0.2 : 0.3;
+          const offsetX = (start.y - end.y) * offsetMultiplier;
+          const offsetY = (end.x - start.x) * offsetMultiplier;
           return `M ${start.x} ${start.y} Q ${midX + offsetX} ${midY + offsetY} ${end.x} ${end.y}`;
         };
         
@@ -224,7 +238,7 @@
       // Initialize layout
       setupWebLayout();
       
-      // Recalculate on resize
+      // Recalculate on resize with debouncing
       let resizeTimer;
       window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
