@@ -211,9 +211,12 @@ button:hover {
   color: black;
   background-color: white;
   transition: color 0.3s ease;
-  padding: .1em;
+  padding: 0.3em 0.6em; /* a little more breathing room */
   border-radius: 12px;
+  display: inline-block;       /* ✅ makes it behave like a button */
+  white-space: nowrap;         /* ✅ prevents splitting into two lines */
 }
+
 
 .intextlink:hover {
   color: white;
@@ -239,135 +242,114 @@ button:hover {
   transform: translateY(0) scale(1);
 }
 
-/* Mobile Responsive Breakpoints */
+/* ---------------------------
+   MOBILE LAYOUT: STACKED
+   (mobile-only overrides; desktop unchanged)
+   --------------------------- */
+
+/* Mobile: tablet & down - stacked vertical layout */
+/* Mobile: tablet & down - stacked vertical layout */
+/* Mobile: tablet & down - stacked vertical layout */
 @media (max-width: 768px) {
   body {
-    background-size: 60%;
+    background: black; /* solid black background */
   }
 
-  h1 {
-    margin-left: 0;
-    font-size: clamp(24px, 8vw, 50px);
-  }
-
-  .web-container {
-    height: clamp(350px, 70vh, 600px);
-  }
-
-  .img-block {
-    width: clamp(80px, 18vw, 140px);
-    height: clamp(80px, 18vw, 140px);
-    transform: scale(1);
-    opacity: 0.9;
-  }
-
-  .img-block:hover,
-  .img-block.active {
-    transform: scale(1.3);
-  }
-
-  .img-caption {
-    font-size: clamp(0.4rem, 1.2vw, 0.55rem);
-  }
-
-  .web-line {
-    stroke-width: 1.5 !important;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-size: 80%;
-    padding: 1em 0;
+  .web-svg {
+    display: none;
   }
 
   .web-container {
-    height: clamp(300px, 60vh, 500px);
-    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.25rem;
+    margin: 0 auto;
   }
 
   .img-block {
-    width: clamp(70px, 16vw, 110px);
-    height: clamp(70px, 16vw, 110px);
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    height: auto;
+    transform: none !important;  /* disable hover scaling */
+    opacity: 1 !important;
   }
 
-  .img-block:hover,
-  .img-block.active {
-    transform: scale(1.2);
+  .img-block img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.38);
+    border: 3px solid rgba(239, 199, 194, 0.35);
   }
 
   .img-caption {
-    font-size: clamp(0.35rem, 1.5vw, 0.5rem);
-    background: rgba(0, 0, 0, 0.8);
+    position: static;
+    width: 100%;
+    margin-top: 0.6rem;
+    padding: 0.8rem 1rem;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    line-height: 1.35;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 1 !important;
   }
 
   .img-caption span {
-    width: 90%;
-    padding: clamp(0.15rem, 0.5vw, 0.25rem);
-    line-height: 1.2;
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0;
   }
 
-  .web-line {
-    stroke-width: 1 !important;
-  }
-
-  .space {
-    height: 1.5rem;
-  }
-}
-
-/* Ultra-small screens */
-@media (max-width: 320px) {
-  .web-container {
-    height: clamp(250px, 50vh, 400px);
-  }
-
-  .img-block {
-    width: clamp(60px, 15vw, 90px);
-    height: clamp(60px, 15vw, 90px);
-  }
-
+  /* disable hover effects */
   .img-block:hover,
   .img-block.active {
-    transform: scale(1.15);
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: rgba(239, 199, 194, 0.35) !important;
   }
 
-  .img-caption {
-    font-size: 0.32rem;
+  .img-block:hover img,
+  .img-block.active img {
+    filter: none !important;
   }
 }
 
-/* Touch device enhancements */
-@media (hover: none) and (pointer: coarse) {
+/* Mobile: small phones */
+@media (max-width: 480px) {
+  body {
+    background: black; /* keep background black */
+  }
+
   .img-block {
-    opacity: 0.9;
-  }
-
-  .img-block:active {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-
-  .img-block:hover {
-    transform: scale(1.1);
+    max-width: 240px;
   }
 }
 
-/* Accessibility improvements */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
+/* Mobile: ultra tiny phones */
+@media (max-width: 320px) {
+  body {
+    background: black; /* keep background black */
   }
-  
-  .web-line {
-    animation: none !important;
-  }
-}
 
-/* Focus styles for keyboard navigation */
-.img-block:focus-visible {
-  outline: 3px solid var(--linkcolor);
-  outline-offset: 4px;
-  border-color: var(--linkcolor);
+  .img-block {
+    max-width: 200px;
+  }
 }
